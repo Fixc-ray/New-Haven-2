@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
-import Item from "./Item";
+import Search from "./Search";
 
 function Menu() {
-  const url = "http://localhost:3000/foodItems";
-  const [foods, setFood] = useState([]);
+  const url = "https://oakberry-backend.vercel.app/foodItems";
+  const [foods, setFoods] = useState([]);
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setFood(data))
-      .catch((error) => console.log(error))
-  },[]);
-  const displayItem = foods.map((food)=> <Item key={food.id} food={food}/>)
+      .then((data) => setFoods(data))
+      .catch((error) => console.error("Error fetching food items:", error));
+  }, []);
+
   return (
     <div className="mt-20">
-      <h1 className="text-4xl font-bold">ENJOY OUR FINGER LICKING MEALS</h1>
-      <div className="flex flex-wrap justify-end">{displayItem}</div>
+      <h1 className="text-4xl font-bold">ENJOY OUR FINGER-LICKING MEALS</h1>
+      <div>
+      <div className="flex">
+        <h2>Ultra Filtration sidebar</h2>
+      </div>
+      <Search foods={foods} />
+      </div>
+      
     </div>
   );
 }
