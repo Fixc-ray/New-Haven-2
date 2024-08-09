@@ -1,0 +1,185 @@
+{
+    "foodItems": [
+      {
+        "id": 1,
+        "name": "Margherita Pizza",
+        "price": 9.99,
+        "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TWFyZ2VoZXJpdGElMjBwaXp6YXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 2,
+        "name": "Caesar Salad",
+        "price": 7.49,
+        "imageUrl": "https://images.unsplash.com/photo-1582034986517-30d163aa1da9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhZXNhciUyMHNhbGFkfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 3,
+        "name": "Grilled Chicken Sandwich",
+        "price": 8.99,
+        "imageUrl": "https://images.unsplash.com/photo-1655195672061-90c23e3e8026?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JpbGxlZCUyMGNoaWNrZW4lMjBzYW5kd2ljaHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 4,
+        "name": "Spaghetti Carbonara",
+        "price": 12.50,
+        "imageUrl": "https://images.unsplash.com/photo-1713561058969-793049b01712?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3BhZ2hldHRpJTIwY2FyYmFub3JhfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 5,
+        "name": "Avocado Toast",
+        "price": 6.75,
+        "imageUrl": "https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZvY2FkbyUyMHRvYXN0fGVufDB8fDB8fHww"
+      },
+      {
+        "id": 6,
+        "name": "Chocolate Cake",
+        "price": 5.25,
+        "imageUrl": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hvY29sYXRlJTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 7,
+        "name": "Beef Burger",
+        "price": 10.99,
+        "imageUrl": "https://images.unsplash.com/photo-1543392765-620e968d2162?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVlZiUyMGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 8,
+        "name": "Greek Salad",
+        "price": 7.99,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1690561082029-0eb2ed65a09f?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z3JlZWslMjBzYWxhZHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 9,
+        "name": "Chicken Tikka Masala",
+        "price": 13.49,
+        "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMFRpa2thJTIwbWFzYWxhfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 10,
+        "name": "Fish and Chips",
+        "price": 11.75,
+        "imageUrl": "https://images.unsplash.com/photo-1580217593608-61931cefc821?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmlzaCUyMGFuZCUyMGNoaXBzfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 11,
+        "name": "Vegan Burger",
+        "price": 9.99,
+        "imageUrl": "https://images.unsplash.com/photo-1627587780063-1655815c958b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnYW4lMjBidXJnZXJ8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 12,
+        "name": "Pepperoni Pizza",
+        "price": 10.50,
+        "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVwcm9uaSUyMFBpenphfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 13,
+        "name": "Shrimp Tacos",
+        "price": 8.99,
+        "imageUrl": "https://media.istockphoto.com/id/1063691422/photo/mexican-food-homemade-tacos-with-shrimp-avocado-and-salsa-sauce-on-a-dark-rustic-background.webp?b=1&s=170667a&w=0&k=20&c=7w4qPgp5FeQUZfgo8TvGoQhPVc7-HxCiJmn5nqsbhqI="
+      },
+      {
+        "id": 14,
+        "name": "Fettuccine Alfredo",
+        "price": 12.99,
+        "imageUrl": "https://images.unsplash.com/photo-1693609929945-b01ae4f2d602?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmV0dHVjY2luZSUyMEFsZnJlZG98ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 15,
+        "name": "Pancakes with Maple Syrup",
+        "price": 6.50,
+        "imageUrl": "https://images.unsplash.com/photo-1528301392571-0dfab3c00216?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGFuY2FrZXMlMjB3aXRoJTIwbWFwbGUlMjBzeXJ1cHxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 16,
+        "name": "BBQ Ribs",
+        "price": 14.99,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1664478272084-532c1bfebd25?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmJxJTIwcmlic3xlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 17,
+        "name": "Vegetable Stir Fry",
+        "price": 8.25,
+        "imageUrl": "https://images.unsplash.com/photo-1599297915779-0dadbd376d49?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmVnaXRhYmxlJTIwc3RpciUyMGZyeXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 18,
+        "name": "Eggs Benedict",
+        "price": 7.50,
+        "imageUrl": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWdncyUyMGJlbmVkaWN0fGVufDB8fDB8fHww"
+      },
+      {
+        "id": 19,
+        "name": "Steak and Potatoes",
+        "price": 18.75,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1669261882830-1e504a9abf1d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3RlYWslMjBhYW5kJTIwcG90YXRvZXN8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 20,
+        "name": "Mushroom Risotto",
+        "price": 11.50,
+        "imageUrl": "https://images.unsplash.com/photo-1595908129746-57ca1a63dd4d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaHJvb20lMjByaXNvdHRvfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 21,
+        "name": "French Onion Soup",
+        "price": 6.99,
+        "imageUrl": "https://images.unsplash.com/photo-1549396563-92fab230895a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlbmNoJTIwb25pb24lMjBzb3VwfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 22,
+        "name": "Chicken Caesar Wrap",
+        "price": 8.50,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1700677185925-81d4d3edc860?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGNhZXNhciUyMHdyYXB8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 23,
+        "name": "Sushi Platter",
+        "price": 19.99,
+        "imageUrl": "https://images.unsplash.com/photo-1663334038419-71e6f82e333f?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VzaGklMjBwbGF0dGVyfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 24,
+        "name": "Tomato Basil Soup",
+        "price": 5.99,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1675727578994-88bcccb76456?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9tYXRvJTIwYmFzaWwlMjBzb3VwfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 25,
+        "name": "Buffalo Wings",
+        "price": 9.75,
+        "imageUrl": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVmZmFsbyUyMHdpbmdzfGVufDB8fDB8fHww"
+      },
+      {
+        "id": 26,
+        "name": "Lasagna",
+        "price": 13.25,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFzYWduYXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 27,
+        "name": "Falafel Wrap",
+        "price": 7.99,
+        "imageUrl": "https://images.unsplash.com/photo-1649138783888-0ec9c3ec2f21?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFsYWZlbCUyMHdyYXB8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "id": 28,
+        "name": "Pad Thai",
+        "price": 10.50,
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1669150852117-7b1106702067?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFkJTIwdGhhaXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "id": 29,
+        "name": "Blueberry Muffin",
+        "price": 2.75,
+        "imageUrl": "https://images.unsplash.com/photo-1722251172750-3fe7ea552a16?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZWJlcnJ5JTIwbXVmZmlufGVufDB8fDB8fHww"
+      },
+      {
+        "id": 30,
+        "name": "Tiramisu",
+        "price": 6.99,
+        "imageUrl": "https://images.unsplash.com/photo-1712262582493-01aa9ec5c7f8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGlyYW1pc3V8ZW58MHx8MHx8fDA%3D"
+      }
+    ]
+  }
+  
