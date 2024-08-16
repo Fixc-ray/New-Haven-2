@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Search from "./Search";
+import Ultrafilter from "./Ultrafilter";
 
 function Menu() {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -15,10 +16,8 @@ function Menu() {
   return (
     <div className="mt-20">
       <h1 className="text-4xl font-bold">ENJOY OUR FINGER-LICKING MEALS</h1>
-      <div>
-      <div className="flex">
-        <h2>Ultra Filtration sidebar</h2>
-      </div>
+      <div  className="flex">
+      <Ultrafilter/>
       <Search foods={foods} />
       </div>
       

@@ -16,7 +16,7 @@ function Search({ foods }) {
     <div>
       <input
         type="text"
-        className="searchbox p-1 border border-gray-600 mb-4 rounded shadow-md"
+        className="searchbox p-1 border border-gray-600 mt-4 mb-4 rounded shadow-md"
         placeholder="Search Meal..."
         value={searchTerm}
         onChange={handleInputChange}
