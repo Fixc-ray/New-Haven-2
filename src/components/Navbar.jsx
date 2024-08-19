@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md shadow-md fixed">
+    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
             <Link
               to="/"
               className="text-xl font-bold text-black hover:text-orange-500"
@@ -14,28 +21,57 @@ const Navbar = () => {
               THE OAKBERRY
             </Link>
           </div>
-          <div className="flex">
-            <div className="hidden md:flex space-x-8 mt-5 mr-40">
-              <Link to="/" className="text-orange-500 hover:text-yellow-500">
-                Home
-              </Link>
-              <Link
-                to="/Menu"
-                className="text-orange-500 hover:text-yellow-500"
-              >
-                Menu
-              </Link>
-              <Link
-                to="/Contact"
-                className="text-orange-500 hover:text-yellow-500"
-              >
-                Contact
-              </Link>
-            </div>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-black focus:outline-none"
+            >
+              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+          <div className="hidden md:flex space-x-8">
+            <Link to="/" className="text-orange-500 hover:text-yellow-500">
+              Home
+            </Link>
+            <Link to="/Menu" className="text-orange-500 hover:text-yellow-500">
+              Menu
+            </Link>
+            <Link
+              to="/Contact"
+              className="text-orange-500 hover:text-yellow-500"
+            >
+              Contact
+            </Link>
           </div>
         </div>
+        {isOpen && (
+          <div className="md:hidden flex flex-col space-y-4 mt-4">
+            <Link
+              to="/"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              Home
+            </Link>
+            <Link
+              to="/Menu"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              Menu
+            </Link>
+            <Link
+              to="/Contact"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              Contact
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
 };
+
 export default Navbar;
