@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";  
 
-const Navbar = () => {
+const Navbar = ({ isCartOpen, toggleCart }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="text-orange-500 hover:text-yellow-500">
               Home
             </Link>
@@ -42,6 +42,13 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <button
+              onClick={toggleCart}
+              className="text-orange-500 hover:text-yellow-500 flex items-center"
+            >
+              <FaShoppingCart size={24} />
+              <span className="ml-2">{isCartOpen ? "Hide Cart" : "Show Cart"}</span>
+            </button>
           </div>
         </div>
         {isOpen && (
@@ -67,6 +74,16 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <button
+              onClick={() => {
+                toggleCart();
+                toggleMenu();
+              }}
+              className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
+            >
+              <FaShoppingCart size={24} />
+              <span className="ml-2">{isCartOpen ? "Hide Cart" : "Show Cart"}</span>
+            </button>
           </div>
         )}
       </div>

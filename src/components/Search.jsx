@@ -21,7 +21,7 @@ function Search({ foods, addToCart }) {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <div className="flex flex-wrap justify-end">
+      <div className="flex flex-wrap justify-center">
         {filteredFoods.map((food) => (
           <Item key={food.id} food={food} addToCart={addToCart} />
         ))}

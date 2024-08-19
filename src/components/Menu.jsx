@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Search from "./Search";
 import Cart from "./Cart";
 
-function Menu() {
+function Menu({ isCartOpen }) {
   const url = "https://oakberry-backend.vercel.app/foodItems";
   const [foods, setFoods] = useState([]);
   const [cart, setCart] = useState([]);
@@ -19,11 +19,20 @@ function Menu() {
   };
 
   return (
-    <div className="mt-20">
-      <h1 className="text-4xl font-bold">ENJOY OUR FINGER-LICKING MEALS</h1>
-      <div className="flex">
-        <Search foods={foods} addToCart={addToCart} />
-        <Cart cartItems={cart} />
+    <div className="mt-20 px-4">
+      <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center ">
+        ENJOY OUR FINGER-LICKING MEALS
+      </h1>
+      
+      <div className="flex flex-col-reverse md:flex-row">
+        <div className="flex-1 mt-8 md:mt-0">
+          <Search foods={foods} addToCart={addToCart} />
+        </div>
+        {isCartOpen && (
+          <div className="w-full md:w-[16rem]">
+            <Cart cartItems={cart} />
+          </div>
+        )}
       </div>
     </div>
   );
