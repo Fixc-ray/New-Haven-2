@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Item from "./Item";
 
-function Search({ foods }) {
+function Search({ foods, addToCart }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (e) => {
@@ -23,7 +23,7 @@ function Search({ foods }) {
       />
       <div className="flex flex-wrap justify-end">
         {filteredFoods.map((food) => (
-          <Item key={food.id} food={food} />
+          <Item key={food.id} food={food} addToCart={addToCart} />
         ))}
       </div>
     </div>
