@@ -6,6 +6,7 @@ import Menu from "./components/Menu"
 import Home from "./components/Home";
 import Contact from "./components/Contact"
 import { useState } from "react";
+import Reservation from "./components/Resavation";
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/Menu" element={<Menu isCartOpen={isCartOpen} toggleCart={toggleCart} />}/>
         <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/Reservation" element={<Reservation/>}/>
       </Routes>
       <div>
       <Navbar isCartOpen={isCartOpen} toggleCart={toggleCart} />
