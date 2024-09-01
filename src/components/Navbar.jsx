@@ -18,7 +18,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               to="/"
               className="text-xl font-bold text-black hover:text-orange-500"
             >
-              THE OAKBERRY
+              THE OAkBErrY
             </Link>
           </div>
           <div className="md:hidden">
@@ -31,16 +31,16 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="text-orange-500 hover:text-yellow-500">
-              Home
+              HOME
             </Link>
             <Link to="/Menu" className="text-orange-500 hover:text-yellow-500">
-              Menu
+              MENU
             </Link>
             <Link
               to="/Contact"
               className="text-orange-500 hover:text-yellow-500"
             >
-              Contact
+              CONTACT
             </Link>
             <button
               onClick={toggleCart}

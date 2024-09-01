@@ -36,10 +36,10 @@ function Search({ foods, addToCart }) {
           value={category}
           onChange={handleFilterChange}
         >
-          <option value="">All Categories</option>
-          <option value="Tea">Tea</option>
-          <option value="Dessert">Desserts</option>
-          <option value="Brunch">Brunch</option>
+          <option value="">ALL CATEGORIES</option>
+          <option value="Tea">TEA</option>
+          <option value="Dessert">DESSERTS</option>
+          <option value="Brunch">BRUNCH</option>
         </select>
       </div>
       <div className="flex flex-wrap justify-center">

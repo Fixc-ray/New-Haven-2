@@ -11,7 +11,7 @@ function Item({ food, addToCart }) {
         alt={food.name}
         className="w-full h-48 object-cover mb-4 rounded"
       />
-      <h4 className="text-xl font-semibold mb-2">{food.name}</h4>
+      <h4 className="text-xl font-semibold mb-2">{food.name.toUpperCase()}</h4>
       <h4 className="text-lg">Price: KSH {food.price}</h4>
       <button
         onClick={() => addToCart(food)}
