@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
-import Cart from "./Cart";
 
 function Menu({ isCartOpen }) {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -28,11 +27,6 @@ function Menu({ isCartOpen }) {
         <div className="flex-1 mt-8 md:mt-0">
           <Search foods={foods} addToCart={addToCart} />
         </div>
-        {isCartOpen && (
-          <div className="w-full md:w-[16rem]">
-            <Cart cartItems={cart} />
-          </div>
-        )}
       </div>
     </div>
   );

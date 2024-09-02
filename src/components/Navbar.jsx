@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";  
+import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = ({ isCartOpen, toggleCart }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,50 +42,16 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             >
               CONTACT
             </Link>
-            <button
+            <Link
+            to="/Cart"
               onClick={toggleCart}
               className="text-orange-500 hover:text-yellow-500 flex items-center"
             >
               <FaShoppingCart size={24} />
-              <span className="ml-2">{isCartOpen ? "Hide Cart" : "Show Cart"}</span>
-            </button>
+              <span className="ml-2">CART</span>
+            </Link>
           </div>
         </div>
-        {isOpen && (
-          <div className="md:hidden flex flex-col space-y-4 mt-4">
-            <Link
-              to="/"
-              className="text-orange-500 hover:text-yellow-500"
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link
-              to="/Menu"
-              className="text-orange-500 hover:text-yellow-500"
-              onClick={toggleMenu}
-            >
-              Menu
-            </Link>
-            <Link
-              to="/Contact"
-              className="text-orange-500 hover:text-yellow-500"
-              onClick={toggleMenu}
-            >
-              Contact
-            </Link>
-            <button
-              onClick={() => {
-                toggleCart();
-                toggleMenu();
-              }}
-              className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
-            >
-              <FaShoppingCart size={24} />
-              <span className="ml-2">{isCartOpen ? "Hide Cart" : "Show Cart"}</span>
-            </button>
-          </div>
-        )}
       </div>
     </nav>
   );
