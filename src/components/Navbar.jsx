@@ -18,7 +18,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               to="/"
               className="text-xl font-bold text-black hover:text-orange-500"
             >
-              THE OAkBErrY
+              THE OAkBErry
             </Link>
           </div>
           <div className="md:hidden">
