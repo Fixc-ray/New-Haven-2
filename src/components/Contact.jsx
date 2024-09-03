@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import table from "../images/slide.jpg"
+import review from "../images/slide2.jpg"
 
 function Contact() {
   const navigate = useNavigate();
@@ -8,13 +10,12 @@ function Contact() {
     <div>
       <div className="mt-20"></div>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 m-6">
-        {/* Book A Table Div */}
         <div
           className="relative bg-white rounded-lg shadow-md hover:shadow-xl cursor-pointer w-full md:w-1/2"
           onClick={() => navigate("/reservation")} 
         >
           <img
-            src="https://images.unsplash.com/photo-1645348210093-42dcad20c2e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRhYmxlJTIwcmVzdGF1cmFudCUyMGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D"
+            src={table}
             alt="Book a Table"
             className="rounded-lg w-full h-64 object-cover"
           />
@@ -24,12 +25,11 @@ function Contact() {
           </h2>
         </div>
 
-        {/* Leave a Review Div */}
         <div
           className="relative bg-white rounded-lg shadow-md hover:shadow-xl cursor-pointer w-full md:w-1/2"
         >
           <img
-            src="https://images.unsplash.com/photo-1609405978461-63be963705b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJldmlldyUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D"
+          src={review}
             alt="Leave a Review"
             className="rounded-lg w-full h-64 object-cover"
           />

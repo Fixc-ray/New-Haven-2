@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
+import Footer from "./Footer "
 
 function Menu({ isCartOpen }) {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -23,11 +24,12 @@ function Menu({ isCartOpen }) {
         ENJOY OUR FINGER-LICKING MEALS
       </h1>
       
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col-reverse md:flex-row mb-20">
         <div className="flex-1 mt-8 md:mt-0">
           <Search foods={foods} addToCart={addToCart} />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
