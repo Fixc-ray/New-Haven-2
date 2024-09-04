@@ -13,6 +13,7 @@ function TopMenus() {
           />
         </div>
         <div className="flex flex-col space-y-4">
+          <h1>hello</h1>
           <div className="bg-white shadow-md rounded-lg w-[20rem] md:w-[30rem] h-40 md:h-60 overflow-hidden">
             <img
               className="w-full h-full object-cover"

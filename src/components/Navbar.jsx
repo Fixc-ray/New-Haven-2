@@ -25,6 +25,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             <button
               onClick={toggleMenu}
               className="text-black focus:outline-none"
+              aria-label="Toggle menu"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -43,8 +44,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               CONTACT
             </Link>
             <Link
-            to="/Cart"
-              onClick={toggleCart}
+              to="/Cart"
               className="text-orange-500 hover:text-yellow-500 flex items-center"
             >
               <FaShoppingCart size={24} />
@@ -52,6 +52,39 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             </Link>
           </div>
         </div>
+        {isOpen && (
+          <div className="md:hidden flex flex-col space-y-4 mt-4">
+            <Link
+              to="/"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              HOME
+            </Link>
+            <Link
+              to="/Menu"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              MENU
+            </Link>
+            <Link
+              to="/Contact"
+              className="text-orange-500 hover:text-yellow-500"
+              onClick={toggleMenu}
+            >
+              CONTACT
+            </Link>
+            <Link
+  to="/Cart"
+  className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
+>
+  <FaShoppingCart size={24} />
+  <span className="ml-2">CART</span>
+</Link>
+
+          </div>
+        )}
       </div>
     </nav>
   );
