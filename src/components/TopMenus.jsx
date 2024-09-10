@@ -4,7 +4,7 @@ function TopMenus() {
   return (
     <div>
       <h2 className="text-2xl md:text-3xl mt-8 text-center">oUr Top MEnuS</h2>
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch mt-8 space-y-4 md:space-y-0 md:space-x-4 mb-12">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch mt-4 space-y-4 md:space-y-0 md:space-x-4 mb-12 md:space-x-8 m-6">
         <div className="bg-white shadow-md rounded-lg w-[20rem] md:w-[30rem] h-60 md:h-70 mt-2 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBpenphJTIwYXN0aGV0aWN8ZW58MHx8MHx8fDA%3D"

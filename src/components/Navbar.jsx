@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 const Navbar = ({ isCartOpen, toggleCart }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,13 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               <FaShoppingCart size={24} />
               <span className="ml-2">CART</span>
             </Link>
+            <Link
+              to="/like"
+              className="text-orange-500 hover:text-yellow-500 flex items-center"
+            >
+              <FaHeart size={24}/>
+              <span className="ml-2">Liked Meals</span>
+            </Link>
           </div>
         </div>
         {isOpen && (
@@ -76,13 +84,19 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               CONTACT
             </Link>
             <Link
-  to="/Cart"
-  className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
->
-  <FaShoppingCart size={24} />
-  <span className="ml-2">CART</span>
-</Link>
-
+              to="/Cart"
+              className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
+            >
+              <FaShoppingCart size={24} />
+              <span className="ml-2">CART</span>
+            </Link>
+            <Link
+              to="/liked"
+              className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
+            >
+              <FaHeart size={24}/>
+              <span className="ml-2">Liked Meals</span>
+            </Link>
           </div>
         )}
       </div>
