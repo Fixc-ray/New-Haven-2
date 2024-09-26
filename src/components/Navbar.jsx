@@ -52,7 +52,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               <span className="ml-2">CART</span>
             </Link>
             <Link
-              to="/like"
+              to="/Liked"
               className="text-orange-500 hover:text-yellow-500 flex items-center"
             >
               <FaHeart size={24}/>
@@ -91,7 +91,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               <span className="ml-2">CART</span>
             </Link>
             <Link
-              to="/liked"
+              to="/Liked"
               className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
             >
               <FaHeart size={24}/>

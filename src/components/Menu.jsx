@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
-import Footer from "./Footer "
 
 function Menu(addToCart) {
   const url = "https://oakberry-backend.vercel.app/foodItems";

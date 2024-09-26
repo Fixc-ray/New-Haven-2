@@ -1,10 +1,10 @@
 import React from 'react'
 
-function LikedMeals() {
+function LikedMeals({liked}) {
   return (
-    <div className='mt-20'>
-        <h3>No Liked Meals</h3>
-    </div>
+    <div className="mt-20">
+      <p>No liked Foods</p>
+  </div>
   )
 }
 

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./Cart";
 import { FaHeart } from "react-icons/fa";
+import LikedMeals from "./LikedMeals";
 
 function Item({ food }) {
   const [cartItems, setCartItems] = useState([]);
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(false, []);
 
   const addToCart = (food) => {
     setCartItems([...cartItems, food]);
@@ -16,6 +17,7 @@ function Item({ food }) {
   };
   const toggleLike = () => {
     setLiked(!liked);
+    setLiked([...liked, food])
     window.alert(`${food.name} Has Been Added To Favourite Meals  `);
   };
   return (
@@ -27,6 +29,13 @@ function Item({ food }) {
             <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
           }
         />
+        <Route
+          path="/Liked"
+          element={
+            <LikedMeals liked={liked} removeFromCart={removeFromCart} />
+          }
+        />
+        
       </Routes>
 
       <div key={food.id} className="border p-4 m-4 w-80 rounded shadow-md">
