@@ -99,7 +99,7 @@ function Home() {
               THE OAkBErry
             </h1>
 
-            <h2 className="absolute top-[30%] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-20 pt-4">
+            <h2 className="absolute top-[30%] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-20 pt-6">
               Come Dine With
             </h2>
 
