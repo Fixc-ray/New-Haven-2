@@ -2,12 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import table from "../images/slide.jpg"
 import review from "../images/slide2.jpg"
+import Navbar from "./Navbar"
 
 function Contact() {
   const navigate = useNavigate();
 
   return (
     <div>
+      <Navbar />
       <div className="mt-20"></div>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 m-6">
         <div

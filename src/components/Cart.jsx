@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart }) {
   return (
     <div className="mt-20">
+      <Navbar />
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (

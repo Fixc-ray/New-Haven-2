@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search";
+import Navbar from "./Navbar"
 
 function Menu(addToCart) {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -13,6 +14,7 @@ function Menu(addToCart) {
   }, []);
   return (
     <div className="mt-20 px-4">
+      <Navbar />
       <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center ">
         ENJOY OUR FINGER-LICKING MEALS
       </h1>

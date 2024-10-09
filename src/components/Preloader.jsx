@@ -1,6 +1,5 @@
-// src/components/Preloader.js
 import React from "react";
-import "./Preloader.css"; // Add custom styles
+import "./Preloader.css";
 
 function Preloader() {
   return (
