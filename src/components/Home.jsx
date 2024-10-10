@@ -13,11 +13,10 @@ function Home() {
     const timers = [];
 
     const spellFriends = () => {
-      const friends = "Friends";
-      let currentText = "";
+      const friends = " Friends";
       for (let i = 0; i < friends.length; i++) {
         timers.push(setTimeout(() => {
-          setFriendsText(prev => prev + friends[i]);
+          setFriendsText((prev) => prev + friends[i]);
           if (i === friends.length - 1) {
             timers.push(setTimeout(() => {
               deleteFriends();
@@ -28,11 +27,10 @@ function Home() {
     };
 
     const deleteFriends = () => {
-      const friends = "Friends";
-      let currentText = friends;
+      const friends = " Friends";
       for (let i = friends.length - 1; i >= 0; i--) {
         timers.push(setTimeout(() => {
-          setFriendsText(prev => prev.slice(0, -1));
+          setFriendsText((prev) => prev.slice(0, -1));
           if (i === 0) {
             timers.push(setTimeout(() => {
               spellFamily();
@@ -43,11 +41,10 @@ function Home() {
     };
 
     const spellFamily = () => {
-      const family = "Family";
-      let currentText = "";
+      const family = " Family";
       for (let i = 0; i < family.length; i++) {
         timers.push(setTimeout(() => {
-          setFamilyText(prev => prev + family[i]);
+          setFamilyText((prev) => prev + family[i]);
           if (i === family.length - 1) {
             timers.push(setTimeout(() => {
               deleteFamily();
@@ -58,11 +55,10 @@ function Home() {
     };
 
     const deleteFamily = () => {
-      const family = "Family";
-      let currentText = family;
+      const family = " Family";
       for (let i = family.length - 1; i >= 0; i--) {
         timers.push(setTimeout(() => {
-          setFamilyText(prev => prev.slice(0, -1));
+          setFamilyText((prev) => prev.slice(0, -1));
           if (i === 0) {
             timers.push(setTimeout(() => {
               spellFriends();
@@ -79,7 +75,7 @@ function Home() {
     }, 5000);
 
     return () => {
-      timers.forEach(timer => clearTimeout(timer));
+      timers.forEach((timer) => clearTimeout(timer));
       clearTimeout(timer);
     };
   }, []);
@@ -95,19 +91,23 @@ function Home() {
             <img className="w-full h-full object-cover" src={Front} alt="Front" />
             <div className="absolute inset-0 bg-black opacity-50"></div>
 
-            <h1 className="absolute inset-0 flex items-center justify-center text-4xl md:text-6xl font-bold mb-12 text-orange-500">
+            {/* Main heading */}
+            <h1 className="absolute inset-0 flex items-center justify-center text-3xl sm:text-4xl md:text-6xl font-bold mb-12 text-white">
               THE OAkBErry
             </h1>
 
-            <h2 className="absolute top-[30%] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-20 pt-6">
-              Come Dine With
-            </h2>
-
-            <h2 className="absolute top-[50%] left-1/2 transform -translate-x-1/2 text-white text-xl sm:text-2xl md:text-4xl font-bold text-center">
-              <span className="block mt-6 sm:mt-8 md:mt-10 text-yellow-500 mt-16 pt-6 ">
+            {/* Dine With Friends/Family Text */}
+            <h1 className="absolute top-[30%] left-1/2 transform -translate-x-1/2 text-2xl sm:text-3xl md:text-6xl font-bold mt-20 pt-6 text-center text-white">
+              Dine With  
+              <span className="text-orange-500">
                 {friendsText}{familyText}
               </span>
-            </h2>
+            </h1>
+
+            {/* Tagline Text */}
+            <h1 className="absolute top-[70%] left-1/2 transform -translate-x-1/2 text-2xl sm:text-4xl md:text-5xl mb-12 text-orange-500 text-center">
+              DELICIOUS & DELIGHTFUL
+            </h1>
           </div>
           <TopMenus />
         </>
