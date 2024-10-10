@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function Cart({ cartItems = [], removeFromCart }) {
   const totalPrice = cartItems.reduce((total, food) => total + food.price * food.quantity, 0);
   const checkout = () => {
-    window.alert(`CHECKING OUT`)
+    window.alert(`CHECKING OUT....`)
   }
 
   return (
@@ -40,7 +40,7 @@ function Cart({ cartItems = [], removeFromCart }) {
           {/* Display Total Price */}
           <div className="bg-white shadow-md p-4 text-right mt-10">
             <h2 className="text-2xl font-semibold">Total: KSH {totalPrice}</h2>
-            <button>Checkout</button>
+            <button onClick={checkout}>Checkout</button>
           </div>
         </div>
       )}
