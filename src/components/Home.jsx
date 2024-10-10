@@ -105,7 +105,7 @@ function Home() {
 
             <h2 className="absolute top-[50%] left-1/2 transform -translate-x-1/2 text-white text-xl sm:text-2xl md:text-4xl font-bold text-center">
               <span className="block mt-6 sm:mt-8 md:mt-10 text-yellow-500 mt-16 pt-6 ">
-                {friendsText}&nbsp;{familyText}
+                {friendsText}{familyText}
               </span>
             </h2>
           </div>
