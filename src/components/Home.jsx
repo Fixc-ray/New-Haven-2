@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Front from "../images/Front.jpg";
-import TopMenus from "./TopMenus";
+import Footer from "./Footer ";
 import Navbar from "./Navbar";
-import Preloader from "./Preloader"; // Ensure this component exists
+import Preloader from "./Preloader"; 
+import About from "./About";
 
 function Home() {
   const [friendsText, setFriendsText] = useState("");
@@ -106,10 +107,12 @@ function Home() {
 
             {/* Tagline Text */}
             <h1 className="absolute top-[70%] left-1/2 transform -translate-x-1/2 text-2xl sm:text-4xl md:text-5xl mb-12 text-orange-500 text-center">
-              DELICIOUS & DELIGHTFUL
+              DELICIoUS & DELIGHTFUL
             </h1>
           </div>
-          <TopMenus />
+          <About />
+          <Footer />
+          
         </>
       )}
     </div>

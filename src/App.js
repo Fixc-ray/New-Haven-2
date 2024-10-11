@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 import LikedMeals from "./components/LikedMeals";
 import { useEffect, useState } from "react";
 import AddMenu from "./components/AddMenu";
+import Login from "./components/Login"
 
 function App() {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -73,10 +74,11 @@ window.alert(`${food.name} has been added to the cart!`);
           <Route path="/Reservation" element={<Reservation />} />
           <Route path="/Cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path="/Liked" element={<LikedMeals />} />
-          <Route path="Add" element={<AddMenu />} />/
+          <Route path="add" element={<AddMenu />} />/
+          <Route path="Admin" element={<Login />}/>
         </Routes>
     </div>
-  );
+  );// src/Login.js
 }
 
 export default App;
