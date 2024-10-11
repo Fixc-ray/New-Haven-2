@@ -1,0 +1,15 @@
+.gallery img.small {
+    width: 100px;
+    height: auto;
+  }
+  
+  .gallery img.medium {
+    width: 200px;
+    height: auto;
+  }
+  
+  .gallery img.large {
+    width: 300px;
+    height: auto;
+  }
+  

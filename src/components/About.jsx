@@ -1,11 +1,13 @@
 import React from "react";
 import about from "../images/about.jpg";
-import Map from "./Map";
 
 function About() {
   return (
     <div>
+      {/* Main container with responsive margin and padding */}
       <div className="flex flex-col md:flex-row items-start space-x-0 md:space-x-8 ml-4 mr-4 md:ml-8 md:mr-8 p-4 md:p-8">
+        
+        {/* Left section: Text content */}
         <div className="w-full md:w-1/2">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-4 text-justify text-orange-500">
             ABOUT US
@@ -31,23 +33,28 @@ function About() {
             That's how The OakBerry came into reality.
           </p>
         </div>
+        
+        {/* Right section: Image content */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={about}
             alt="About"
-            className="w-full h-auto rounded-full object-cover mt-8 md:mt-16 border-8 border-azure"
+            className="w-full h-auto rounded-full object-cover mt-8 md:mt-16 border-4 md:border-8 border-azure"
           />
         </div>
       </div>
-      <div className="p-4 mx-10">
+
+      {/* Google Map iframe section */}
+      <div className="p-4 mx-4 md:mx-10">
         <iframe
           width="100%"
           height="400"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
-          marginheight="0"
-          marginwidth="0"
+          marginHeight="0"
+          marginWidth="0"
           src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=the%20oakberry%20+(The%20Oakberry)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          title="Google Map"
         >
           <a href="https://www.gps.ie/">gps tracker sport</a>
         </iframe>
