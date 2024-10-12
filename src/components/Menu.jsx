@@ -2,7 +2,7 @@ import React from "react";
 import Search from "./Search";
 import Navbar from "./Navbar";
 
-function Menu({ foods, addToCart }) {  // Ensure addToCart is destructured from props
+function Menu({ foods, addToCart, addToLikedMeals }) {  // Ensure addToCart is destructured from props
   return (
     <div className="mt-20 px-4">
       <Navbar />
@@ -12,7 +12,7 @@ function Menu({ foods, addToCart }) {  // Ensure addToCart is destructured from 
 
       <div className="flex flex-col-reverse md:flex-row mb-20">
         <div className="flex-1 mt-8 md:mt-0">
-          <Search foods={foods} addToCart={addToCart} /> {/* Pass addToCart down */}
+          <Search foods={foods} addToCart={addToCart} addToLikedMeals={addToLikedMeals} /> {/* Pass addToCart down */}
         </div>
       </div>
     </div>

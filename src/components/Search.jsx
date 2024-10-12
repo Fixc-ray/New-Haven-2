@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Item from "./Item";
 
-function Search( { foods, addToCart } ) {
+function Search( { foods, addToCart, addToLikedMeals } ) {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("");
 
@@ -44,7 +44,7 @@ function Search( { foods, addToCart } ) {
       </div>
       <div className="flex flex-wrap justify-center">
         {filteredFoods.map((food) => (
-          <Item key={food.id} food={food} addToCart={ addToCart } />
+          <Item key={food.id} food={food} addToCart={ addToCart } addToLikedMeals={addToLikedMeals}/>
         ))}
       </div>
     </div>

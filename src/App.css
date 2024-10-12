@@ -36,3 +36,6 @@
 body {
   font-family: 'laginchy', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
