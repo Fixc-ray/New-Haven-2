@@ -1,10 +1,8 @@
-// Home.js
 import React, { useEffect, useState } from "react";
 import Front from "../images/Front.jpg";
 import Footer from "./Footer ";
 import Navbar from "./Navbar";
 import About from "./About";
-import Gallery from "./Gallery";
 
 function Home() {
   const [friendsText, setFriendsText] = useState("");
@@ -86,7 +84,6 @@ function Home() {
         </h1>
       </div>
       <About />
-      <Gallery />
       <Footer />
     </div>
   );

@@ -1,14 +1,43 @@
 import React from "react";
+import emailjs from "emailjs-com"; // Import EmailJS
 import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
+  // Calculate the total price
   const totalPrice = cartItems.reduce(
     (total, food) => total + food.price * food.quantity,
     0
   );
 
+  // Function to handle checkout and send email
   const checkout = () => {
-    window.alert(`CHECKING OUT...`);
+    // Prepare the cart details as a string for the email body
+    const cartDetails = cartItems
+      .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
+      .join("\n");
+
+    // Define the parameters to send to EmailJS
+    const emailParams = {
+      to_email: "goriderray@gmail.com", // Replace with your email
+      cart_details: cartDetails,
+      total_price: `KSH ${totalPrice}`,
+    };
+
+    // Use EmailJS to send the email
+    emailjs
+      .send(
+        "service_koac7yy",  // Replace with your Service ID
+        "template_al29uyy", // Replace with your Template ID
+        emailParams,
+        "m5okyqReJXrsKPd_J"      // Replace with your User ID
+      )
+      .then(() => {
+        alert("Email sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        alert("Failed to send email.");
+      });
   };
 
   return (
@@ -33,7 +62,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
                   <button
                     onClick={() => updateCartQuantity(food.id, food.quantity - 1)}
                     className="bg-gray-300 px-2 py-1 rounded hover:bg-gray-400"
-                    disabled={food.quantity <= 1} 
+                    disabled={food.quantity <= 1}
                   >
                     -
                   </button>
