@@ -18,10 +18,10 @@ function Reservation() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page reload on form submit
+    e.preventDefault(); 
 
     const emailParams = {
-      to_email: "restaurant@example.com", // Replace with your recipient's email
+      to_email: "restaurant@example.com", 
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
@@ -33,15 +33,15 @@ function Reservation() {
 
     emailjs
       .send(
-        "service_koac7yy", // Replace with your EmailJS service ID
-        "template_wgpp21p", // Replace with your EmailJS template ID
+        "service_koac7yy", 
+        "template_wgpp21p",
         emailParams,
-        "m5okyqReJXrsKPd_J"  // Replace with your EmailJS public key
+        "m5okyqReJXrsKPd_J"
       )
       .then(() => {
         alert("Reservation email sent successfully!");
 
-        // Reset the form fields
+        
         setFormData({
           name: "",
           email: "",

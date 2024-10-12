@@ -38,14 +38,14 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
 
     emailjs
       .send(
-        "service_koac7yy", // Replace with your EmailJS service ID
-        "template_al29uyy", // Replace with your EmailJS template ID
+        "service_koac7yy", 
+        "template_al29uyy", 
         emailParams,
-        "m5okyqReJXrsKPd_J" // Replace with your EmailJS public key
+        "m5okyqReJXrsKPd_J"
       )
       .then(() => {
         alert("Email sent successfully!");
-        setIsModalOpen(false); // Close modal on success
+        setIsModalOpen(false); 
       })
       .catch((error) => {
         console.error("Error sending email:", error);
@@ -133,7 +133,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
               </div>
               <div className="mb-4">
                 <label htmlFor="address" className="block text-gray-700 font-semibold mb-2">
-                  Address
+                  Delivery Address
                 </label>
                 <input
                   type="text"
