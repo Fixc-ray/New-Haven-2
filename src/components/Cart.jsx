@@ -1,38 +1,51 @@
-import React from "react";
-import emailjs from "emailjs-com"; // Import EmailJS
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
-  // Calculate the total price
+  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal visibility
+  const [userData, setUserData] = useState({
+    name: "",
+    address: "",
+    email: "",
+  });
+
   const totalPrice = cartItems.reduce(
     (total, food) => total + food.price * food.quantity,
     0
   );
 
-  // Function to handle checkout and send email
-  const checkout = () => {
-    // Prepare the cart details as a string for the email body
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setUserData({ ...userData, [id]: value });
+  };
+
+  const checkout = (e) => {
+    e.preventDefault(); // Prevent page reload
+
     const cartDetails = cartItems
       .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
       .join("\n");
 
-    // Define the parameters to send to EmailJS
     const emailParams = {
-      to_email: "goriderray@gmail.com", // Replace with your email
+      to_email: "goriderray@gmail.com, rayjustin481@gmail.com",
+      user_name: userData.name,
+      user_address: userData.address,
+      user_email: userData.email,
       cart_details: cartDetails,
       total_price: `KSH ${totalPrice}`,
     };
 
-    // Use EmailJS to send the email
     emailjs
       .send(
-        "service_koac7yy",  // Replace with your Service ID
-        "template_al29uyy", // Replace with your Template ID
+        "service_koac7yy", // Replace with your EmailJS service ID
+        "template_al29uyy", // Replace with your EmailJS template ID
         emailParams,
-        "m5okyqReJXrsKPd_J"      // Replace with your User ID
+        "m5okyqReJXrsKPd_J" // Replace with your EmailJS public key
       )
       .then(() => {
         alert("Email sent successfully!");
+        setIsModalOpen(false); // Close modal on success
       })
       .catch((error) => {
         console.error("Error sending email:", error);
@@ -90,11 +103,76 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
           <div className="bg-white shadow-md p-4 text-right mt-10">
             <h2 className="text-2xl font-semibold">Total: KSH {totalPrice}</h2>
             <button
-              onClick={checkout}
+              onClick={() => setIsModalOpen(true)} // Open modal on click
               className="bg-green-500 text-white px-6 py-2 rounded shadow-md hover:bg-green-700 mt-4"
             >
               Checkout
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 className="text-2xl font-bold mb-6 text-center">Checkout Details</h2>
+            <form onSubmit={checkout}>
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={userData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="address" className="block text-gray-700 font-semibold mb-2">
+                  Address
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  value={userData.address}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={userData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                  required
+                />
+              </div>
+              <div className="flex justify-between mt-6">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)} // Close modal on cancel
+                  className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
