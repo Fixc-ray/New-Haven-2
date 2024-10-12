@@ -8,8 +8,6 @@ import Reservation from "./components/Resavation";
 import Cart from "./components/Cart";
 import LikedMeals from "./components/LikedMeals";
 import { useEffect, useState } from "react";
-import AddMenu from "./components/AddMenu";
-import Login from "./components/Login";
 import Preloader from "./components/Preloader";
 
 function App() {
@@ -135,8 +133,6 @@ function App() {
             />
           }
         />
-        <Route path="/add" element={<AddMenu />} />
-        <Route path="/Admin" element={<Login />} />
       </Routes>
     </div>
   );
