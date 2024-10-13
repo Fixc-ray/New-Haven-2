@@ -29,7 +29,7 @@ const Login = () => {
         }, 0);
       }
     } catch (err) {
-      setError('Invalid username or password'); // Show error if login fails
+      window.alert('Invalid username or password'); // Show error if login fails
     }
   };
 
