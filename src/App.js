@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom"; // Add Navigate import
 import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
@@ -9,13 +9,16 @@ import Cart from "./components/Cart";
 import LikedMeals from "./components/LikedMeals";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
+import AdminDashboard from "./components/Admins/AdminsDashboard";
+import Login from "./components/Admins/Login";
+import AddMenu from "./components/Admins/AddMenu";
+import ProtectedRoute from "./components/Admins/ProtectedRoute";
 
 function App() {
   const url = "https://oakberry-backend.vercel.app/foodItems";
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Load cart and liked meals from localStorage on initial render
   const [cartItems, setCartItems] = useState(() => {
     const storedCart = localStorage.getItem("cartItems");
     return storedCart ? JSON.parse(storedCart) : [];
@@ -38,11 +41,9 @@ function App() {
         setTimeout(() => setLoading(false), 3000);
       }
     };
-
     fetchData();
   }, []);
 
-  // Save cart items to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
@@ -58,7 +59,6 @@ function App() {
         return [...prevCartItems, { ...food, quantity: 1 }];
       }
     });
-
     window.alert(`${food.name} has been added to the cart!`);
   };
 
@@ -80,7 +80,6 @@ function App() {
     setLikedMeals((prevLikedMeals) => {
       const isAlreadyLiked = prevLikedMeals.some((item) => item.id === food.id);
       if (isAlreadyLiked) return prevLikedMeals;
-
       const updatedLikedMeals = [...prevLikedMeals, food];
       localStorage.setItem("likedMeals", JSON.stringify(updatedLikedMeals));
       return updatedLikedMeals;
@@ -95,6 +94,8 @@ function App() {
     });
   };
 
+  const isAuthenticated = () => !!localStorage.getItem('adminToken');
+
   if (loading) return <Preloader />;
 
   return (
@@ -104,35 +105,32 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/Menu"
-          element={
-            <Menu
-              foods={foods}
-              addToCart={addToCart}
-              addToLikedMeals={addToLikedMeals}
-            />
-          }
+          element={<Menu foods={foods} addToCart={addToCart} addToLikedMeals={addToLikedMeals} />}
         />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Reservation" element={<Reservation />} />
         <Route
           path="/Cart"
-          element={
-            <Cart
-              cartItems={cartItems}
-              removeFromCart={removeFromCart}
-              updateCartQuantity={updateCartQuantity}
-            />
-          }
+          element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} updateCartQuantity={updateCartQuantity} />}
         />
         <Route
           path="/Liked"
-          element={
-            <LikedMeals
-              likedMeals={likedMeals}
-              removeFromLikedMeals={removeFromLikedMeals}
-            />
-          }
+          element={<LikedMeals likedMeals={likedMeals} removeFromLikedMeals={removeFromLikedMeals} />}
         />
+        <Route path="/admin/login" element={<Login />} />
+        <Route
+          path="/admin/dashboard"
+          element={<ProtectedRoute>
+            <AdminDashboard />
+          </ProtectedRoute>}
+        />
+        <Route
+          path="/admin/add-menu"
+          element={<ProtectedRoute>
+            <AddMenu />
+          </ProtectedRoute>}
+        />
+
       </Routes>
     </div>
   );
