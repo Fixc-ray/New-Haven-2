@@ -13,6 +13,8 @@ import AdminDashboard from "./components/Admins/AdminsDashboard";
 import Login from "./components/Admins/Login";
 import AddMenu from "./components/Admins/AddMenu";
 import ProtectedRoute from "./components/Admins/ProtectedRoute";
+import DeleteMenu from "./components/Admins/DeleteMenu";
+import EditMenu from "./components/Admins/EditMenu";
 
 function App() {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -130,7 +132,18 @@ function App() {
             <AddMenu />
           </ProtectedRoute>}
         />
-
+         <Route
+          path="/admin/delete"
+          element={<ProtectedRoute>
+            <DeleteMenu />
+          </ProtectedRoute>}
+        />
+        <Route
+          path="/admin/edit"
+          element={<ProtectedRoute>
+            <EditMenu />
+          </ProtectedRoute>}
+        />
       </Routes>
     </div>
   );
