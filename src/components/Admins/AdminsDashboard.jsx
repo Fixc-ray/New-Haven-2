@@ -1,8 +1,28 @@
-// src/components/Admins/AdminsDashboard.js
-import React from 'react';
+// src/components/Admins/AdminDashboard.js
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// Adjust the path to your JSON file as needed.
+const MENU_JSON_URL = 'https://oakberry-backend.vercel.app/foodItems'; 
+
 const AdminDashboard = () => {
+  const [menuCount, setMenuCount] = useState(0); // State for total menu items
+
+  // Fetch menu items and update the count
+  useEffect(() => {
+    const fetchMenuItems = async () => {
+      try {
+        const response = await fetch(MENU_JSON_URL);
+        const data = await response.json();
+        setMenuCount(data.length); // Set the menu count
+      } catch (error) {
+        console.error('Failed to fetch menu items:', error);
+      }
+    };
+
+    fetchMenuItems();
+  }, []); // Empty dependency array to run once when component mounts
+
   return (
     <div className="min-h-screen bg-gray-100 mt-16 p-8">
       <h1 className="text-4xl font-bold text-gray-800 mb-8">Admin Dashboard</h1>
@@ -19,7 +39,8 @@ const AdminDashboard = () => {
         </div>
         <div className="bg-white shadow-md p-6 rounded-lg">
           <h2 className="text-xl font-semibold text-gray-700">Total Menu Items</h2>
-          <p className="text-2xl font-bold text-purple-600">25</p>
+          {/* Display the dynamic menu item count here */}
+          <p className="text-2xl font-bold text-purple-600">{menuCount}</p>
         </div>
         <div className="bg-white shadow-md p-6 rounded-lg">
           <h2 className="text-xl font-semibold text-gray-700">New Reservations</h2>
