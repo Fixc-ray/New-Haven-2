@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate} from "react-router-dom";
 
 function AddMenu() {
   const [items, setItems] = useState([]); // Corrected from 'item' to 'items'
@@ -6,6 +7,7 @@ function AddMenu() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [image_url, setImageUrl] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +38,11 @@ function AddMenu() {
     setPrice("");
     setCategory("");
     setImageUrl("");
+
+    navigate("/admin/dashbord");
+    window.alert("Item added successfully");
+    window.location.reload();
+
   };
 
   return (

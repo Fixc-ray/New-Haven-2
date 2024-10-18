@@ -15,6 +15,7 @@ import AddMenu from "./components/Admins/AddMenu";
 import ProtectedRoute from "./components/Admins/ProtectedRoute";
 import DeleteMenu from "./components/Admins/DeleteMenu";
 import EditMenu from "./components/Admins/EditMenu";
+import Featured from "./components/Featured";
 
 function App() {
   const url = "https://oakberry-backend.vercel.app/foodItems";
@@ -144,6 +145,7 @@ function App() {
             <EditMenu />
           </ProtectedRoute>}
         />
+        <Route path="/feature" element={<Featured food={foods}/>} />
       </Routes>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EditMenu() {
   const [items, setItems] = useState([]); // Stores all items
@@ -7,7 +8,8 @@ function EditMenu() {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image_url, setImageUrl] = useState("");
-  const [searchQuery, setSearchQuery] = useState(""); // New state for search input
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const navigate = useNavigate();
 
   // Fetch all items when the component loads
   useEffect(() => {
@@ -66,12 +68,16 @@ function EditMenu() {
       item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  const back = () => {
+    navigate("/admin/dashboard");
+  };
 
   return (
     <div className="p-6 w-80 mx-auto bg-white mt-20">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
         EDIT ITEMS
       </h2>
+      <button onClick={back} className="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-700 focus:outline-none mb-4">Back</button>
 
       {/* Search Input */}
       <input

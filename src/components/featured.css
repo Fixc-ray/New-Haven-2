@@ -1,0 +1,113 @@
+/* Featured Section */
+.featured-products {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .types-of-food {
+    margin-bottom: 2rem;
+  }
+  
+  .types-of-food h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .types-of-food p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Swiper Styles */
+  .swiper-container-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .swiper-container {
+    width: 100%;
+  }
+  
+  .swiper-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .food-image {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .food-type {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+  }
+  
+  .food-description {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Navigation Arrows */
+  .swiper-prev,
+  .swiper-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .swiper-prev {
+    left: 0;
+  }
+  
+  .swiper-next {
+    right: 0;
+  }
+  
+  .swiper-prev:hover,
+  .swiper-next:hover {
+    color: #ff6347; /* Optional: Hover color for navigation arrows */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .food-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .food-image {
+      width: 120px;
+      height: 120px;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  

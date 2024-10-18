@@ -3,6 +3,7 @@ import Front from "../images/Front.jpg";
 import Footer from "./Footer ";
 import Navbar from "./Navbar";
 import About from "./About";
+import Featured from "./Featured";
 
 function Home() {
   const [friendsText, setFriendsText] = useState("");
@@ -84,6 +85,7 @@ function Home() {
         </h1>
       </div>
       <About />
+      <Featured />
       <Footer />
     </div>
   );
