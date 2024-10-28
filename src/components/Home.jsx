@@ -85,7 +85,6 @@ function Home() {
         </h1>
       </div>
       <About />
-      <Featured />
       <Footer />
     </div>
   );
