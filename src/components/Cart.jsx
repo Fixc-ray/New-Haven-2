@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import emailjs from "emailjs-com";
 import Navbar from "./Navbar";
 
@@ -8,6 +9,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
     name: "",
     address: "",
     email: "",
+    phoneNumber: "",  // Added phone number for payment
   });
 
   const totalPrice = cartItems.reduce(
@@ -20,8 +22,25 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
     setUserData({ ...userData, [id]: value });
   };
 
+  const handlePayment = async () => {
+    try {
+      const tokenResponse = await axios.get("http://localhost:3001/mpesa/token");
+      const token = tokenResponse.data.access_token;
+
+      const response = await axios.post(
+        "http://localhost:3001/mpesa/stkpush",
+        { amount: totalPrice, phoneNumber: userData.phoneNumber },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      alert("Payment initiated! Please complete it on your phone.");
+    } catch (error) {
+      console.error("Payment error", error);
+      alert("Error initiating payment. Try again.");
+    }
+  };
+
   const checkout = (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault();  // Prevent page reload
 
     const cartDetails = cartItems
       .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
@@ -37,15 +56,10 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
     };
 
     emailjs
-      .send(
-        "service_koac7yy", 
-        "template_al29uyy", 
-        emailParams,
-        "m5okyqReJXrsKPd_J"
-      )
+      .send("service_koac7yy", "template_al29uyy", emailParams, "m5okyqReJXrsKPd_J")
       .then(() => {
         alert("Email sent successfully!");
-        setIsModalOpen(false); 
+        setIsModalOpen(false);
       })
       .catch((error) => {
         console.error("Error sending email:", error);
@@ -103,7 +117,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
           <div className="bg-white shadow-md p-4 text-right mt-10">
             <h2 className="text-2xl font-semibold">Total: KSH {totalPrice}</h2>
             <button
-              onClick={() => setIsModalOpen(true)} // Open modal on click
+              onClick={() => setIsModalOpen(true)}
               className="bg-green-500 text-white px-6 py-2 rounded shadow-md hover:bg-green-700 mt-4"
             >
               Checkout
@@ -112,10 +126,10 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
         </div>
       )}
 
-      {/* Modal */}
+      {/* Modal for User and Payment Details */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mt-20">
             <h2 className="text-2xl font-bold mb-6 text-center">Checkout Details</h2>
             <form onSubmit={checkout}>
               <div className="mb-4">
@@ -157,10 +171,23 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
                   required
                 />
               </div>
+              <div className="mb-4">
+                <label htmlFor="phoneNumber" className="block text-gray-700 font-semibold mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  value={userData.phoneNumber}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                  required
+                />
+              </div>
               <div className="flex justify-between mt-6">
                 <button
                   type="button"
-                  onClick={() => setIsModalOpen(false)} // Close modal on cancel
+                  onClick={() => setIsModalOpen(false)}
                   className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500"
                 >
                   Cancel
@@ -168,8 +195,9 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
                 <button
                   type="submit"
                   className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+                  onClick={handlePayment}
                 >
-                  Submit
+                  Pay Now
                 </button>
               </div>
             </form>
@@ -181,3 +209,4 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
 }
 
 export default Cart;
+ 
