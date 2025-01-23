@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Route, Routes, Navigate } from "react-router-dom"; // Add Navigate import
+import { Route, Routes } from "react-router-dom";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
@@ -16,9 +16,10 @@ import ProtectedRoute from "./components/Admins/ProtectedRoute";
 import DeleteMenu from "./components/Admins/DeleteMenu";
 import EditMenu from "./components/Admins/EditMenu";
 import Featured from "./components/Featured";
+import Drinks from "./components/Drinks";
 
 function App() {
-  const url = "https://oakberry-backend.vercel.app/foodItems";
+  const url = "https://new-haven-backend.vercel.app/Breakfast";
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -99,18 +100,17 @@ function App() {
 
   const isAuthenticated = () => !!localStorage.getItem('adminToken');
 
-  if (loading) return <Preloader />;
-
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home addToCart={addToCart}/>} />
         <Route
           path="/Menu"
           element={<Menu foods={foods} addToCart={addToCart} addToLikedMeals={addToLikedMeals} />}
         />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Drinks" element={<Drinks addToCart={addToCart}/>} />
         <Route path="/Reservation" element={<Reservation />} />
         <Route
           path="/Cart"

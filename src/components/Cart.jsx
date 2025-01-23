@@ -9,7 +9,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
     name: "",
     address: "",
     email: "",
-    phoneNumber: "",  // Added phone number for payment
+    phoneNumber: "",  
   });
 
   const totalPrice = cartItems.reduce(

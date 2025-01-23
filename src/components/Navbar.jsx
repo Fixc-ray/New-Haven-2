@@ -19,7 +19,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               to="/"
               className="text-xl font-bold text-black hover:text-orange-500"
             >
-              THE OAkBErry
+              NEW HAVEN
             </Link>
           </div>
           <div className="md:hidden">
@@ -35,9 +35,6 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             <Link to="/" className="text-orange-500 hover:text-yellow-500">
               HOME
             </Link>
-            <Link to="/Menu" className="text-orange-500 hover:text-yellow-500">
-              MENU
-            </Link>
             <Link
               to="/Contact"
               className="text-orange-500 hover:text-yellow-500"
@@ -50,13 +47,6 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             >
               <FaShoppingCart size={24} />
               <span className="ml-2">CART</span>
-            </Link>
-            <Link
-              to="/Liked"
-              className="text-orange-500 hover:text-yellow-500 flex items-center"
-            >
-              <FaHeart size={24}/>
-              <span className="ml-2">Liked Meals</span>
             </Link>
           </div>
         </div>
@@ -70,13 +60,6 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
               HOME
             </Link>
             <Link
-              to="/Menu"
-              className="text-orange-500 hover:text-yellow-500"
-              onClick={toggleMenu}
-            >
-              MENU
-            </Link>
-            <Link
               to="/Contact"
               className="text-orange-500 hover:text-yellow-500"
               onClick={toggleMenu}
@@ -89,13 +72,6 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
             >
               <FaShoppingCart size={24} />
               <span className="ml-2">CART</span>
-            </Link>
-            <Link
-              to="/Liked"
-              className="text-orange-500 hover:text-yellow-500 flex items-center justify-center"
-            >
-              <FaHeart size={24}/>
-              <span className="ml-2">Liked Meals</span>
             </Link>
           </div>
         )}

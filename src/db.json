@@ -1,214 +1,960 @@
 {
-  "foodItems": [
+  "beers": [
     {
-      "id": 1,
-      "name": "Margherita Pizza",
-      "price": 9.99,
-      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TWFyZ2VoZXJpdGElMjBwaXp6YXxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Brunch"
+      "name": "WHITE CUP LAGER",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 2,
-      "name": "Caesar Salad",
-      "price": 7.49,
-      "imageUrl": "https://images.unsplash.com/photo-1582034986517-30d163aa1da9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhZXNhciUyMHNhbGFkfGVufDB8fDB8fHww",
-      "category": "Brunch"
+      "name": "WHITE CUP CRISP",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 3,
-      "name": "Grilled Chicken Sandwich",
-      "price": 8.99,
-      "imageUrl": "https://images.unsplash.com/photo-1655195672061-90c23e3e8026?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JpbGxlZCUyMGNoaWNrZW4lMjBzYW5kd2ljaHxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Dessert"
+      "name": "TUSKER LAGER",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 4,
-      "name": "Spaghetti Carbonara",
-      "price": 12.5,
-      "imageUrl": "https://images.unsplash.com/photo-1713561058969-793049b01712?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3BhZ2hldHRpJTIwY2FyYmFub3JhfGVufDB8fDB8fHww",
-      "category": "Brunch"
+      "name": "TUSKER MALT",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 5,
-      "name": "Avocado Toast",
-      "price": 6.75,
-      "imageUrl": "https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZvY2FkbyUyMHRvYXN0fGVufDB8fDB8fHww",
-      "category": "Dessert"
+      "name": "TUSKER LITE",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 6,
-      "name": "Chocolate Cake",
-      "price": 5.25,
-      "imageUrl": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hvY29sYXRlJTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Dessert"
+      "name": "TUSKER CIDER",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 7,
-      "name": "Beef Burger",
-      "price": 10.99,
-      "imageUrl": "https://images.unsplash.com/photo-1543392765-620e968d2162?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVlZiUyMGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Brunch"
+      "name": "GUINNESS STOUT",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 8,
-      "name": "Greek Salad",
-      "price": 7.99,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1690561082029-0eb2ed65a09f?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z3JlZWslMjBzYWxhZHxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Brunch"
+      "name": "GUINNESS SMOOTH",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 9,
-      "name": "Chicken Tikka Masala",
-      "price": 13.49,
-      "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMFRpa2thJTIwbWFzYWxhfGVufDB8fDB8fHww",
-      "category": "Tea"
+      "name": "BALOZI",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 10,
-      "name": "Fish and Chips",
-      "price": 11.75,
-      "imageUrl": "https://images.unsplash.com/photo-1580217593608-61931cefc821?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmlzaCUyMGFuZCUyMGNoaXBzfGVufDB8fDB8fHww",
-      "category": "Tea"
+      "name": "PILSNER",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 11,
-      "name": "Vegan Burger",
-      "price": 9.99,
-      "imageUrl": "https://images.unsplash.com/photo-1627587780063-1655815c958b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnYW4lMjBidXJnZXJ8ZW58MHx8MHx8fDA%3D",
-      "category": "Dessert"
+      "name": "GUARANA",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 12,
-      "name": "Pepperoni Pizza",
-      "price": 10.5,
-      "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVwcm9uaSUyMFBpenphfGVufDB8fDB8fHww",
-      "category": "Dessert"
+      "name": "BLACK ICE",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 13,
-      "name": "Shrimp Tacos",
-      "price": 8.99,
-      "imageUrl": "https://media.istockphoto.com/id/1063691422/photo/mexican-food-homemade-tacos-with-shrimp-avocado-and-salsa-sauce-on-a-dark-rustic-background.webp?b=1&s=170667a&w=0&k=20&c=7w4qPgp5FeQUZfgo8TvGoQhPVc7-HxCiJmn5nqsbhqI=",
-      "category": "Tea"
+      "name": "PINEAPPLE PUNCH",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 14,
-      "name": "Fettuccine Alfredo",
-      "price": 12.99,
-      "imageUrl": "https://images.unsplash.com/photo-1693609929945-b01ae4f2d602?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmV0dHVjY2luZSUyMEFsZnJlZG98ZW58MHx8MHx8fDA%3D",
-      "category": "Brunch"
+      "name": "SNAPP",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 15,
-      "name": "Pancakes with Maple Syrup",
-      "price": 6.5,
-      "imageUrl": "https://images.unsplash.com/photo-1528301392571-0dfab3c00216?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGFuY2FrZXMlMjB3aXRoJTIwbWFwbGUlMjBzeXJ1cHxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Dessert"
+      "name": "KA",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 16,
-      "name": "BBQ Ribs",
-      "price": 14.99,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1664478272084-532c1bfebd25?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmJxJTIwcmlic3xlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Tea"
+      "name": "MANYATTA",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 17,
-      "name": "Vegetable Stir Fry",
-      "price": 8.25,
-      "imageUrl": "https://images.unsplash.com/photo-1599297915779-0dadbd376d49?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmVnaXRhYmxlJTIwc3RpciUyMGZyeXxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Tea"
+      "name": "HUNTERS DRY",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 18,
-      "name": "Eggs Benedict",
-      "price": 7.5,
-      "imageUrl": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWdncyUyMGJlbmVkaWN0fGVufDB8fDB8fHww",
-      "category": "Brunch"
+      "name": "HUNTERS GOLD",
+      "price": 300,
+      "image": "url_to_image"
     },
     {
-      "id": 19,
-      "name": "STeak and Potatoes",
-      "price": 18.75,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1669261882830-1e504a9abf1d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3RlYWslMjBhYW5kJTIwcG90YXRvZXN8ZW58MHx8MHx8fDA%3D",
-      "category": "Dessert"
+      "name": "SAVANNA DRY",
+      "price": 350,
+      "image": "url_to_image"
     },
     {
-      "id": 20,
-      "name": "Mushroom Risotto",
-      "price": 11.5,
-      "imageUrl": "https://images.unsplash.com/photo-1595908129746-57ca1a63dd4d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaHJvb20lMjByaXNvdHRvfGVufDB8fDB8fHww",
-      "category": "Dessert"
+      "name": "HEINEKEN",
+      "price": 400,
+      "image": "url_to_image"
     },
     {
-      "id": 21,
-      "name": "French Onion Soup",
-      "price": 6.99,
-      "imageUrl": "https://images.unsplash.com/photo-1549396563-92fab230895a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlbmNoJTIwb25pb24lMjBzb3VwfGVufDB8fDB8fHww",
-      "category": "Tea"
+      "name": "HEINEKEN ZERO",
+      "price": 400,
+      "image": "url_to_image"
     },
     {
-      "id": 22,
-      "name": "Chicken Caesar Wrap",
-      "price": 8.5,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1700677185925-81d4d3edc860?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGNhZXNhciUyMHdyYXB8ZW58MHx8MHx8fDA%3D",
-      "category": "Brunch"
+      "name": "DESPERADO",
+      "price": 400,
+      "image": "url_to_image"
     },
     {
-      "id": 23,
-      "name": "Sushi Platter",
-      "price": 19.99,
-      "imageUrl": "https://images.unsplash.com/photo-1663334038419-71e6f82e333f?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VzaGklMjBwbGF0dGVyfGVufDB8fDB8fHww",
-      "category": "Tea"
+      "name": "GORDONS & TONIC CAN",
+      "price": 300,
+      "image": "url_to_image"
+    }
+  ],
+  "cigarettes": [
+    {
+      "name": "DUNHILL SINGLE SWITCH",
+      "price": 600,
+      "image": "url_to_image"
     },
     {
-      "id": 24,
-      "name": "Tomato Basil Soup",
-      "price": 5.99,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1675727578994-88bcccb76456?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9tYXRvJTIwYmFzaWwlMjBzb3VwfGVufDB8fDB8fHww",
-      "category": "Brunch"
+      "name": "DUNHILL DOUBLE SWITCH",
+      "price": 600,
+      "image": "url_to_image"
     },
     {
-      "id": 25,
-      "name": "Buffalo Wings",
-      "price": 9.75,
-      "imageUrl": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVmZmFsbyUyMHdpbmdzfGVufDB8fDB8fHww",
-      "category": "Dessert"
+      "name": "EMBASSY LITE",
+      "price": 600,
+      "image": "url_to_image"
+    }
+  ],
+
+  "whiskys": [
+    {
+      "name": "J/W BLACK LABEL",
+      "shot_price": 350,
+      "350ml_price": 2100,
+      "750ml_price": 4500,
+      "1ltr_price": 5600,
+      "image": "url_to_image"
     },
     {
-      "id": 26,
-      "name": "Lasagna",
-      "price": 13.25,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFzYWduYXxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Tea"
+      "name": "JACK DANIELS",
+      "shot_price": 350,
+      "750ml_price": 5000,
+      "image": "url_to_image"
     },
     {
-      "id": 27,
-      "name": "Falafel Wrap",
-      "price": 7.99,
-      "imageUrl": "https://images.unsplash.com/photo-1649138783888-0ec9c3ec2f21?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFsYWZlbCUyMHdyYXB8ZW58MHx8MHx8fDA%3D",
-      "category": "Tea"
+      "name": "JACK DANIELS HONEY",
+      "750ml_price": 5000,
+      "image": "url_to_image"
     },
     {
-      "id": 28,
-      "name": "Pad Thai",
-      "price": 10.5,
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1669150852117-7b1106702067?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFkJTIwdGhhaXxlbnwwfHwwfHx8MA%3D%3D",
-      "category": "Tea"
+      "name": "JAMESON",
+      "shot_price": 250,
+      "350ml_price": 1800,
+      "750ml_price": 3500,
+      "1ltr_price": 4500,
+      "image": "url_to_image"
     },
     {
-      "id": 29,
-      "name": "Blueberry Muffin",
-      "price": 2.75,
-      "imageUrl": "https://images.unsplash.com/photo-1722251172750-3fe7ea552a16?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZWJlcnJ5JTIwbXVmZmlufGVufDB8fDB8fHww",
-      "category": "Brunch"
+      "name": "DOUBLE BLACK J/W",
+      "shot_price": 450,
+      "750ml_price": 7500,
+      "image": "url_to_image"
     },
     {
-      "id": 30,
-      "name": "Tiramisu",
-      "price": 6.99,
-      "imageUrl": "https://images.unsplash.com/photo-1712262582493-01aa9ec5c7f8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGlyYW1pc3V8ZW58MHx8MHx8fDA%3D",
-      "category": "Dessert"
+      "name": "CHIVAS 12YRS",
+      "shot_price": 400,
+      "750ml_price": 5500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TULLAMOR DEW",
+      "350ml_price": 3000,
+      "750ml_price": 3800,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GRANTS",
+      "350ml_price": 3000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "JIM BEAM",
+      "750ml_price": 4000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GENTLEMAN JACK",
+      "shot_price": 350,
+      "750ml_price": 7800,
+      "1ltr_price": 8600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SINGLETON 12YRS",
+      "750ml_price": 6900,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SINGLETON 15YRS",
+      "750ml_price": 9500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GLENLIVET 12YRS",
+      "750ml_price": 7900,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GLENLIVET FOUNDERS RESERVE",
+      "750ml_price": 7000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GLENFIDDICH 12YRS",
+      "750ml_price": 8500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GLENFIDDICH 15YRS",
+      "750ml_price": 13000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "VICEROY",
+      "shot_price": 150,
+      "350ml_price": 1300,
+      "750ml_price": 2500,
+      "image": "url_to_image"
+    }
+  ],
+  "cognacs": [
+    {
+      "name": "HENNESSY VS",
+      "shot_price": 450,
+      "750ml_price": 7100,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MARTEL VS",
+      "shot_price": 400,
+      "750ml_price": 7900,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MARTEL VSOP",
+      "shot_price": 600,
+      "750ml_price": 11500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "REMMY MARTIN VS",
+      "shot_price": 550,
+      "image": "url_to_image"
+    }
+  ],
+  "wines": [
+    {
+      "name": "MUCHO MAS",
+      "glass_price": null,
+      "bottle_price": 3500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TRUMPETER",
+      "glass_price": null,
+      "bottle_price": 3500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "NEDERBURG (MERLOT)",
+      "glass_price": null,
+      "bottle_price": 2800,
+      "image": "url_to_image"
+    },
+    {
+      "name": "NEDERBURG (CHARONAY)",
+      "glass_price": null,
+      "bottle_price": 2500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "NEDERBURG ROSE",
+      "glass_price": null,
+      "bottle_price": 2500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "FRONTERA (Cabernet Sauvignon)",
+      "glass_price": 400,
+      "bottle_price": 2500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "FRONTERA (Chardonnay)",
+      "glass_price": 400,
+      "bottle_price": 2500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "DROSTDY HOF RED/WHITE",
+      "glass_price": 300,
+      "bottle_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "ROBERTSON RED/WHITE",
+      "glass_price": null,
+      "bottle_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "4TH STREET RED/WHITE",
+      "glass_price": 300,
+      "bottle_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "FOUR COUSINS RED/WHITE",
+      "glass_price": 300,
+      "bottle_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "CELLAR CASK RED/WHITE",
+      "glass_price": 300,
+      "bottle_price": 1500,
+      "image": "url_to_image"
+    }
+  ],
+  "gins": [
+    {
+      "name": "HENDRICKS",
+      "shot_price": null,
+      "350ml_price": null,
+      "750ml_price": 7200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TANQUERAY 10",
+      "shot_price": null,
+      "350ml_price": null,
+      "750ml_price": 6500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TANQUERAY DRY GIN",
+      "shot_price": 350,
+      "350ml_price": null,
+      "750ml_price": 4500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MALFY PINK",
+      "shot_price": 250,
+      "350ml_price": null,
+      "750ml_price": 5200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MALFY",
+      "shot_price": 250,
+      "350ml_price": null,
+      "750ml_price": 5200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GORDONS DRY GIN",
+      "shot_price": 200,
+      "350ml_price": 1300,
+      "750ml_price": 3000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GORDONS LEMON",
+      "shot_price": 200,
+      "350ml_price": null,
+      "750ml_price": 3000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GORDONS PINK",
+      "shot_price": 200,
+      "350ml_price": null,
+      "750ml_price": 3000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "BEEFEATER",
+      "shot_price": null,
+      "350ml_price": null,
+      "750ml_price": 2500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GILBEYS",
+      "shot_price": 150,
+      "350ml_price": 1000,
+      "750ml_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GIN 58",
+      "shot_price": 150,
+      "350ml_price": null,
+      "750ml_price": 2000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GIN MORE",
+      "shot_price": null,
+      "350ml_price": null,
+      "750ml_price": 7200,
+      "image": "url_to_image"
+    }
+  ],
+  "vodka": [
+    {
+      "name": "ABSOLUTE VODKA",
+      "shot_price": 300,
+      "350ml_price": null,
+      "750ml_price": 3500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SMINORFF VODKA",
+      "shot_price": 150,
+      "350ml_price": 1200,
+      "750ml_price": 2200,
+      "image": "url_to_image"
+    }
+  ],
+  "tequila": [
+    {
+      "name": "JOSE QUERVO SILVER/GOLD",
+      "shot_price": 250,
+      "750ml_price": 4800,
+      "image": "url_to_image"
+    },
+    {
+      "name": "CAMINO CLEAR/GOLD",
+      "shot_price": 250,
+      "750ml_price": 3000,
+      "image": "url_to_image"
+    }
+  ],
+  "rum": [
+    {
+      "name": "MALIBU",
+      "shot_price": 300,
+      "750ml_price": 2600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "BARCADI",
+      "shot_price": 250,
+      "750ml_price": 2000,
+      "image": "url_to_image"
+    }
+  ],
+  "liqueur": [
+    {
+      "name": "BARLEYS",
+      "750ml_price": 3000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "AMARULA",
+      "750ml_price": 2700,
+      "image": "url_to_image"
+    },
+    {
+      "name": "JAGARMEISTER",
+      "750ml_price": 4000,
+      "image": "url_to_image"
+    },
+    {
+      "name": "KAHLUA",
+      "750ml_price": 5500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "CONTREAU",
+      "750ml_price": 2100,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SOUTHERN COMFORT",
+      "750ml_price": 3500,
+      "image": "url_to_image"
+    }
+  ],
+  "soft_drinks": [
+    {
+      "name": "REDBULL",
+      "price": 300,
+      "image": "url_to_image"
+    },
+    {
+      "name": "KERINGET WATER",
+      "size": "500ml",
+      "price": 100,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MONSTER",
+      "price": 300,
+      "image": "url_to_image"
+    },
+    {
+      "name": "KERINGET WATER",
+      "size": "1ltr",
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "DELMONTE",
+      "price": 500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SPARKLING WATER",
+      "size": "1ltr",
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SODA",
+      "price": 100,
+      "image": "url_to_image"
+    },
+    {
+      "name": "ORANGE JUICE",
+      "size": "glass",
+      "price": 500,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GINGER ALE",
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "FRESH JUICE",
+      "price": 400,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TONIC WATER",
+      "price": 120,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SODA WATER",
+      "price": 120,
+      "image": "url_to_image"
+    },
+    {
+      "name": "DAWA",
+      "price": 200,
+      "image": "url_to_image"
+    }
+  ],
+  "mocktails": [
+    {
+      "name": "LEMONADE",
+      "ingredients": ["Lime", "Syrup"],
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "VIRGIN MOJITO",
+      "ingredients": ["Soda Water", "Mint", "Syrup"],
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "ORANGE SUNSET",
+      "ingredients": ["Orange", "Cranberry", "Lime"],
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "LIME COLA",
+      "ingredients": ["Lime Cordial", "Coke"],
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "VIRGIN PINACOLADA",
+      "ingredients": ["Pineapple", "Coconut Cream"],
+      "price": 200,
+      "image": "url_to_image"
+    }
+  ],
+  "cocktails": [
+    {
+      "name": "ADIOS MOTHERFUCKER",
+      "ingredients": [
+        "Vodka",
+        "Rum",
+        "Tequila",
+        "Gin",
+        "Blue Curacao",
+        "Sprite"
+      ],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "THE PINEAPPLE",
+      "sizes": {
+        "300ml": 400,
+        "400ml": 500,
+        "500ml": 600,
+        "600ml": 1000,
+        "800ml": 800
+      },
+      "ingredients": [
+        "Pineapple Juice",
+        "Vodka",
+        "Triple Sec",
+        "Cointreau",
+        "Lime"
+      ],
+      "image": "url_to_image"
+    },
+    {
+      "name": "MOJITO",
+      "ingredients": ["Rum", "Lime Juice", "Mint", "Soda Water"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MARGARITA",
+      "ingredients": ["Tequila", "Cointreau", "Lime Juice"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TEQUILA SUNRISE",
+      "ingredients": ["Tequila", "Grenadine Syrup", "Orange Juice"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "LONG ISLAND",
+      "sizes": {
+        "800ml": 800,
+        "1000ml": 1000
+      },
+      "ingredients": [
+        "Vodka",
+        "Tequila",
+        "White Rum",
+        "Triple Sec",
+        "Gin",
+        "Splash of Cola"
+      ],
+      "image": "url_to_image"
+    },
+    {
+      "name": "CUBA LIBRE",
+      "ingredients": ["Rum", "Lime Juice", "Coke"],
+      "price": 800,
+      "image": "url_to_image"
+    },
+    {
+      "name": "HOT TODDY",
+      "ingredients": ["Hot Water", "Brandy", "Honey", "Lemon Juice"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "WHISKY SOUR",
+      "ingredients": ["Whisky", "Egg White", "Lemon Juice", "Syrup"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "PINACOLADA",
+      "sizes": {
+        "500ml": 1000,
+        "800ml": 800
+      },
+      "ingredients": [
+        "Pineapple Juice",
+        "Malibu",
+        "Coconut Cream",
+        "Lime Juice"
+      ],
+      "image": "url_to_image"
+    },
+    {
+      "name": "SCREW DRIVER",
+      "ingredients": ["Vodka", "Orange Juice"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "BLUE LAGOON",
+      "ingredients": ["Blue Curacao", "Vodka", "Lemonade"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "911 SINGLE",
+      "ingredients": ["Gin", "Lime Juice", "Passion Juice", "Syrup"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "OLD FASHIONED",
+      "ingredients": ["Whiskey", "Sugar Cube", "Bitters"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "DIRTY MARTINI",
+      "ingredients": ["Vodka", "Vermouth", "Lime", "Olives"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "ORGASM",
+      "ingredients": ["Amaretto", "Irish Cream", "Kahlua"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "RUSTY NAIL",
+      "ingredients": ["Whiskey", "Drambuie"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "LUCIEN GAUDIN",
+      "ingredients": ["Gin", "Vermouth", "Cointreau", "Campari"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SEX IN THE BEACH",
+      "ingredients": ["Cranberry", "Orange", "Vodka", "Triple Sec"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "GIN FIZZ",
+      "ingredients": ["Gin", "Lemon Juice", "Syrup", "Soda Water", "Egg White"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "TWIN TOWER",
+      "sizes": {
+        "600ml": 800,
+        "800ml": 800
+      },
+      "alcohol_content": "75%",
+      "ingredients": ["Gin", "Orange Juice", "Passion Juice", "Lime Juice"],
+      "image": "url_to_image"
+    },
+    {
+      "name": "MADRAS",
+      "ingredients": ["Vodka", "Cranberry Juice", "Orange Juice", "Bitters"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "MAI TAI",
+      "ingredients": ["Pineapple Juice", "Orange Juice", "Rum", "Syrup"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "SOUTHERN HARMONY",
+      "ingredients": ["Southern Comfort", "JID", "Lime Juice", "Sprite"],
+      "price": null,
+      "image": "url_to_image"
+    },
+    {
+      "name": "JAGER BOMB",
+      "ingredients": ["Jagermeister", "Redbull"],
+      "sizes": {
+        "600ml": 700,
+        "800ml": 800
+      },
+      "image": "url_to_image"
+    }
+  ],
+  "Breakfast": [
+    {
+      "name": "Beef Sausage",
+      "price": 60,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0482/3233/files/linkscut_large.jpg?19777"
+    },
+    {
+      "name": "Chicken Sausage",
+      "price": 60
+    },
+    {
+      "name": "Samosa",
+      "price": 60
+    },
+    {
+      "name": "Fried Eggs",
+      "price": 100
+    },
+    {
+      "name": "Omelette",
+      "price": 200
+    },
+    {
+      "name": "Chapati",
+      "price": 50
+    },
+    {
+      "name": "Ngwaci",
+      "price": 100
+    },
+    {
+      "name": "Nduma",
+      "price": 100
+    },
+    {
+      "name": "Mahamri",
+      "price": 40
+    },
+    {
+      "name": "Kenyan Tea",
+      "price": 150
+    },
+    {
+      "name": "Black Coffee",
+      "price": 150
+    },
+    {
+      "name": " White Coffee",
+      "price": 200
+    },
+    {
+      "name": "Porridge",
+      "price": 150
+    },
+    {
+      "name": "Fresh Juice",
+      "price":400
+    },
+    {
+      "name": "Orange Juice",
+      "price": 500
+    }
+  ],
+  "Main Dishes": [
+    {
+      "name": "Beef Wet Fry",
+      "price": 700,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Beef Dry Fry",
+      "price": 700,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Anti Theft",
+      "price": 700,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Glazed Pork Ribs",
+      "price": 900,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Pork 1/2 kg",
+      "price": 850,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Athola",
+      "price": 600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Matumbo Wet Fry",
+      "price": 300,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Chicken Stew (Kienyeji)",
+      "price": 600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Chicken Dry (Kienyeji)",
+      "price": 600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Chicken Wings",
+      "price": 600,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Fish Wet Fry (Tilapia)",
+      "price": 700,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Fish Dry Fry (Tilapia)",
+      "price": 800,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Mbuzi",
+      "price": 750,
+      "image": "url_to_image"
+    }
+  ],
+  "Sides": [
+    {
+      "name": "French Fries",
+      "price": 200,
+      "image": "url_to_image"
+    },
+    {
+      "name": "Saute Potatoes",
+      "price": 250,
+      "image": "url_to_image"
+    },{
+      "name": "Managu / kunde",
+      "price": 100,
+      "image": "url_to_image"
+    },{
+      "name": "Brown Ugali",
+      "price": 150,
+      "image": "url_to_image"
+    },{
+      "name": "White Ugali",
+      "price": 100,
+      "image": "url_to_image"
+    },{
+      "name": "Kachumbari ",
+      "price": 100,
+      "image": "url_to_image"
+    },{
+      "name": "Choma Sausage",
+      "price": 150,
+      "image": "url_to_image"
     }
   ]
 }
