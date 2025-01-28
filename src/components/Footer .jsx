@@ -1,31 +1,86 @@
 import React from "react";
-import about from "../images/about.jpg";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaTwitter } from "react-icons/fa";
 
-function Footer() {
+const Footer = () => {
   return (
-    <div className="relative w-full h-[60vh] md:h-[50vh] font-poppins">
-      <img
-        className="w-full h-full object-cover"
-        src={about}
-        alt="Front"
-      />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <h4 className="text-3xl mt-14 sm:text-4xl font-bold text-orange-500 mb-4">
-          THE OAkBErry
-        </h4>
-        <p className="text-white text-sm sm:text-lg md:text-xl font-medium mb-6">
-          WELCOME TO THE OAkBErry, WHERE FRESH INGREDIENTS, INSPIRED DISHES, AND
-          WARM HOSPITALITY COME TOGETHER. ENJOY A MEMORABLE DINING EXPERIENCE IN
-          OUR INVITING ATMOSPHERE. EVERY MEAL IS A STORY, AND EVERY GUEST IS
-          FAMILY.WE ARE LOCATED ALONG  <span className="text-orange-500">KIAMBU ROAD, THINDIGUA</span>. FEEL FREE TO COME DINE WITH US.
-        </p>
+    <footer className="bg-[#141414] text-white py-8">
+      <div className="container mx-auto">
+        {/* First Row - Address, Phone, Email */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-lg font-semibold flex items-center mb-4">
+              <FaMapMarkerAlt className="mr-2" />
+              Where to Find Us
+            </h3>
+            <p>WestField Hub</p>
+            <p>Likoni cl</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold flex items-center mb-4">
+              <FaPhoneAlt className="mr-2" />
+              Call Us
+            </h3>
+            <p>0110391729</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold flex items-center mb-4">
+              <FaEnvelope className="mr-2" />
+              Email Us
+            </h3>
+            <p>newhaven@gmail.com</p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 my-8"></div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          <div>
+            <h3 className="text-xl font-bold">New Haven</h3>
+            <p className="text-sm mt-2">Your trusted partner for great taste of African Dishes.</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="grid grid-cols-2">
+              <a
+                href="https://www.instagram.com/newhavenrestaurant/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="ml-16"
+              >
+                <FaInstagram className="w-10 h-10" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@new.haveneateries"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="ml-6"
+              >
+                <FaTiktok className="w-10 h-10" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Subscribe to our Newsletter</h3>
+            <form className="flex flex-col">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="mb-2 px-4 py-2 rounded bg-gray-700 text-white"
+              />
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white font-semibold"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <p className="w-full mt-2 text-center text-xs sm:text-sm text-black">
-        &copy; 2024 OAKBERRY. ALL RIGHTS RESERVED.
-      </p>
-    </div>
+    </footer>
   );
-}
+};
 
 export default Footer;

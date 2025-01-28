@@ -2,47 +2,68 @@ import React from "react";
 import about from "../images/about.jpg";
 
 function About() {
+  const redirectToMenu = () => {
+    alert("Feature to be implemented soon");
+  };
+  const redirectToDrinks = () => {
+    window.open("https://drive.google.com/file/d/1hEbLA92ipezODactvYDAv6nSfaahKhzK/view?usp=sharing", "_blank");
+  };
+  
   return (
-    <div>
-      {/* Main container with responsive margin and padding */}
-      <div className="flex flex-col md:flex-row items-start space-x-0 md:space-x-8 ml-4 mr-4 md:ml-8 md:mr-8 p-4 md:p-8">
-        {/* Left section: Text content */}
-        <div className="w-full md:w-1/2">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 mt-4 text-justify text-orange-500">
-            ABOUT US
-          </h1>
-          <h2 className="text-xl md:text-2xl mb-4 text-justify">
-            IT STARTED, QUITE SIMPLY, LIKE THIS....
-          </h2>
-          <p className="leading-relaxed text-justify">
-            In the heart of a bustling city, a small group of passionate food
-            enthusiasts came together with a shared dream of bringing authentic
-            flavors and hospitality to their community. With a vision to create
-            a dining experience that celebrates both culinary tradition and
-            innovation, they embarked on a journey to establish their own
-            restaurant. <br />
-            Months of meticulous planning, from designing the menu to crafting
-            the ambiance culminated in the grand opening of their establishment.
-            From humble beginnings, the restaurant quickly gained popularity,
-            attracting locals and tourists alike with its delectable dishes and
-            welcoming atmosphere. <br />
-            Through dedication, hard work, and a commitment to excellence, the
-            restaurant flourished, becoming a beloved fixture in the culinary
-            landscape, a testament to the power of passion and perseverance.
-            That's how The OakBerry came into reality.
-          </p>
-        </div>
-
-        {/* Right section: Image content */}
-        <div className="w-full md:w-1/2 flex justify-center">
+    <div className="bg-[#0b161a] p-4 md:p-8">
+      <p className="text-white">New Haven</p>
+      <h1 className="text-center text-3xl md:text-4xl font-bold mb-4 text-orange-500">
+        ABOUT US
+      </h1>
+      {/* Container for flex layout on larger screens */}
+      <div className="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
+        {/* Left Image */}
+        <div className="w-full md:w-1/3">
           <img
             src={about}
-            alt="About"
-            className="w-full h-auto rounded-full object-cover mt-8 md:mt-16 border-4 md:border-8 border-azure"
+            alt="About New Haven"
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Center Text */}
+        <div className="w-full md:w-1/3 text-center border rounded-30px border-black pl-16 pr-16 pt-16 pb-10">
+          <h2 className="text-2xl md:text-3xl mb-4 text-white font-bold">
+            TASTE OF MOTHERLAND
+          </h2>
+          <img
+            src={about}
+            alt="Small Cultural Icon"
+            className="w-14 h-14 mx-auto rounded-full shadow-md mb-4"
+          />
+          <div className="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <button
+            onClick={redirectToMenu}
+              className="bg-orange-500 text-black font-bold px-6 sm:px-8 py-2 rounded hover:bg-yellow-500 transition text-sm sm:text-base"
+            >
+              Download Food Menu
+            </button>
+            <button
+            onClick={redirectToDrinks}
+              className="bg-orange-500 text-black font-bold px-6 sm:px-8 py-2 rounded hover:bg-yellow-500 transition text-sm sm:text-base"
+            >
+              Download Drinks Menu
+            </button>
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="w-full md:w-1/3">
+          <img
+            src={about}
+            alt="Cultural Food"
+            className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
       </div>
-      <div className="p-4 mx-4 md:mx-10">
+
+      {/* Map Section: Positioned below content */}
+      <div className="mt-8">
         <iframe
           width="100%"
           height="400"
@@ -52,6 +73,7 @@ function About() {
           marginWidth="0"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.938592420507!2d36.7880268!3d-1.2839481!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11b6b4384267%3A0x1f4b32ff6e0944db!2sNew%20haven%20restaurant%20kilimani!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
           title="Google Map"
+          className="rounded-lg shadow-lg"
         ></iframe>
       </div>
     </div>

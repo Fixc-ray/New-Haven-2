@@ -23,19 +23,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-@font-face{
-  font-family: "laginchy";
-  src: url('./fonts/laginchy-quirky-serif-regular-bold/Laginchy-Regular.otf') format('otf'),
-       url('./fonts/laginchy-quirky-serif-regular-bold/Laginchy-Bold.ttf') format('truetype'),
-       url('./fonts/laginchy-quirky-serif-regular-bold/Laginchy-Bold.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'laginchy', sans-serif;
-}
-html {
-  scroll-behavior: smooth;
-}

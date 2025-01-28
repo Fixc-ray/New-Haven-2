@@ -19,7 +19,7 @@ import Featured from "./components/Featured";
 import Drinks from "./components/Drinks";
 
 function App() {
-  const url = "https://new-haven-backend.vercel.app/Breakfast";
+  const url = "https://new-haven-backend.vercel.app";
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -37,8 +37,8 @@ function App() {
     const fetchData = async () => {
       try {
         const res = await fetch(url);
-        const data = await res.json();
-        setFoods(data);
+        const foods = await res.json();
+        setFoods(foods);
       } catch (error) {
         console.error("Error fetching food items:", error);
       } finally {
@@ -98,54 +98,79 @@ function App() {
     });
   };
 
-  const isAuthenticated = () => !!localStorage.getItem('adminToken');
+  const isAuthenticated = () => !!localStorage.getItem("adminToken");
 
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home addToCart={addToCart}/>} />
+        <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route
-          path="/Menu"
-          element={<Menu foods={foods} addToCart={addToCart} addToLikedMeals={addToLikedMeals} />}
+          path="/order"
+          element={
+            <Menu
+              foods={foods}
+              addToCart={addToCart}
+              addToLikedMeals={addToLikedMeals}
+            />
+          }
         />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Drinks" element={<Drinks addToCart={addToCart}/>} />
+        <Route path="/Drinks" element={<Drinks addToCart={addToCart} />} />
         <Route path="/Reservation" element={<Reservation />} />
         <Route
           path="/Cart"
-          element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} updateCartQuantity={updateCartQuantity} />}
+          element={
+            <Cart
+              cartItems={cartItems}
+              removeFromCart={removeFromCart}
+              updateCartQuantity={updateCartQuantity}
+            />
+          }
         />
         <Route
           path="/Liked"
-          element={<LikedMeals likedMeals={likedMeals} removeFromLikedMeals={removeFromLikedMeals} />}
+          element={
+            <LikedMeals
+              likedMeals={likedMeals}
+              removeFromLikedMeals={removeFromLikedMeals}
+            />
+          }
         />
         <Route path="/admin/login" element={<Login />} />
         <Route
           path="/admin/dashboard"
-          element={<ProtectedRoute>
-            <AdminDashboard />
-          </ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/admin/add-menu"
-          element={<ProtectedRoute>
-            <AddMenu />
-          </ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <AddMenu />
+            </ProtectedRoute>
+          }
         />
-         <Route
+        <Route
           path="/admin/delete"
-          element={<ProtectedRoute>
-            <DeleteMenu />
-          </ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <DeleteMenu />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/admin/edit"
-          element={<ProtectedRoute>
-            <EditMenu />
-          </ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <EditMenu />
+            </ProtectedRoute>
+          }
         />
-        <Route path="/feature" element={<Featured food={foods}/>} />
+        <Route path="/feature" element={<Featured food={foods} />} />
       </Routes>
     </div>
   );
