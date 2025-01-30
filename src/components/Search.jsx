@@ -44,7 +44,7 @@ function Search( { foods, addToCart, addToLikedMeals } ) {
       </div>
       <div className="flex flex-wrap justify-center">
         {filteredFoods.map((food) => (
-          <Item key={food.id} food={foods} addToCart={ addToCart } addToLikedMeals={addToLikedMeals}/>
+          <Item key={food.id} food={food} addToCart={ addToCart } addToLikedMeals={addToLikedMeals}/>
         ))}
       </div>
     </div>

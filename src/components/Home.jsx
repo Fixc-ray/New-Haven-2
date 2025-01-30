@@ -3,20 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Display from "../Videos/Display.mp4";
 import Navbar from "./Navbar";
 import About from "./About";
-import Menu2 from "./Menu2";
 import Footer from "./Footer ";
 
 function Home({ addToCart }) {
   const navigate = useNavigate();
-
-  const redirectToDrinks = () => {
-    window.open("https://drive.google.com/file/d/1hEbLA92ipezODactvYDAv6nSfaahKhzK/view?usp=sharing", "_blank");
-  };
-  
-
-  const redirectToMenu = () => {
-    alert("Feature to be implemented soon");
-  };
 
   const Order = () => {
     navigate("/Order");

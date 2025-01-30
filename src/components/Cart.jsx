@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import emailjs from "emailjs-com";
 import Navbar from "./Navbar";
 
@@ -20,23 +19,6 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
   const handleChange = (e) => {
     const { id, value } = e.target;
     setUserData({ ...userData, [id]: value });
-  };
-
-  const handlePayment = async () => {
-    try {
-      const tokenResponse = await axios.get("http://localhost:3001/mpesa/token");
-      const token = tokenResponse.data.access_token;
-
-      const response = await axios.post(
-        "http://localhost:3001/mpesa/stkpush",
-        { amount: totalPrice, phoneNumber: userData.phoneNumber },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      alert("Payment initiated! Please complete it on your phone.");
-    } catch (error) {
-      console.error("Payment error", error);
-      alert("Error initiating payment. Try again.");
-    }
   };
 
   const checkout = (e) => {
@@ -195,7 +177,6 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
                 <button
                   type="submit"
                   className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
-                  onClick={handlePayment}
                 >
                   Pay Now
                 </button>

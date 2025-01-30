@@ -20,9 +20,6 @@ function Drinks({ Menu }) {
       setLoading(false);
     }
   };
-  const redirectToDrinks = () => {
-    navigate("/drinks"); // Use the appropriate route for the drinks section
-  }
 
   const menuItems = [
     {

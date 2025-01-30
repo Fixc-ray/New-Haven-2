@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok} from "react-icons/fa";
 
 const Footer = () => {
   return (

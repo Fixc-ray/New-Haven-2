@@ -19,7 +19,6 @@ import Featured from "./components/Featured";
 import Drinks from "./components/Drinks";
 
 function App() {
-  const url = "https://new-haven-backend.vercel.app";
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -35,36 +34,52 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const endpoints = [
+        "https://new-haven-backend.vercel.app/breakfast",
+        "https://new-haven-backend.vercel.app/maindishes",
+        "https://new-haven-backend.vercel.app/sides",
+      ];
+  
       try {
-        const res = await fetch(url);
-        const foods = await res.json();
-        setFoods(foods);
+        const responses = await Promise.all(endpoints.map((endpoint) => fetch(endpoint)));
+        const data = await Promise.all(responses.map((res) => res.json()));
+  
+        // Combine all fetched data into one array
+        const combinedFoods = [...data[0], ...data[1], ...data[2]];
+        setFoods(combinedFoods);
       } catch (error) {
         console.error("Error fetching food items:", error);
       } finally {
         setTimeout(() => setLoading(false), 3000);
       }
     };
+  
     fetchData();
   }, []);
-
+  
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
   const addToCart = (food) => {
     setCartItems((prevCartItems) => {
-      const existingItem = prevCartItems.find((item) => item.id === food.id);
+      const existingItem = prevCartItems.find(
+        (item) => item.id === food.id && item.name === food.name
+      );
+  
       if (existingItem) {
         return prevCartItems.map((item) =>
-          item.id === food.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === food.id && item.name === food.name
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       } else {
         return [...prevCartItems, { ...food, quantity: 1 }];
       }
     });
-    window.alert(`${food.name} has been added to the cart!`);
+    alert("Added to cart");
   };
+  
 
   const removeFromCart = (food) => {
     setCartItems((prevCartItems) =>
@@ -97,8 +112,6 @@ function App() {
       return updatedLikedMeals;
     });
   };
-
-  const isAuthenticated = () => !!localStorage.getItem("adminToken");
 
   return (
     <div className="App">
