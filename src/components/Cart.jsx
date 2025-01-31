@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [userData, setUserData] = useState({
     name: "",
     address: "",
@@ -22,14 +22,14 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
   };
 
   const checkout = (e) => {
-    e.preventDefault();  // Prevent page reload
+    e.preventDefault();
 
     const cartDetails = cartItems
       .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
       .join("\n");
 
     const emailParams = {
-      to_email: "goriderray@gmail.com, rayjustin481@gmail.com",
+      to_email: "rayjustin481@gmail.com",
       user_name: userData.name,
       user_address: userData.address,
       user_email: userData.email,
@@ -45,7 +45,7 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        alert("Failed to send email.");
+        alert("Failed to send emil.");
       });
   };
 

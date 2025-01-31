@@ -36,7 +36,7 @@ function App() {
     const fetchData = async () => {
       const endpoints = [
         "https://new-haven-backend.vercel.app/breakfast",
-        "https://new-haven-backend.vercel.app/maindishes",
+        "https://new-haven-backend.vercel.app/MainDishes",
         "https://new-haven-backend.vercel.app/sides",
       ];
   
