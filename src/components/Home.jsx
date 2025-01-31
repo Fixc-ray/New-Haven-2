@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Display from "../Videos/Display.mp4";
+import first from "../Videos/first.mp4";
 import Navbar from "./Navbar";
 import About from "./About";
 import Footer from "./Footer ";
@@ -22,7 +22,7 @@ function Home({ addToCart }) {
         {/* Video Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src={Display}
+          src={first}
           autoPlay
           loop
           muted

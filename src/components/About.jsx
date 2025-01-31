@@ -1,5 +1,7 @@
 import React from "react";
-import about from "../images/about.jpg";
+import About1 from "../images/About1.jpg";
+import About2 from "../images/About2.jpg";
+import Center from "../images/Center.png"
 
 function About() {
   const redirectToMenu = () => {
@@ -20,7 +22,7 @@ function About() {
         {/* Left Image */}
         <div className="w-full md:w-1/3">
           <img
-            src={about}
+            src={About1}
             alt="About New Haven"
             className="w-full h-auto rounded-lg shadow-lg"
           />
@@ -32,7 +34,7 @@ function About() {
             TASTE OF MOTHERLAND
           </h2>
           <img
-            src={about}
+            src={Center}
             alt="Small Cultural Icon"
             className="w-14 h-14 mx-auto rounded-full shadow-md mb-4"
           />
@@ -55,7 +57,7 @@ function About() {
         {/* Right Image */}
         <div className="w-full md:w-1/3">
           <img
-            src={about}
+            src={About2}
             alt="Cultural Food"
             className="w-full h-auto rounded-lg shadow-lg"
           />
