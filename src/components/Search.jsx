@@ -29,9 +29,9 @@ function Search( { foods, addToCart, addToLikedMeals } ) {
         onChange={handleFilterChange}
       >
         <option value="">ALL CATEGORIES</option>
-        <option value="Tea">TEA</option>
-        <option value="Dessert">DESSERTS</option>
-        <option value="Brunch">BRUNCH</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Main Dishes">Main Dishes</option>
+        <option value="Sides">Sides</option>
       </select>
       <div className="sm:flex-row items-center justify-between gap-4 mb-4">
         <input

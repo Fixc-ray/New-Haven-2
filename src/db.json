@@ -926,77 +926,92 @@
       "id": 128,
       "name": "Beef Sausage",
       "price": 60,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0482/3233/files/linkscut_large.jpg?19777"
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0482/3233/files/linkscut_large.jpg?19777",
+      "category": "Breakfast"
     },
     {
       "id": 129,
       "name": "Chicken Sausage",
-      "price": 60
+      "price": 60,
+      "category": "Breakfast"
     },
     {
       "id": 130,
       "name": "Samosa",
-      "price": 60
+      "price": 60,
+      "category": "Breakfast"
     },
     {
       "id": 131,
       "name": "Fried Eggs",
-      "price": 100
+      "price": 100,
+      "category": "Breakfast"
     },
     {
       "id": 132,
       "name": "Omelette",
-      "price": 200
+      "price": 200,
+      "category": "Breakfast"
     },
     {
       "id": 133,
       "name": "Chapati",
-      "price": 50
+      "price": 50,
+      "category": "Breakfast"
     },
     {
       "id": 134,
       "name": "Ngwaci",
-      "price": 100
+      "price": 100,
+      "category": "Breakfast"
     },
     {
       "id": 135,
       "name": "Nduma",
-      "price": 100
+      "price": 100,
+      "category": "Breakfast"
     },
     {
       "id": 136,
       "name": "Mahamri",
-      "price": 40
+      "price": 40,
+      "category": "Breakfast"
     },
     {
       "id": 137,
       "name": "Kenyan Tea",
-      "price": 150
+      "price": 150,
+      "category": "Breakfast"
     },
     {
       "id": 138,
       "name": "Black Coffee",
-      "price": 150
+      "price": 150,
+      "category": "Breakfast"
     },
     {
       "id": 139,
       "name": " White Coffee",
-      "price": 200
+      "price": 200,
+      "category": "Breakfast"
     },
     {
       "id": 140,
       "name": "Porridge",
-      "price": 150
+      "price": 150,
+      "category": "Breakfast"
     },
     {
       "id": 141,
       "name": "Fresh Juice",
-      "price":400
+      "price":400,
+      "category": "Breakfast"
     },
     {
       "id": 142,
       "name": "Orange Juice",
-      "price": 500
+      "price": 500,
+      "category": "Breakfast"
     }
   ],
   "MainDishes": [
@@ -1004,79 +1019,92 @@
       "id": 143,
       "name": "Beef Wet Fry",
       "price": 700,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 144,
       "name": "Beef Dry Fry",
       "price": 700,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 145,
       "name": "Anti Theft",
       "price": 700,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 146,
       "name": "Glazed Pork Ribs",
       "price": 900,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 147,
       "name": "Pork 1/2 kg",
       "price": 850,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 148,
       "name": "Athola",
       "price": 600,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 149,
       "name": "Matumbo Wet Fry",
       "price": 300,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 150,
       "name": "Chicken Stew (Kienyeji)",
       "price": 600,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 151,
       "name": "Chicken Dry (Kienyeji)",
       "price": 600,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 152,
       "name": "Chicken Wings",
       "price": 600,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 153,
       "name": "Fish Wet Fry (Tilapia)",
       "price": 700,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 154,
       "name": "Fish Dry Fry (Tilapia)",
       "price": 800,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     },
     {
       "id": 155,
       "name": "Mbuzi",
       "price": 750,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Main Dishes"
     }
   ],
   "Sides": [
@@ -1084,38 +1112,45 @@
       "id": 156,
       "name": "French Fries",
       "price": 200,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     },
     {
       "id": 157,
       "name": "Saute Potatoes",
       "price": 250,
-      "image": "url_to_image"
+      "image": "src/images/About1.jpg",
+      "category": "Sides"
     },{
       "id": 158,
       "name": "Managu / kunde",
       "price": 100,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     },{
       "id": 159,
       "name": "Brown Ugali",
       "price": 150,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     },{
       "id": 160,
       "name": "White Ugali",
       "price": 100,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     },{
       "id": 161,
       "name": "Kachumbari ",
       "price": 100,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     },{
       "id": 162,
       "name": "Choma Sausage",
       "price": 150,
-      "image": "url_to_image"
+      "image": "url_to_image",
+      "category": "Sides"
     }
   ]
 }
