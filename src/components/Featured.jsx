@@ -29,7 +29,7 @@ function Featured() {
 
   const getSlidesPerView = () => {
     const width = window.innerWidth;
-    if (width >= 1024) return 3; // 3 slides for desktop
+    if (width >= 1024) return 3; 
     if (width >= 768) return 2; // 2 slides for tablets
     return 1; // 1 slide for mobile
   };

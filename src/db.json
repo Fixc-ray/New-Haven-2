@@ -933,85 +933,99 @@
       "id": 129,
       "name": "Chicken Sausage",
       "price": 60,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 130,
       "name": "Samosa",
       "price": 60,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": "https://ibb.co/hRYcD5VJ"
     },
     {
       "id": 131,
       "name": "Fried Eggs",
       "price": 100,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 132,
       "name": "Omelette",
       "price": 200,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 133,
       "name": "Chapati",
       "price": 50,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": "https://ibb.co/QF3jQds3"
     },
     {
       "id": 134,
       "name": "Ngwaci",
       "price": 100,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 135,
       "name": "Nduma",
       "price": 100,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 136,
       "name": "Mahamri",
       "price": 40,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": "public/FoodFolder/Mahamri.jpeg"
     },
     {
       "id": 137,
       "name": "Kenyan Tea",
       "price": 150,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 138,
       "name": "Black Coffee",
       "price": 150,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 139,
       "name": " White Coffee",
       "price": 200,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": "https://ibb.co/WWCQ4f9m"
     },
     {
       "id": 140,
       "name": "Porridge",
       "price": 150,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 141,
       "name": "Fresh Juice",
       "price":400,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     },
     {
       "id": 142,
       "name": "Orange Juice",
       "price": 500,
-      "category": "Breakfast"
+      "category": "Breakfast",
+      "imageUrl": ""
     }
   ],
   "MainDishes": [
@@ -1019,91 +1033,91 @@
       "id": 143,
       "name": "Beef Wet Fry",
       "price": 700,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/QFrLv4Hs",
       "category": "Main Dishes"
     },
     {
       "id": 144,
       "name": "Beef Dry Fry",
       "price": 700,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     },
     {
       "id": 145,
       "name": "Anti Theft",
       "price": 700,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/prn39gXP",
       "category": "Main Dishes"
     },
     {
       "id": 146,
       "name": "Glazed Pork Ribs",
       "price": 900,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     },
     {
       "id": 147,
       "name": "Pork 1/2 kg",
       "price": 850,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/6c1P9s7C",
       "category": "Main Dishes"
     },
     {
       "id": 148,
       "name": "Athola",
       "price": 600,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     },
     {
       "id": 149,
       "name": "Matumbo Wet Fry",
       "price": 300,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/Rkw8QKgB",
       "category": "Main Dishes"
     },
     {
       "id": 150,
       "name": "Chicken Stew (Kienyeji)",
       "price": 600,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/pvLn2bky",
       "category": "Main Dishes"
     },
     {
       "id": 151,
       "name": "Chicken Dry (Kienyeji)",
       "price": 600,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     },
     {
       "id": 152,
       "name": "Chicken Wings",
       "price": 600,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     },
     {
       "id": 153,
       "name": "Fish Wet Fry (Tilapia)",
       "price": 700,
-      "image": "url_to_image",
+      "imageUrl": "https://i.ibb.co/cS3Gz4Pw/Wet-fish.jpg",
       "category": "Main Dishes"
     },
     {
       "id": 154,
       "name": "Fish Dry Fry (Tilapia)",
       "price": 800,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/zWJP5kBK",
       "category": "Main Dishes"
     },
     {
       "id": 155,
       "name": "Mbuzi",
       "price": 750,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Main Dishes"
     }
   ],
@@ -1112,44 +1126,44 @@
       "id": 156,
       "name": "French Fries",
       "price": 200,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/cnMt9N3",
       "category": "Sides"
     },
     {
       "id": 157,
       "name": "Saute Potatoes",
       "price": 250,
-      "image": "src/images/About1.jpg",
+      "imageUrl": "https://ibb.co/7tGHnBnL",
       "category": "Sides"
     },{
       "id": 158,
       "name": "Managu / kunde",
       "price": 100,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Sides"
     },{
       "id": 159,
       "name": "Brown Ugali",
       "price": 150,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/B5tvHwPz",
       "category": "Sides"
     },{
       "id": 160,
       "name": "White Ugali",
       "price": 100,
-      "image": "url_to_image",
+      "imageUrl": "https://ibb.co/RkyNjqdf",
       "category": "Sides"
     },{
       "id": 161,
       "name": "Kachumbari ",
       "price": 100,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Sides"
     },{
       "id": 162,
       "name": "Choma Sausage",
       "price": 150,
-      "image": "url_to_image",
+      "imageUrl": "",
       "category": "Sides"
     }
   ]
