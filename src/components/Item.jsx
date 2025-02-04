@@ -16,7 +16,7 @@ function Item({ food, addToCart }) {
     <div key={food.id} className="border p-4 m-4 w-80 rounded shadow-md">
       <img
         src={food.imageUrl}
-        alt={"Image To Be Added Soon"}
+        alt={"Img To Be Added Soon"}
         className="w-full h-48 object-cover mb-4 rounded"
       />
       <h4 className="text-xl font-semibold mb-2">{food.name.toUpperCase()}</h4>
