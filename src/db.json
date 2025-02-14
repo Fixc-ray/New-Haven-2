@@ -4,139 +4,139 @@
       "id": 1,
       "name": "WHITE CUP LAGER",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/imageUrls?q=tbn:ANd9GcRhicXYXpzWKZvarA-03UmkPB_GxKVajlJjxg&s"
     },
     {
       "id": 2,
       "name": "WHITE CUP CRISP",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/hc2/heb/34070824976414/181065_main.jpg"
     },
     {
       "id": 4,
       "name": "TUSKER LAGER",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://villagemarketcellar.co.ke/cdn/shop/products/TUSKERLAGERBOTTLE500ML.png?v=1627644842"
     },
     {
       "id": 5,
       "name": "TUSKER MALT",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://www.montyskenya.com/wp-content/uploads/2020/05/tusker-malt.jpg"
     },
     {
       "id": 6,
       "name": "TUSKER LITE",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/hb1/hb5/12456807235614/41863_Main.jpg"
     },
     {
       "id": 7,
       "name": "TUSKER CIDER",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://www.tusker.beer/imageUrls/cidcan.png"
     },
     {
       "id": 8,
       "name": "GUINNESS STOUT",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "https://e-mart.co.ke/imageUrl/cache/catalog/Drinks/guinness%20stout%20beer%20300ml%20bottle%20-%20130-200x200.jpg"
     },
     {
       "id": 9,
       "name": "GUINNESS SMOOTH",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 10,
       "name": "BALOZI",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 11,
       "name": "PILSNER",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 12,
       "name": "GUARANA",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 13,
       "name": "BLACK ICE",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 14,
       "name": "PINEAPPLE PUNCH",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 15,
       "name": "SNAPP",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 16,
       "name": "KA",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 17,
       "name": "MANYATTA",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 18,
       "name": "HUNTERS DRY",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 19,
       "name": "HUNTERS GOLD",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 20,
       "name": "SAVANNA DRY",
       "price": 350,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 21,
       "name": "HEINEKEN",
       "price": 400,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 22,
       "name": "HEINEKEN ZERO",
       "price": 400,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 23,
       "name": "DESPERADO",
       "price": 400,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 24,
       "name": "GORDONS & TONIC CAN",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "cigarettes": [
@@ -144,19 +144,19 @@
       "id": 25,
       "name": "DUNHILL SINGLE SWITCH",
       "price": 600,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 26,
       "name": "DUNHILL DOUBLE SWITCH",
       "price": 600,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 27,
       "name": "EMBASSY LITE",
       "price": 600,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     }
   ],
 
@@ -165,117 +165,117 @@
       "id": 28,
       "name": "J/W BLACK LABEL",
       "shot_price": 350,
-      "350ml_price": 2100,
-      "750ml_price": 4500,
-      "1ltr_price": 5600,
-      "image": "url_to_image"
+      "threeFifty_price": 2100,
+      "sevenfifty_price": 4500,
+      "oneliter_price": 5600,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 29,
       "name": "JACK DANIELS",
       "shot_price": 350,
-      "750ml_price": 5000,
-      "image": "url_to_image"
+      "sevenfifty_price": 5000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 30,
       "name": "JACK DANIELS HONEY",
-      "750ml_price": 5000,
-      "image": "url_to_image"
+      "sevenfifty_price": 5000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 31,
       "name": "JAMESON",
       "shot_price": 250,
-      "350ml_price": 1800,
-      "750ml_price": 3500,
-      "1ltr_price": 4500,
-      "image": "url_to_image"
+      "threeFifty_price": 1800,
+      "sevenfifty_price": 3500,
+      "oneliter_price": 4500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 32,
       "name": "DOUBLE BLACK J/W",
       "shot_price": 450,
-      "750ml_price": 7500,
-      "image": "url_to_image"
+      "sevenfifty_price": 7500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 33,
       "name": "CHIVAS 12YRS",
       "shot_price": 400,
-      "750ml_price": 5500,
-      "image": "url_to_image"
+      "sevenfifty_price": 5500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 34,
       "name": "TULLAMOR DEW",
-      "350ml_price": 3000,
-      "750ml_price": 3800,
-      "image": "url_to_image"
+      "threeFifty_price": 3000,
+      "sevenfifty_price": 3800,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 35,
       "name": "GRANTS",
-      "350ml_price": 3000,
-      "image": "url_to_image"
+      "threeFifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 36,
       "name": "JIM BEAM",
-      "750ml_price": 4000,
-      "image": "url_to_image"
+      "sevenfifty_price": 4000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 37,
       "name": "GENTLEMAN JACK",
       "shot_price": 350,
-      "750ml_price": 7800,
-      "1ltr_price": 8600,
-      "image": "url_to_image"
+      "sevenfifty_price": 7800,
+      "oneliter_price": 8600,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 38,
       "name": "SINGLETON 12YRS",
-      "750ml_price": 6900,
-      "image": "url_to_image"
+      "sevenfifty_price": 6900,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 39,
       "name": "SINGLETON 15YRS",
-      "750ml_price": 9500,
-      "image": "url_to_image"
+      "sevenfifty_price": 9500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 40,
       "name": "GLENLIVET 12YRS",
-      "750ml_price": 7900,
-      "image": "url_to_image"
+      "sevenfifty_price": 7900,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 41,
       "name": "GLENLIVET FOUNDERS RESERVE",
-      "750ml_price": 7000,
-      "image": "url_to_image"
+      "sevenfifty_price": 7000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 42,
       "name": "GLENFIDDICH 12YRS",
-      "750ml_price": 8500,
-      "image": "url_to_image"
+      "sevenfifty_price": 8500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 43,
       "name": "GLENFIDDICH 15YRS",
-      "750ml_price": 13000,
-      "image": "url_to_image"
+      "sevenfifty_price": 13000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 44,
       "name": "VICEROY",
       "shot_price": 150,
-      "350ml_price": 1300,
-      "750ml_price": 2500,
-      "image": "url_to_image"
+      "threeFifty_price": 1300,
+      "sevenfifty_price": 2500,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "cognacs": [
@@ -283,212 +283,213 @@
       "id": 45,
       "name": "HENNESSY VS",
       "shot_price": 450,
-      "750ml_price": 7100,
-      "image": "url_to_image"
+      "sevenfifty_price": 7100,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 46,
       "name": "MARTEL VS",
       "shot_price": 400,
-      "750ml_price": 7900,
-      "image": "url_to_image"
+      "sevenfifty_price": 7900,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 47,
       "name": "MARTEL VSOP",
       "shot_price": 600,
-      "750ml_price": 11500,
-      "image": "url_to_image"
+      "sevenfifty_price": 11500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 48,
       "name": "REMMY MARTIN VS",
       "shot_price": 550,
-      "image": "url_to_image"
+      "sevenfifty_price": "null",
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "wines": [
     {
       "id": 49,
       "name": "MUCHO MAS",
-      "glass_price": null,
+      "glass_price": "null",
       "bottle_price": 3500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 50,
       "name": "TRUMPETER",
-      "glass_price": null,
+      "glass_price":  "null",
       "bottle_price": 3500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 51,
       "name": "NEDERBURG (MERLOT)",
-      "glass_price": null,
+      "glass_price": "null",
       "bottle_price": 2800,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 52,
       "name": "NEDERBURG (CHARONAY)",
-      "glass_price": null,
+      "glass_price": "null",
       "bottle_price": 2500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 53,
       "name": "NEDERBURG ROSE",
-      "glass_price": null,
+      "glass_price": "null",
       "bottle_price": 2500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 54,
       "name": "FRONTERA (Cabernet Sauvignon)",
       "glass_price": 400,
       "bottle_price": 2500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 55,
       "name": "FRONTERA (Chardonnay)",
       "glass_price": 400,
       "bottle_price": 2500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 56,
       "name": "DROSTDY HOF RED/WHITE",
       "glass_price": 300,
       "bottle_price": 2000,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 57,
       "name": "ROBERTSON RED/WHITE",
-      "glass_price": null,
+      "glass_price": "null",
       "bottle_price": 2000,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 58,
       "name": "4TH STREET RED/WHITE",
       "glass_price": 300,
       "bottle_price": 2000,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 59,
       "name": "FOUR COUSINS RED/WHITE",
       "glass_price": 300,
       "bottle_price": 2000,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 60,
       "name": "CELLAR CASK RED/WHITE",
       "glass_price": 300,
       "bottle_price": 1500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "gins": [
     {
       "id": 61,
       "name": "HENDRICKS",
-      "shot_price": null,
-      "350ml_price": null,
-      "750ml_price": 7200,
-      "image": "url_to_image"
+      "shot_price": "null",
+      "threeFifty_price": "null",
+      "sevenfifty_price": 7200,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 62,
       "name": "TANQUERAY ",
-      "shot_price": null,
-      "350ml_price": null,
-      "750ml_price": 6500,
-      "image": "url_to_image"
+      "shot_price": "null",
+      "threeFifty_price": "null",
+      "sevenfifty_price": 6500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 63,
       "name": "TANQUERAY DRY GIN",
       "shot_price": 350,
-      "350ml_price": null,
-      "750ml_price": 4500,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 4500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 64,
       "name": "MALFY PINK",
       "shot_price": 250,
-      "350ml_price": null,
-      "750ml_price": 5200,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 5200,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 65,
       "name": "MALFY",
       "shot_price": 250,
-      "350ml_price": null,
-      "750ml_price": 5200,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 5200,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 66,
       "name": "GORDONS DRY GIN",
       "shot_price": 200,
-      "350ml_price": 1300,
-      "750ml_price": 3000,
-      "image": "url_to_image"
+      "threeFifty_price": 1300,
+      "sevenfifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 67,
       "name": "GORDONS LEMON",
       "shot_price": 200,
-      "350ml_price": null,
-      "750ml_price": 3000,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 68,
       "name": "GORDONS PINK",
       "shot_price": 200,
-      "350ml_price": null,
-      "750ml_price": 3000,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 69,
       "name": "BEEFEATER",
-      "shot_price": null,
-      "350ml_price": null,
-      "750ml_price": 2500,
-      "image": "url_to_image"
+      "shot_price": "null",
+      "threeFifty_price": "null",
+      "sevenfifty_price": 2500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 70,
       "name": "GILBEYS",
       "shot_price": 150,
-      "350ml_price": 1000,
-      "750ml_price": 2000,
-      "image": "url_to_image"
+      "threeFifty_price": 1000,
+      "sevenfifty_price": 2000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 71,
       "name": "GIN 58",
       "shot_price": 150,
-      "350ml_price": null,
-      "750ml_price": 2000,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 2000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 72,
       "name": "GIN MORE",
-      "shot_price": null,
-      "350ml_price": null,
-      "750ml_price": 7200,
-      "image": "url_to_image"
+      "shot_price": "null",
+      "threeFifty_price": "null",
+      "sevenfifty_price": 7200,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "vodka": [
@@ -496,17 +497,17 @@
       "id": 73,
       "name": "ABSOLUTE VODKA",
       "shot_price": 300,
-      "350ml_price": null,
-      "750ml_price": 3500,
-      "image": "url_to_image"
+      "threeFifty_price": "null",
+      "sevenfifty_price": 3500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 74,
       "name": "SMINORFF VODKA",
       "shot_price": 150,
-      "350ml_price": 1200,
-      "750ml_price": 2200,
-      "image": "url_to_image"
+      "threeFifty_price": 1200,
+      "sevenfifty_price": 2200,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "tequila": [
@@ -514,15 +515,15 @@
       "id": 75,
       "name": "JOSE QUERVO SILVER/GOLD",
       "shot_price": 250,
-      "750ml_price": 4800,
-      "image": "url_to_image"
+      "sevenfifty_price": 4800,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 76,
       "name": "CAMINO CLEAR/GOLD",
       "shot_price": 250,
-      "750ml_price": 3000,
-      "image": "url_to_image"
+      "sevenfifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "rum": [
@@ -530,53 +531,53 @@
       "id": 77,
       "name": "MALIBU",
       "shot_price": 300,
-      "750ml_price": 2600,
-      "image": "url_to_image"
+      "sevenfifty_price": 2600,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 78,
       "name": "BARCADI",
       "shot_price": 250,
-      "750ml_price": 2000,
-      "image": "url_to_image"
+      "sevenfifty_price": 2000,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "liqueur": [
     {
       "id": 79,
       "name": "BARLEYS",
-      "750ml_price": 3000,
-      "image": "url_to_image"
+      "sevenfifty_price": 3000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 80,
       "name": "AMARULA",
-      "750ml_price": 2700,
-      "image": "url_to_image"
+      "sevenfifty_price": 2700,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 81,
       "name": "JAGARMEISTER",
-      "750ml_price": 4000,
-      "image": "url_to_image"
+      "sevenfifty_price": 4000,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 82,
       "name": "KAHLUA",
-      "750ml_price": 5500,
-      "image": "url_to_image"
+      "sevenfifty_price": 5500,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 83,
       "name": "CONTREAU",
-      "750ml_price": 2100,
-      "image": "url_to_image"
+      "sevenfifty_price": 2100,
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 84,
       "name": "SOUTHERN COMFORT",
-      "750ml_price": 3500,
-      "image": "url_to_image"
+      "sevenfifty_price": 3500,
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "soft_drinks": [
@@ -584,83 +585,83 @@
       "id": 85,
       "name": "REDBULL",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 86,
       "name": "KERINGET WATER",
       "size": "500ml",
       "price": 100,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 87,
       "name": "MONSTER",
       "price": 300,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 88,
       "name": "KERINGET WATER",
       "size": "1ltr",
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 89,
       "name": "DELMONTE",
       "price": 500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 90,
       "name": "SPARKLING WATER",
       "size": "1ltr",
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 91,
       "name": "SODA",
       "price": 100,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 92,
       "name": "ORANGE JUICE",
       "size": "glass",
       "price": 500,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 93,
       "name": "GINGER ALE",
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 94,
       "name": "FRESH JUICE",
       "price": 400,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 95,
       "name": "TONIC WATER",
       "price": 120,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 96,
       "name": "SODA WATER",
       "price": 120,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 97,
       "name": "DAWA",
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "mocktails": [
@@ -669,35 +670,35 @@
       "name": "LEMONADE",
       "ingredients": ["Lime", "Syrup"],
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 99,
       "name": "VIRGIN MOJITO",
       "ingredients": ["Soda Water", "Mint", "Syrup"],
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 100,
       "name": "ORANGE SUNSET",
       "ingredients": ["Orange", "Cranberry", "Lime"],
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 101,
       "name": "LIME COLA",
       "ingredients": ["Lime Cordial", "Coke"],
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 102,
       "name": "VIRGIN PINACOLADA",
       "ingredients": ["Pineapple", "Coconut Cream"],
       "price": 200,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     }
   ],
   "cocktails": [
@@ -712,8 +713,8 @@
         "Blue Curacao",
         "Sprite"
       ],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 104,
@@ -732,28 +733,21 @@
         "Cointreau",
         "Lime"
       ],
-      "image": "url_to_image"
-    },
-    {
-      "id": 105,
-      "name": "MOJITO",
-      "ingredients": ["Rum", "Lime Juice", "Mint", "Soda Water"],
-      "price": null,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 106,
       "name": "MARGARITA",
       "ingredients": ["Tequila", "Cointreau", "Lime Juice"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 107,
       "name": "TEQUILA SUNRISE",
       "ingredients": ["Tequila", "Grenadine Syrup", "Orange Juice"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 108,
@@ -770,28 +764,28 @@
         "Gin",
         "Splash of Cola"
       ],
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 109,
       "name": "CUBA LIBRE",
       "ingredients": ["Rum", "Lime Juice", "Coke"],
       "price": 800,
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 110,
       "name": "HOT TODDY",
       "ingredients": ["Hot Water", "Brandy", "Honey", "Lemon Juice"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 111,
       "name": "WHISKY SOUR",
       "ingredients": ["Whisky", "Egg White", "Lemon Juice", "Syrup"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 112,
@@ -806,77 +800,77 @@
         "Coconut Cream",
         "Lime Juice"
       ],
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 113,
       "name": "SCREW DRIVER",
       "ingredients": ["Vodka", "Orange Juice"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 114,
       "name": "BLUE LAGOON",
       "ingredients": ["Blue Curacao", "Vodka", "Lemonade"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 115,
       "name": "911 SINGLE",
       "ingredients": ["Gin", "Lime Juice", "Passion Juice", "Syrup"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 116,
       "name": "OLD FASHIONED",
       "ingredients": ["Whiskey", "Sugar Cube", "Bitters"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 117,
       "name": "DIRTY MARTINI",
       "ingredients": ["Vodka", "Vermouth", "Lime", "Olives"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 118,
       "name": "ORGASM",
       "ingredients": ["Amaretto", "Irish Cream", "Kahlua"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 119,
       "name": "RUSTY NAIL",
       "ingredients": ["Whiskey", "Drambuie"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 120,
       "name": "LUCIEN GAUDIN",
       "ingredients": ["Gin", "Vermouth", "Cointreau", "Campari"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id":121 ,
       "name": "SEX IN THE BEACH",
       "ingredients": ["Cranberry", "Orange", "Vodka", "Triple Sec"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 121,
       "name": "GIN FIZZ",
       "ingredients": ["Gin", "Lemon Juice", "Syrup", "Soda Water", "Egg White"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 123,
@@ -887,28 +881,28 @@
       },
       "alcohol_content": "75%",
       "ingredients": ["Gin", "Orange Juice", "Passion Juice", "Lime Juice"],
-      "image": "url_to_image"
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 124,
       "name": "MADRAS",
       "ingredients": ["Vodka", "Cranberry Juice", "Orange Juice", "Bitters"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 125,
       "name": "MAI TAI",
       "ingredients": ["Pineapple Juice", "Orange Juice", "Rum", "Syrup"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 126,
       "name": "SOUTHERN HARMONY",
       "ingredients": ["Southern Comfort", "JID", "Lime Juice", "Sprite"],
-      "price": null,
-      "image": "url_to_image"
+      "price": "null",
+      "imageUrl": "url_to_imageUrl"
     },
     {
       "id": 127,
@@ -918,7 +912,7 @@
         "600ml": 700,
         "800ml": 800
       },
-      "image": "url_to_image"
+      "imageUrl": "url_to_image"
     }
   ],
   "Breakfast": [

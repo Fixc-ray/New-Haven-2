@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
 
-function Drinks({ Menu }) {
+function Drinks({ addToCart }) {
   const Beer = "https://new-haven-backend2.vercel.app/beers";
   const [beerItems, setBeerItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -206,7 +206,7 @@ function Drinks({ Menu }) {
       setLoading(false);
     }
   };
-  const SoftDrinks = "https://new-haven-backend2.vercel.app/softDrinks";
+  const SoftDrinks = "https://new-haven-backend2.vercel.app/soft_Drinks";
   const [soft, setSoftItems] = useState([]);
 
   const softDrinksSectionRef = useRef(null);
@@ -361,12 +361,6 @@ function Drinks({ Menu }) {
           <h2 className="text-4xl md:text-6xl sm:text-3xl font-bold text-center">
             Enjoy Our Drinks Section
           </h2>
-          <button
-            onClick={redirectToHome}
-            className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded"
-          >
-            View Our Menu
-          </button>
         </div>
       </section>
 
@@ -417,7 +411,13 @@ function Drinks({ Menu }) {
                         alt={beer.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{beer.description}</p>
+                      <p> Ksh {beer.price}</p>
+                      <button
+                        onClick={() => addToCart(beer)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -447,7 +447,13 @@ function Drinks({ Menu }) {
                         alt={Ciggarates.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{Ciggarates.description}</p>
+                      <p>Ksh {Ciggarates.price}</p>
+                      <button
+                        onClick={() => addToCart(Ciggarates)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -474,7 +480,16 @@ function Drinks({ Menu }) {
                         alt={Whisky.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{Whisky.description}</p>
+                      <p>Shot Ksh {Whisky.shot_price}</p>
+                      <p>350ml Ksh {Whisky.threeFifty_price}</p>
+                      <p>750ml Ksh {Whisky.sevenfifty_price}</p>
+                      <p>1 Liter Ksh {Whisky.oneLiter_price}</p>
+                      <button
+                        onClick={() => addToCart(Whisky)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -501,7 +516,14 @@ function Drinks({ Menu }) {
                         alt={cognac.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{cognac.description}</p>
+                      <p>Shot Ksh {cognac.shot_price}</p>
+                      <p>750ml Ksh {cognac.sevenfifty_price}</p>
+                      <button
+                        onClick={() => addToCart(cognac)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -524,11 +546,18 @@ function Drinks({ Menu }) {
                     >
                       <h4 className="text-xl font-bold">{Wines.name}</h4>
                       <img
-                        src={Wines.imagbeere}
+                        src={Wines.image}
                         alt={Wines.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{Wines.description}</p>
+                      <p>Shot glass Price Ksh {Wines.glass_price}</p>
+                      <p>Bottle Price Ksh {Wines.bottle_price}</p>
+                      <button
+                        onClick={() => addToCart(Wines)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -555,7 +584,15 @@ function Drinks({ Menu }) {
                         alt={Gins.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{Gins.description}</p>
+                      <p>shot ksh {Gins.shot_price}</p>
+                      <p>350ml ksh {Gins.threeFifty_price}</p>
+                      <p>750ml ksh {Gins.sevenfifty_price}</p>
+                      <button
+                        onClick={() => addToCart(Gins)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -582,7 +619,15 @@ function Drinks({ Menu }) {
                         alt={vodka.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{vodka.description}</p>
+                      <p>Shot Price Ksh {vodka.shot_price}</p>
+                      <p>350ml Price Ksh {vodka.threeFifty_price}</p>
+                      <p>750ml Price Ksh {vodka.sevenfifty_price}</p>
+                      <button
+                        onClick={() => addToCart(vodka)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -609,7 +654,15 @@ function Drinks({ Menu }) {
                         alt={tequila.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{tequila.description}</p>
+                      <p>Shot Price Ksh {tequila.shot_price}</p>
+                      <p>750ml bottle Ksh {tequila.sevenfifty_price}</p>
+
+                      <button
+                        onClick={() => addToCart(tequila)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -636,7 +689,14 @@ function Drinks({ Menu }) {
                         alt={rum.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{rum.description}</p>
+                      <p>Ksh {rum.shot_price}</p>
+                      <p>750ml bottle Ksh {rum.sevenfifty_price}</p>
+                      <button
+                        onClick={() => addToCart(rum)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -663,7 +723,13 @@ function Drinks({ Menu }) {
                         alt={liqueur.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{liqueur.description}</p>
+                      <p>750ml bottle Ksh {liqueur.sevenfifty_price}</p>
+                      <button
+                        onClick={() => addToCart(liqueur)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -687,10 +753,16 @@ function Drinks({ Menu }) {
                       <h4 className="text-xl font-bold">{soft.name}</h4>
                       <img
                         src={soft.image}
-                        alt={soft.name}
+                        alt={"Img To Be Added Soon"}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{soft.description}</p>
+                      <p>Ksh {soft.price}</p>
+                      <button
+                        onClick={() => addToCart(soft)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -706,18 +778,24 @@ function Drinks({ Menu }) {
                 <p className="text-center">Loading Mocktails...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {mocktails.map((mocktails) => (
+                  {mocktails.map((mocktail) => (
                     <div
-                      key={mocktails.id}
+                      key={mocktail.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
                     >
-                      <h4 className="text-xl font-bold">{mocktails.name}</h4>
+                      <h4 className="text-xl font-bold">{mocktail.name}</h4>
                       <img
-                        src={mocktails.image}
-                        alt={mocktails.name}
+                        src={mocktail.image}
+                        alt={"img to be added soon"}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{mocktails.description}</p>
+                      <p>Ksh {mocktail.price}</p>
+                      <button
+                        onClick={() => addToCart(mocktail)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -725,6 +803,7 @@ function Drinks({ Menu }) {
             </div>
           </section>
         )}
+
         {cocktails.length > 0 && (
           <section ref={CocktailSectionRef} id="cocktails" className="py-16">
             <div className="container mx-auto px-4">
@@ -744,7 +823,13 @@ function Drinks({ Menu }) {
                         alt={cocktails.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>{cocktails.description}</p>
+                      <p>Ksh {cocktails.price}</p>
+                      <button
+                        onClick={() => addToCart(cocktails)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   ))}
                 </div>
