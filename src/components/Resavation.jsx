@@ -173,3 +173,149 @@ function Reservation() {
 }
 
 export default Reservation;
+
+// import { useState, useEffect } from "react";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import "leaflet/dist/leaflet.css";
+// import L from "leaflet";
+// import emailjs from "emailjs-com";
+
+// // Fix marker icon issue in Leaflet
+// delete L.Icon.Default.prototype._getIconUrl;
+// L.Icon.Default.mergeOptions({
+//   iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+//   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+//   shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+// });
+
+// export default function BookingForm() {
+//   const [bookingType, setBookingType] = useState("in-house");
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     phone: "",
+//     event: "",
+//     date: "",
+//     time: "",
+//     location: "",
+//   });
+//   const [position, setPosition] = useState(null);
+
+//   useEffect(() => {
+//     if (bookingType === "catering") {
+//       if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(
+//           (pos) => {
+//             setPosition([pos.coords.latitude, pos.coords.longitude]);
+//           },
+//           (error) => console.error("Geolocation error:", error)
+//         );
+//       }
+//     }
+//   }, [bookingType]);
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+    
+//     const emailParams = {
+//       to_email: "rayjustin481@gmail.com",
+//       from_name: formData.name,
+//       phone: formData.phone,
+//       event: formData.event,
+//       reservation_date: formData.date,
+//       reservation_time: formData.time,
+//       location: bookingType === "catering" ? formData.location : "N/A",
+//     };
+
+//     emailjs
+//       .send(
+//         "service_koac7yy",
+//         "template_wgpp21p",
+//         emailParams,
+//         "m5okyqReJXrsKPd_J"
+//       )
+//       .then(() => {
+//         alert("Reservation email sent successfully!");
+//         setFormData({
+//           name: "",
+//           phone: "",
+//           event: "",
+//           date: "",
+//           time: "",
+//           location: "",
+//         });
+//       })
+//       .catch((error) => {
+//         console.error("Failed to send email:", error);
+//         alert("Error sending email. Please try again.");
+//       });
+//   };
+
+//   return (
+//     <div className="max-w-lg mx-auto mt-10 p-6 bg-white shadow-xl rounded-2xl">
+//       <h2 className="text-xl font-bold text-center mb-4">Restaurant Booking Form</h2>
+//       <form className="space-y-4" onSubmit={handleSubmit}>
+//         <div>
+//           <label className="block text-sm font-medium">Name</label>
+//           <input type="text" name="name" className="w-full p-2 border rounded-md" value={formData.name} onChange={handleChange} required />
+//         </div>
+//         <div>
+//           <label className="block text-sm font-medium">Phone</label>
+//           <input type="tel" name="phone" className="w-full p-2 border rounded-md" value={formData.phone} onChange={handleChange} required />
+//         </div>
+//         <div>
+//           <label className="block text-sm font-medium">Booking Type</label>
+//           <select className="w-full p-2 border rounded-md" value={bookingType} onChange={(e) => setBookingType(e.target.value)}>
+//             <option value="in-house">In-House</option>
+//             <option value="catering">Outside Catering</option>
+//           </select>
+//         </div>
+//         <div>
+//           <label className="block text-sm font-medium">Event</label>
+//           <input type="text" name="event" className="w-full p-2 border rounded-md" value={formData.event} onChange={handleChange} required />
+//         </div>
+//         <div>
+//           <label className="block text-sm font-medium">Date</label>
+//           <input type="date" name="date" className="w-full p-2 border rounded-md" value={formData.date} onChange={handleChange} required />
+//         </div>
+//         <div>
+//           <label className="block text-sm font-medium">Time</label>
+//           <input type="time" name="time" className="w-full p-2 border rounded-md" value={formData.time} onChange={handleChange} required />
+//         </div>
+//         {bookingType === "catering" && position && (
+//           <div>
+//             <label className="block text-sm font-medium">Event Location</label>
+//             <input 
+//               type="text" 
+//               name="location" 
+//               className="w-full p-2 border rounded-md" 
+//               value={formData.location} 
+//               onChange={handleChange} 
+//               placeholder="Enter location or use map"
+//               required 
+//             />
+//             <div className="mt-4 w-full h-64">
+//               <MapContainer center={position} zoom={16} className="w-full h-full rounded-md">
+//                 <TileLayer
+//                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+//                 />
+//                 <Marker position={position} draggable={true} eventHandlers={{
+//                   dragend: (e) => {
+//                     const { lat, lng } = e.target.getLatLng();
+//                     setPosition([lat, lng]);
+//                   }
+//                 }}>
+//                   <Popup>Your event location</Popup>
+//                 </Marker>
+//               </MapContainer>
+//             </div>
+//           </div>
+//         )}
+//         <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded-md">Submit Booking</button>
+//       </form>
+//     </div>
+//   );
+// }

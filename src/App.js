@@ -8,7 +8,6 @@ import Reservation from "./components/Resavation";
 import Cart from "./components/Cart";
 import LikedMeals from "./components/LikedMeals";
 import { useEffect, useState } from "react";
-import Preloader from "./components/Preloader";
 import AdminDashboard from "./components/Admins/AdminsDashboard";
 import Login from "./components/Admins/Login";
 import AddMenu from "./components/Admins/AddMenu";
@@ -17,6 +16,7 @@ import DeleteMenu from "./components/Admins/DeleteMenu";
 import EditMenu from "./components/Admins/EditMenu";
 import Featured from "./components/Featured";
 import Drinks from "./components/Drinks";
+import BookingForm from "./components/Bookus";
 
 function App() {
   const [foods, setFoods] = useState([]);
@@ -35,9 +35,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const endpoints = [
-        "https://new-haven-backend2.vercel.app/breakfast",
-        "https://new-haven-backend2.vercel.app/MainDishes",
-        "https://new-haven-backend2.vercel.app/sides",
+        "https://new-haven-backend.vercel.app/breakfast",
+        "https://new-haven-backend.vercel.app/MainDishes",
+        "https://new-haven-backend.vercel.app/sides",
       ];
   
       try {
@@ -184,6 +184,7 @@ function App() {
           }
         />
         <Route path="/feature" element={<Featured food={foods} />} />
+        <Route path="/book-us" element={<Reservation />} />
       </Routes>
     </div>
   );
