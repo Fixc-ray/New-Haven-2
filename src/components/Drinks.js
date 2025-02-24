@@ -3,7 +3,7 @@ import "../index.css";
 import { useNavigate } from "react-router-dom";
 
 function Drinks({ addToCart }) {
-  const Beer = "https://new-haven-backend2.vercel.app/beers";
+  const Beer = "https://new-haven-backend.vercel.app/beers";
   const [beerItems, setBeerItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function Drinks({ addToCart }) {
     }
   };
 
-  const Ciggarates = "https://new-haven-backend2.vercel.app/cigarettes";
+  const Ciggarates = "https://new-haven-backend.vercel.app/cigarettes";
   const [cigarItems, setcigarItems] = useState([]);
 
   const CigarSectionRef = useRef(null);
@@ -46,7 +46,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Whiskys = "https://new-haven-backend2.vercel.app/whiskys";
+  const Whiskys = "https://new-haven-backend.vercel.app/whiskys";
   const [Whisky, setWhiskyItems] = useState([]);
 
   const WhiskySectionRef = useRef(null);
@@ -66,7 +66,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Cognacs = "https://new-haven-backend2.vercel.app/cognacs";
+  const Cognacs = "https://new-haven-backend.vercel.app/cognacs";
   const [cognacs, setCognacsItems] = useState([]);
 
   const CognacSectionRef = useRef(null);
@@ -86,7 +86,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Wines = "https://new-haven-backend2.vercel.app/wines";
+  const Wines = "https://new-haven-backend.vercel.app/wines";
   const [wines, setWinesItems] = useState([]);
 
   const WinesSectionRef = useRef(null);
@@ -106,7 +106,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Gins = "https://new-haven-backend2.vercel.app/gins";
+  const Gins = "https://new-haven-backend.vercel.app/gins";
   const [gins, setGinsItems] = useState([]);
 
   const GinsSectionRef = useRef(null);
@@ -126,7 +126,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Vodka = "https://new-haven-backend2.vercel.app/vodka";
+  const Vodka = "https://new-haven-backend.vercel.app/vodka";
   const [vodka, setVodkaItems] = useState([]);
 
   const VodkaSectionRef = useRef(null);
@@ -146,7 +146,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Tequila = "https://new-haven-backend2.vercel.app/tequila";
+  const Tequila = "https://new-haven-backend.vercel.app/tequila";
   const [tequila, setTequilaItems] = useState([]);
 
   const TequilaSectionRef = useRef(null);
@@ -166,7 +166,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Rum = "https://new-haven-backend2.vercel.app/rum";
+  const Rum = "https://new-haven-backend.vercel.app/rum";
   const [rum, setRumItems] = useState([]);
 
   const RumSectionRef = useRef(null);
@@ -186,7 +186,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Liqueur = "https://new-haven-backend2.vercel.app/liqueur";
+  const Liqueur = "https://new-haven-backend.vercel.app/liqueur";
   const [liqueur, setliqueurItems] = useState([]);
 
   const liqueurSectionRef = useRef(null);
@@ -206,7 +206,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const SoftDrinks = "https://new-haven-backend2.vercel.app/soft_Drinks";
+  const SoftDrinks = "https://new-haven-backend.vercel.app/soft_Drinks";
   const [soft, setSoftItems] = useState([]);
 
   const softDrinksSectionRef = useRef(null);
@@ -226,7 +226,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Mocktails = "https://new-haven-backend2.vercel.app/mocktails";
+  const Mocktails = "https://new-haven-backend.vercel.app/mocktails";
   const [mocktails, setMocktailItems] = useState([]);
 
   const MocktailSectionRef = useRef(null);
@@ -246,7 +246,7 @@ function Drinks({ addToCart }) {
       setLoading(false);
     }
   };
-  const Cocktails = "https://new-haven-backend2.vercel.app/cocktails";
+  const Cocktails = "https://new-haven-backend.vercel.app/cocktails";
   const [cocktails, setCocktailItems] = useState([]);
 
   const CocktailSectionRef = useRef(null);
@@ -407,7 +407,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{beer.name}</h4>
                       <img
-                        src={beer.image}
+                        src={beer.imageUrl}
                         alt={beer.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -443,7 +443,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{Ciggarates.name}</h4>
                       <img
-                        src={Ciggarates.image}
+                        src={Ciggarates.imageUrl}
                         alt={Ciggarates.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -476,7 +476,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{Whisky.name}</h4>
                       <img
-                        src={Whisky.image}
+                        src={Whisky.imageUrl}
                         alt={Whisky.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -512,7 +512,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{cognac.name}</h4>
                       <img
-                        src={cognac.image}
+                        src={cognac.imageUrl}
                         alt={cognac.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -546,7 +546,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{Wines.name}</h4>
                       <img
-                        src={Wines.image}
+                        src={Wines.imageUrl}
                         alt={Wines.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -580,7 +580,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{Gins.name}</h4>
                       <img
-                        src={Gins.image}
+                        src={Gins.imageUrl}
                         alt={Gins.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -615,7 +615,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{vodka.name}</h4>
                       <img
-                        src={vodka.image}
+                        src={vodka.imageUrl}
                         alt={vodka.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -650,7 +650,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{tequila.name}</h4>
                       <img
-                        src={tequila.image}
+                        src={tequila.imageUrl}
                         alt={tequila.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -685,7 +685,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{rum.name}</h4>
                       <img
-                        src={rum.image}
+                        src={rum.imageUrl}
                         alt={rum.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -719,7 +719,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{liqueur.name}</h4>
                       <img
-                        src={liqueur.image}
+                        src={liqueur.imageUrl}
                         alt={liqueur.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -752,7 +752,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{soft.name}</h4>
                       <img
-                        src={soft.image}
+                        src={soft.imageUrl}
                         alt={"Img To Be Added Soon"}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -785,7 +785,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{mocktail.name}</h4>
                       <img
-                        src={mocktail.image}
+                        src={mocktail.imageUrl}
                         alt={"img to be added soon"}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
@@ -819,7 +819,7 @@ function Drinks({ addToCart }) {
                     >
                       <h4 className="text-xl font-bold">{cocktails.name}</h4>
                       <img
-                        src={cocktails.image}
+                        src={cocktails.imageUrl}
                         alt={cocktails.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />

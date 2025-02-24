@@ -21,7 +21,7 @@ function Reservation() {
     e.preventDefault(); 
 
     const emailParams = {
-      to_email: "rayjustin481@gmail.com", 
+      to_email: "newhaven.eateries@gmail.com", 
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,

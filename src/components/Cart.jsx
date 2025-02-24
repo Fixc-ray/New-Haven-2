@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
@@ -28,25 +27,24 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
       .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
       .join("\n");
 
-    const emailParams = {
-      to_email: "rayjustin481@gmail.com",
-      user_name: userData.name,
-      user_address: userData.address,
-      user_email: userData.email,
-      cart_details: cartDetails,
-      total_price: `KSH ${totalPrice}`,
-    };
+    const message = `New Order Details:
+    
+Name: ${userData.name}
+Delivery Address: ${userData.address}
+Email: ${userData.email}
+Phone: ${userData.phoneNumber}
 
-    emailjs
-      .send("service_koac7yy", "template_al29uyy", emailParams, "m5okyqReJXrsKPd_J")
-      .then(() => {
-        alert("Email sent successfully!");
-        setIsModalOpen(false);
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-        alert("Failed to send emil.");
-      });
+Hello I Would Like To Place An Order For The Following:
+${cartDetails}
+
+Total: KSH ${totalPrice}`;
+
+    // Replace with your business WhatsApp number (in international format without the '+' sign)
+    const businessWhatsAppNumber = "254722880230"; 
+
+    const whatsappUrl = `https://wa.me/${businessWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    setIsModalOpen(false);
   };
 
   return (
@@ -190,4 +188,3 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
 }
 
 export default Cart;
- 
