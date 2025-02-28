@@ -64,7 +64,7 @@
       "id": 12,
       "name": "GUARANA",
       "price": 300,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": ""
     },
     {
       "id": 13,
@@ -76,7 +76,7 @@
       "id": 14,
       "name": "PINEAPPLE PUNCH",
       "price": 300,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": ""
     },
     {
       "id": 15,
@@ -88,7 +88,7 @@
       "id": 16,
       "name": "KA",
       "price": 300,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": ""
     },
     {
       "id": 17,
@@ -164,117 +164,103 @@
     {
       "id": 28,
       "name": "J/W BLACK LABEL",
-      "shot_price": 350,
-      "threeFifty_price": 2100,
-      "sevenfifty_price": 4500,
-      "oneliter_price": 5600,
+      "price": 5600,
       "imageUrl": "https://images.ctfassets.net/waruwpig3jxu/rYk8WxpJ1ellZvibRckWT/0e8df23f16b39c6d986faf6f68af8fee/black-750ml_producthero_lifestyle-01_desktop.webp?&w=1920&q=30"
     },
     {
       "id": 29,
       "name": "JACK DANIELS",
-      "shot_price": 350,
-      "sevenfifty_price": 5000,
+      "price": 5000,
       "imageUrl": "https://www.oaks.delivery/wp-content/uploads/Jack-Daniels-Honey-Whiskey-1-1600x900-1-1200x628-cropped.webp"
     },
     {
       "id": 30,
       "name": "JACK DANIELS HONEY",
-      "sevenfifty_price": 5000,
+      "price": 5000,
       "imageUrl": "https://www.bondston.com/files/Fotky_k_popisom_1400x700/Jack_Daniels/jack-daniels-honey.jpg"
     },
     {
       "id": 31,
       "name": "JAMESON",
-      "shot_price": 250,
-      "threeFifty_price": 1800,
-      "sevenfifty_price": 3500,
-      "oneliter_price": 4500,
+      "price": 4500,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9NguIR8diycdOSLTZCLM5QMrMqWPjMVKhg&s"
     },
     {
       "id": 32,
       "name": "DOUBLE BLACK J/W",
-      "shot_price": 450,
-      "sevenfifty_price": 7500,
+      "price": 7500,
       "imageUrl": "https://winehouseliquor.com/images/com_hikashop/upload/websize_photo_32_1889492140.png"
     },
     {
       "id": 33,
       "name": "CHIVAS 12YRS",
-      "shot_price": 400,
-      "sevenfifty_price": 5500,
+      "price": 5500,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIicDcR1Wmhx9f-dXFZY_FkhtW1oztVIZYQ&s"
     },
     {
       "id": 34,
       "name": "TULLAMOR DEW",
-      "threeFifty_price": 3000,
-      "sevenfifty_price": 3800,
+      "price": 3800,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWymqIFoooQCLU8usRXhU4OmACeKzpYaP41A&s"
     },
     {
       "id": 35,
       "name": "GRANTS",
-      "threeFifty_price": 3000,
+      "price": 3000,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVfaxr5RaKwRFeJ9ZBWGCcl30d3brFFFJJDA&s"
     },
     {
       "id": 36,
       "name": "JIM BEAM",
-      "sevenfifty_price": 4000,
+      "price": 4000,
       "imageUrl": "https://arthurcantina.com/cdn/shop/files/Jim_Beam_Bourbon_750mL_-_Arthur_Cantina_Wine_Liquor_-_-_tag1_-_tag2_-2693895.jpg?v=1724540992"
     },
     {
       "id": 37,
       "name": "GENTLEMAN JACK",
-      "shot_price": 350,
-      "sevenfifty_price": 7800,
-      "oneliter_price": 8600,
+      "price": 8600,
       "imageUrl": "https://www.liquorshack.co.ke/wp-content/uploads/2020/12/Gentleman-Jack-wpp1692312681673.png"
     },
     {
       "id": 38,
       "name": "SINGLETON 12YRS",
-      "sevenfifty_price": 6900,
+      "price": 6900,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8o4se_KnW6nPuFljDBlcAGHE_9ceEMCa7HA&s"
     },
     {
       "id": 39,
       "name": "SINGLETON 15YRS",
-      "sevenfifty_price": 9500,
+      "price": 9500,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzCk42ZRf-rngBrmUt088P3P6DerGHDRzrA&s"
     },
     {
       "id": 40,
       "name": "GLENLIVET 12YRS",
-      "sevenfifty_price": 7900,
+      "price": 7900,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7xJz5qAI7zGZiV5a4jDrjcrIqmaiXGIo2A&s"
     },
     {
       "id": 41,
       "name": "GLENLIVET FOUNDERS RESERVE",
-      "sevenfifty_price": 7000,
+      "price": 7000,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3nfREf3xY01rAIP7VKev9bwb5q0o9ZGZMRQ&s"
     },
     {
       "id": 42,
       "name": "GLENFIDDICH 12YRS",
-      "sevenfifty_price": 8500,
+      "price": 8500,
       "imageUrl": "https://www.vipbottles.co.uk/wp-content/uploads/2020/11/Glenfiddich-12-Year-Old-Whisky-70cl-Lifestyle-6.jpg"
     },
     {
       "id": 43,
       "name": "GLENFIDDICH 15YRS",
-      "sevenfifty_price": 13000,
+      "price": 13000,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmB2_RYRX5AbHpfZGOLH3zR8AhxMYQs52KoA&s"
     },
     {
       "id": 44,
       "name": "VICEROY",
-      "shot_price": 150,
-      "threeFifty_price": 1300,
-      "sevenfifty_price": 2500,
+      "price": 2500,
       "imageUrl": "https://jayswines.com/wp-content/uploads/2015/04/Viceroy-5-years-375ml.jpg"
     }
   ],
@@ -282,29 +268,25 @@
     {
       "id": 45,
       "name": "HENNESSY VS",
-      "shot_price": 450,
-      "sevenfifty_price": 7100,
+      "price": 7100,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpP1pN20LEz9hR088CYk_JYL1i_NoZTBVZcA&s"
     },
     {
       "id": 46,
       "name": "MARTEL VS",
-      "shot_price": 400,
-      "sevenfifty_price": 7900,
-      "imageUrl": "url_to_imageUrl"
+      "price": 7900,
+      "imageUrl": ""
     },
     {
       "id": 47,
       "name": "MARTEL VSOP",
-      "shot_price": 600,
-      "sevenfifty_price": 11500,
+      "price": 11500,
       "imageUrl": "https://www.oaks.delivery/wp-content/uploads/photo-news-hd.jpg"
     },
     {
       "id": 48,
       "name": "REMMY MARTIN VS",
-      "shot_price": 550,
-      "sevenfifty_price": "null",
+      "price": "null",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3XRnr0w6K_mOqpfMM9LWE9zl3fbmnfg0Qw&s"
     }
   ],
@@ -312,85 +294,73 @@
     {
       "id": 49,
       "name": "MUCHO MAS",
-      "glass_price": "null",
-      "bottle_price": 3500,
+      "price": 3500,
       "imageUrl": "https://ik.imagekit.io/drinksvine/products/mucho-mas-black-edition.webp"
     },
     {
       "id": 50,
       "name": "TRUMPETER",
-      "glass_price":  "null",
-      "bottle_price": 3500,
+      "price": 3500,
       "imageUrl": "https://soys.co.ke/PImages/NVBIV-0.jpg"
     },
     {
       "id": 51,
       "name": "NEDERBURG (MERLOT)",
-      "glass_price": "null",
-      "bottle_price": 2800,
+      "price": 2800,
       "imageUrl": "https://www.oaks.delivery/wp-content/uploads/nederburg-merlot.jpg"
     },
     {
       "id": 52,
       "name": "NEDERBURG (CHARONAY)",
-      "glass_price": "null",
-      "bottle_price": 2500,
+      "price": 2500,
       "imageUrl": "data:image/jpeg;base64,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"
     },
     {
       "id": 53,
       "name": "NEDERBURG ROSE",
-      "glass_price": "null",
-      "bottle_price": 2500,
+      "price": 2500,
       "imageUrl": "https://www.vintageliquorkenya.com/wp-content/uploads/2022/04/Nederburg-Rose-750ml.jpg"
     },
     {
       "id": 54,
       "name": "FRONTERA (Cabernet Sauvignon)",
-      "glass_price": 400,
-      "bottle_price": 2500,
+      "price": 2500,
       "imageUrl": "https://www.oaks.delivery/wp-content/uploads/2017/11/frontera-cab-sauv.jpg"
     },
     {
       "id": 55,
       "name": "FRONTERA (Chardonnay)",
-      "glass_price": 400,
-      "bottle_price": 2500,
+      "price": 2500,
       "imageUrl": "https://jayswines.com/wp-content/uploads/2020/09/frontera-chardonnay.png"
     },
     {
       "id": 56,
       "name": "DROSTDY HOF RED/WHITE",
-      "glass_price": 300,
-      "bottle_price": 2000,
+      "price": 2000,
       "imageUrl": "https://www.vintageliquorkenya.com/wp-content/uploads/2022/04/DH-Red-Claret-750ml-600x600-1-300x300.jpg"
     },
     {
       "id": 57,
       "name": "ROBERTSON RED/WHITE",
-      "glass_price": "null",
-      "bottle_price": 2000,
+      "price": 2000,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJGnyzxZLBAGe0k3TpTeYIOw9aul86VG2Pzw&s"
     },
     {
       "id": 58,
       "name": "4TH STREET RED/WHITE",
-      "glass_price": 300,
-      "bottle_price": 2000,
+      "price": 2000,
       "imageUrl": "https://res.cloudinary.com/dyc0ieeyu/image/upload/c_fit,f_auto/v1/products/kl0upvyjx45nkcxg3yow.webp"
     },
     {
       "id": 59,
       "name": "FOUR COUSINS RED/WHITE",
-      "glass_price": 300,
-      "bottle_price": 2000,
+      "price": 2000,
       "imageUrl": "https://ik.imagekit.io/drinksvine/products/four-cousins-sweet-rose.webp"
     },
     {
       "id": 60,
       "name": "CELLAR CASK RED/WHITE",
-      "glass_price": 300,
-      "bottle_price": 1500,
+      "price": 1500,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdWsbQlQoeVOLb-nOShOb85qvebLPKXePNA&s"
     }
   ],
@@ -398,186 +368,154 @@
     {
       "id": 61,
       "name": "HENDRICKS",
-      "shot_price": "null",
-      "threeFifty_price": "null",
-      "sevenfifty_price": 7200,
+      "price": 7200,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnvUQp1Y7clGzmaZRGzeMNjiSOlYgjshDzow&s"
     },
     {
       "id": 62,
       "name": "TANQUERAY ",
-      "shot_price": "null",
-      "threeFifty_price": "null",
-      "sevenfifty_price": 6500,
+      "price": 6500,
       "imageUrl": "https://i0.wp.com/www.traveldistilled.com/wp-content/uploads/2023/11/two-tanqueray-gin-bottles.png?fit=737%2C1024&ssl=1"
     },
     {
       "id": 63,
       "name": "TANQUERAY DRY GIN",
-      "shot_price": 350,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 4500,
+      "price": 4500,
       "imageUrl": "data:image/jpeg;base64,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"
     },
     {
       "id": 64,
       "name": "MALFY PINK",
-      "shot_price": 250,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 5200,
+      "price": 5200,
       "imageUrl": "https://www.oaks.delivery/wp-content/uploads/malfy-gin-rosa.png"
     },
     {
       "id": 65,
       "name": "MALFY",
-      "shot_price": 250,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 5200,
+      "price": 5200,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXhx9OEn_u0dCBgTBG0n83riAxGndDIZmSw&s"
     },
     {
       "id": 66,
       "name": "GORDONS DRY GIN",
-      "shot_price": 200,
-      "threeFifty_price": 1300,
-      "sevenfifty_price": 3000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3000,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkvtQ8VAoZMirCtWf7wE4GOYZFESSwSYRWmQ&s"
     },
     {
       "id": 67,
       "name": "GORDONS LEMON",
-      "shot_price": 200,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 3000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3000,
+      "imageUrl": "https://www.gordonsgin.com/assets/images/bottles/gordons_bottles_1_5.png"
     },
     {
       "id": 68,
       "name": "GORDONS PINK",
-      "shot_price": 200,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 3000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3000,
+      "imageUrl": "https://soys.co.ke/PImages/RMPZS-0.jpg"
     },
     {
       "id": 69,
       "name": "BEEFEATER",
-      "shot_price": "null",
-      "threeFifty_price": "null",
-      "sevenfifty_price": 2500,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2500,
+      "imageUrl": "https://soys.co.ke/PImages/XZNZF-0.jpg"
     },
     {
       "id": 70,
       "name": "GILBEYS",
-      "shot_price": 150,
-      "threeFifty_price": 1000,
-      "sevenfifty_price": 2000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2000,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUd_fUfBd6GPUmqSo1eaf_RyCIqHX3Vp16UA&s"
     },
     {
       "id": 71,
       "name": "GIN 58",
-      "shot_price": 150,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 2000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2000,
+      "imageUrl": "https://greenspoon.co.ke/wp-content/uploads/2022/04/Greenspoon-Kenya-Kenyan-Originals-58-Gin-Classic-750ml.jpg"
     },
     {
       "id": 72,
       "name": "GIN MORE",
-      "shot_price": "null",
-      "threeFifty_price": "null",
-      "sevenfifty_price": 7200,
-      "imageUrl": "url_to_imageUrl"
+      "price": 7200,
+      "imageUrl": "https://www.ginmare.com/wp-content/themes/wphack-core/assets/images/html/ginmare-botella.png"
     }
   ],
   "vodka": [
     {
       "id": 73,
       "name": "ABSOLUTE VODKA",
-      "shot_price": 300,
-      "threeFifty_price": "null",
-      "sevenfifty_price": 3500,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3500,
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/h9b/he5/12457108045854/36828_Main.jpg"
     },
     {
       "id": 74,
       "name": "SMINORFF VODKA",
-      "shot_price": 150,
-      "threeFifty_price": 1200,
-      "sevenfifty_price": 2200,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2200,
+      "imageUrl": "https://www.oaks.delivery/wp-content/uploads/Untitled-800-x-800-mm-11.png"
     }
   ],
   "tequila": [
     {
       "id": 75,
       "name": "JOSE QUERVO SILVER/GOLD",
-      "shot_price": 250,
-      "sevenfifty_price": 4800,
-      "imageUrl": "url_to_imageUrl"
+      "price": 4800,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSqhB1F-rLjjNIbEzJ6yvlpLAmZGESAa3VfQ&s"
     },
     {
       "id": 76,
       "name": "CAMINO CLEAR/GOLD",
-      "shot_price": 250,
-      "sevenfifty_price": 3000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3000,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMtUoO-l-Bh8jeTLpln30fpRKyZAjbB6qGtQ&s"
     }
   ],
   "rum": [
     {
       "id": 77,
       "name": "MALIBU",
-      "shot_price": 300,
-      "sevenfifty_price": 2600,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2600,
+      "imageUrl": "https://ik.imagekit.io/drinksvine/products/malibu-caribbean-rum.webp"
     },
     {
       "id": 78,
       "name": "BARCADI",
-      "shot_price": 250,
-      "sevenfifty_price": 2000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2000,
+      "imageUrl": "https://soys.co.ke/PImages/OTQFP-0.jpg"
     }
   ],
   "liqueur": [
     {
       "id": 79,
       "name": "BARLEYS",
-      "sevenfifty_price": 3000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3000,
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/h42/h5e/12456809988126/41876_Main.jpg"
     },
     {
       "id": 80,
       "name": "AMARULA",
-      "sevenfifty_price": 2700,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2700,
+      "imageUrl": "https://res.cloudinary.com/dyc0ieeyu/image/upload/c_fit,f_auto/v1/products/amarula.jpg"
     },
     {
       "id": 81,
       "name": "JAGARMEISTER",
-      "sevenfifty_price": 4000,
-      "imageUrl": "url_to_imageUrl"
+      "price": 4000,
+      "imageUrl": "https://soys.co.ke/PImages/VJKNR-0.jpg"
     },
     {
       "id": 82,
       "name": "KAHLUA",
-      "sevenfifty_price": 5500,
-      "imageUrl": "url_to_imageUrl"
+      "price": 5500,
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKNs5MdrtNXAHAGYuC_6u-31UO-yxgHUDgow&s"
     },
     {
       "id": 83,
       "name": "CONTREAU",
-      "sevenfifty_price": 2100,
-      "imageUrl": "url_to_imageUrl"
+      "price": 2100,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cointreau_original_v4.jpg"
     },
     {
       "id": 84,
       "name": "SOUTHERN COMFORT",
-      "sevenfifty_price": 3500,
-      "imageUrl": "url_to_imageUrl"
+      "price": 3500,
+      "imageUrl": "https://www.oaks.delivery/wp-content/uploads/2017/05/southern-comfort.jpg"
     }
   ],
   "soft_drinks": [
@@ -585,334 +523,71 @@
       "id": 85,
       "name": "REDBULL",
       "price": 300,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://cdn.mafrservices.com/pim-content/KEN/media/product/40578/1727949603/40578_main.jpg"
     },
     {
       "id": 86,
       "name": "KERINGET WATER",
       "size": "500ml",
       "price": 100,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAuoKnvDYXZ7xQNXVxxjFe4plRSgCRm6SEbQ&s"
     },
     {
       "id": 87,
       "name": "MONSTER",
       "price": 300,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThjSVqP66rUeHeEE_j962jHqHIwRJ57aRP-A&s"
     },
     {
       "id": 88,
       "name": "KERINGET WATER",
       "size": "1ltr",
       "price": 200,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAuoKnvDYXZ7xQNXVxxjFe4plRSgCRm6SEbQ&s"
     },
     {
       "id": 89,
       "name": "DELMONTE",
       "price": 500,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://jayswines.com/wp-content/uploads/2015/04/Buy-Delmonte-Juice-1L-online-in-Nairobi.jpg"
     },
     {
       "id": 90,
       "name": "SPARKLING WATER",
       "size": "1ltr",
       "price": 200,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": ""
     },
     {
       "id": 91,
       "name": "SODA",
       "price": 100,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Coca_Cola_Flasche_-_Original_Taste.jpg/1200px-Coca_Cola_Flasche_-_Original_Taste.jpg"
     },
     {
       "id": 92,
       "name": "ORANGE JUICE",
       "size": "glass",
       "price": 500,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": ""
     },
     {
       "id": 93,
       "name": "GINGER ALE",
       "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 94,
-      "name": "FRESH JUICE",
-      "price": 400,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/hf0/h36/34849778860062/178181_main.jpg"
     },
     {
       "id": 95,
       "name": "TONIC WATER",
       "price": 120,
-      "imageUrl": "url_to_imageUrl"
+      "imageUrl": "https://cdn.mafrservices.com/sys-master-root/h0e/h0d/12456184971294/24177_Main.jpg"
     },
     {
       "id": 96,
       "name": "SODA WATER",
       "price": 120,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 97,
-      "name": "DAWA",
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    }
-  ],
-  "mocktails": [
-    {
-      "id": 98,
-      "name": "LEMONADE",
-      "ingredients": ["Lime", "Syrup"],
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 99,
-      "name": "VIRGIN MOJITO",
-      "ingredients": ["Soda Water", "Mint", "Syrup"],
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 100,
-      "name": "ORANGE SUNSET",
-      "ingredients": ["Orange", "Cranberry", "Lime"],
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 101,
-      "name": "LIME COLA",
-      "ingredients": ["Lime Cordial", "Coke"],
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 102,
-      "name": "VIRGIN PINACOLADA",
-      "ingredients": ["Pineapple", "Coconut Cream"],
-      "price": 200,
-      "imageUrl": "url_to_imageUrl"
-    }
-  ],
-  "cocktails": [
-    {
-      "id": 103,
-      "name": "ADIOS MOTHERFUCKER",
-      "ingredients": [
-        "Vodka",
-        "Rum",
-        "Tequila",
-        "Gin",
-        "Blue Curacao",
-        "Sprite"
-      ],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 104,
-      "name": "THE PINEAPPLE",
-      "sizes": {
-        "300ml": 400,
-        "400ml": 500,
-        "500ml": 600,
-        "600ml": 1000,
-        "800ml": 800
-      },
-      "ingredients": [
-        "Pineapple Juice",
-        "Vodka",
-        "Triple Sec",
-        "Cointreau",
-        "Lime"
-      ],
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 106,
-      "name": "MARGARITA",
-      "ingredients": ["Tequila", "Cointreau", "Lime Juice"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 107,
-      "name": "TEQUILA SUNRISE",
-      "ingredients": ["Tequila", "Grenadine Syrup", "Orange Juice"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 108,
-      "name": "LONG ISLAND",
-      "sizes": {
-        "800ml": 800,
-        "1000ml": 1000
-      },
-      "ingredients": [
-        "Vodka",
-        "Tequila",
-        "White Rum",
-        "Triple Sec",
-        "Gin",
-        "Splash of Cola"
-      ],
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 109,
-      "name": "CUBA LIBRE",
-      "ingredients": ["Rum", "Lime Juice", "Coke"],
-      "price": 800,
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 110,
-      "name": "HOT TODDY",
-      "ingredients": ["Hot Water", "Brandy", "Honey", "Lemon Juice"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 111,
-      "name": "WHISKY SOUR",
-      "ingredients": ["Whisky", "Egg White", "Lemon Juice", "Syrup"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 112,
-      "name": "PINACOLADA",
-      "sizes": {
-        "500ml": 1000,
-        "800ml": 800
-      },
-      "ingredients": [
-        "Pineapple Juice",
-        "Malibu",
-        "Coconut Cream",
-        "Lime Juice"
-      ],
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 113,
-      "name": "SCREW DRIVER",
-      "ingredients": ["Vodka", "Orange Juice"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 114,
-      "name": "BLUE LAGOON",
-      "ingredients": ["Blue Curacao", "Vodka", "Lemonade"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 115,
-      "name": "911 SINGLE",
-      "ingredients": ["Gin", "Lime Juice", "Passion Juice", "Syrup"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 116,
-      "name": "OLD FASHIONED",
-      "ingredients": ["Whiskey", "Sugar Cube", "Bitters"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 117,
-      "name": "DIRTY MARTINI",
-      "ingredients": ["Vodka", "Vermouth", "Lime", "Olives"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 118,
-      "name": "ORGASM",
-      "ingredients": ["Amaretto", "Irish Cream", "Kahlua"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 119,
-      "name": "RUSTY NAIL",
-      "ingredients": ["Whiskey", "Drambuie"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 120,
-      "name": "LUCIEN GAUDIN",
-      "ingredients": ["Gin", "Vermouth", "Cointreau", "Campari"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id":121 ,
-      "name": "SEX IN THE BEACH",
-      "ingredients": ["Cranberry", "Orange", "Vodka", "Triple Sec"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 121,
-      "name": "GIN FIZZ",
-      "ingredients": ["Gin", "Lemon Juice", "Syrup", "Soda Water", "Egg White"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 123,
-      "name": "TWIN TOWER",
-      "sizes": {
-        "600ml": 800,
-        "800ml": 800
-      },
-      "alcohol_content": "75%",
-      "ingredients": ["Gin", "Orange Juice", "Passion Juice", "Lime Juice"],
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 124,
-      "name": "MADRAS",
-      "ingredients": ["Vodka", "Cranberry Juice", "Orange Juice", "Bitters"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 125,
-      "name": "MAI TAI",
-      "ingredients": ["Pineapple Juice", "Orange Juice", "Rum", "Syrup"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 126,
-      "name": "SOUTHERN HARMONY",
-      "ingredients": ["Southern Comfort", "JID", "Lime Juice", "Sprite"],
-      "price": "null",
-      "imageUrl": "url_to_imageUrl"
-    },
-    {
-      "id": 127,
-      "name": "JAGER BOMB",
-      "ingredients": ["Jagermeister", "Redbull"],
-      "sizes": {
-        "600ml": 700,
-        "800ml": 800
-      },
-      "imageUrl": "url_to_image"
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDpH29zA_EoM5iz7DmfVEXMBlzjGxCfFvWQ&s"
     }
   ],
   "Breakfast": [

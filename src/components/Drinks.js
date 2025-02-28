@@ -3,17 +3,116 @@ import "../index.css";
 import { useNavigate } from "react-router-dom";
 
 function Drinks({ addToCart }) {
-  const Beer = "https://new-haven-backend.vercel.app/beers";
-  const [beerItems, setBeerItems] = useState([]);
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const beerSectionRef = useRef(null);
+  // API Endpoints
+  const beersURL = "https://new-haven-backend.vercel.app/beers";
+  const cigarettesURL = "https://new-haven-backend.vercel.app/cigarettes";
+  const whiskysURL = "https://new-haven-backend.vercel.app/whiskys";
+  const cognacsURL = "https://new-haven-backend.vercel.app/cognacs";
+  const winesURL = "https://new-haven-backend.vercel.app/wines";
+  const ginsURL = "https://new-haven-backend.vercel.app/gins";
+  const vodkaURL = "https://new-haven-backend.vercel.app/vodka";
+  const tequilaURL = "https://new-haven-backend.vercel.app/tequila";
+  const rumURL = "https://new-haven-backend.vercel.app/rum";
+  const liqueurURL = "https://new-haven-backend.vercel.app/liqueur";
+  const softDrinksURL = "https://new-haven-backend.vercel.app/soft_Drinks";
+  const mocktailsURL = "https://new-haven-backend.vercel.app/mocktails";
+  const cocktailsURL = "https://new-haven-backend.vercel.app/cocktails";
 
+  // State for drink items
+  const [beerItems, setBeerItems] = useState([]);
+  const [cigaretteItems, setCigaretteItems] = useState([]);
+  const [whiskyItems, setWhiskyItems] = useState([]);
+  const [cognacItems, setCognacItems] = useState([]);
+  const [wineItems, setWineItems] = useState([]);
+  const [ginItems, setGinItems] = useState([]);
+  const [vodkaItems, setVodkaItems] = useState([]);
+  const [tequilaItems, setTequilaItems] = useState([]);
+  const [rumItems, setRumItems] = useState([]);
+  const [liqueurItems, setLiqueurItems] = useState([]);
+  const [softDrinkItems, setSoftDrinkItems] = useState([]);
+  const [mocktailItems, setMocktailItems] = useState([]);
+  const [cocktailItems, setCocktailItems] = useState([]);
+
+  // Separate loading states for each category
+  const [loadingBeers, setLoadingBeers] = useState(false);
+  const [loadingCigarettes, setLoadingCigarettes] = useState(false);
+  const [loadingWhiskys, setLoadingWhiskys] = useState(false);
+  const [loadingCognacs, setLoadingCognacs] = useState(false);
+  const [loadingWines, setLoadingWines] = useState(false);
+  const [loadingGins, setLoadingGins] = useState(false);
+  const [loadingVodka, setLoadingVodka] = useState(false);
+  const [loadingTequila, setLoadingTequila] = useState(false);
+  const [loadingRum, setLoadingRum] = useState(false);
+  const [loadingLiqueur, setLoadingLiqueur] = useState(false);
+  const [loadingSoftDrinks, setLoadingSoftDrinks] = useState(false);
+  const [loadingMocktails, setLoadingMocktails] = useState(false);
+  const [loadingCocktails, setLoadingCocktails] = useState(false);
+
+  // Section Refs
+  const beerSectionRef = useRef(null);
+  const cigaretteSectionRef = useRef(null);
+  const whiskySectionRef = useRef(null);
+  const cognacSectionRef = useRef(null);
+  const wineSectionRef = useRef(null);
+  const ginSectionRef = useRef(null);
+  const vodkaSectionRef = useRef(null);
+  const tequilaSectionRef = useRef(null);
+  const rumSectionRef = useRef(null);
+  const liqueurSectionRef = useRef(null);
+  const softDrinksSectionRef = useRef(null);
+  const mocktailSectionRef = useRef(null);
+  const cocktailSectionRef = useRef(null);
+
+  // ---------------- Price Selection Modal State ----------------
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [priceOptions, setPriceOptions] = useState([]);
+  const [selectedPriceOption, setSelectedPriceOption] = useState(null);
+  const [showPriceSelectionModal, setShowPriceSelectionModal] = useState(false);
+
+  // Helper function to extract valid price options from a product
+  const getPriceOptions = (item) => {
+    const options = [];
+    Object.keys(item).forEach((key) => {
+      if (key.endsWith("_price") && item[key] && item[key] !== "null") {
+        // Remove the trailing "_price" to get the option type (e.g. "shot", "threeFifty")
+        options.push({ type: key.replace("_price", ""), price: item[key] });
+      }
+    });
+    return options;
+  };
+
+  // Handler to add to cart after checking for multiple price options
+  const handleAddToCart = (item) => {
+    // If a single price is already present, add directly
+    if (item.price !== undefined) {
+      addToCart(item);
+      return;
+    }
+    // Get the price options from the product object
+    const options = getPriceOptions(item);
+    if (options.length > 1) {
+      // Prompt the user to select an option if more than one exists
+      setSelectedProduct(item);
+      setPriceOptions(options);
+      setShowPriceSelectionModal(true);
+    } else if (options.length === 1) {
+      // If there's only one option, use it automatically
+      item.price = options[0].price;
+      item.selectedPriceType = options[0].type;
+      addToCart(item);
+    } else {
+      // Fallback
+      addToCart(item);
+    }
+  };
+
+  // ---------------- Fetch Functions ----------------
   const fetchBeers = async () => {
-    setLoading(true);
+    setLoadingBeers(true);
     try {
-      const response = await fetch(Beer);
+      const response = await fetch(beersURL);
       const data = await response.json();
       setBeerItems(data);
       setTimeout(() => {
@@ -22,328 +121,216 @@ function Drinks({ addToCart }) {
     } catch (error) {
       console.error("Error fetching beers:", error);
     } finally {
-      setLoading(false);
+      setLoadingBeers(false);
     }
   };
 
-  const Ciggarates = "https://new-haven-backend.vercel.app/cigarettes";
-  const [cigarItems, setcigarItems] = useState([]);
-
-  const CigarSectionRef = useRef(null);
-
-  const fetchCigars = async () => {
-    setLoading(true);
+  const fetchCigarettes = async () => {
+    setLoadingCigarettes(true);
     try {
-      const response = await fetch(Ciggarates);
+      const response = await fetch(cigarettesURL);
       const data = await response.json();
-      setcigarItems(data);
+      setCigaretteItems(data);
       setTimeout(() => {
-        CigarSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        cigaretteSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
       console.error("Error fetching cigarettes:", error);
     } finally {
-      setLoading(false);
+      setLoadingCigarettes(false);
     }
   };
-  const Whiskys = "https://new-haven-backend.vercel.app/whiskys";
-  const [Whisky, setWhiskyItems] = useState([]);
 
-  const WhiskySectionRef = useRef(null);
-
-  const fetchWhisky = async () => {
-    setLoading(true);
+  const fetchWhiskys = async () => {
+    setLoadingWhiskys(true);
     try {
-      const response = await fetch(Whiskys);
+      const response = await fetch(whiskysURL);
       const data = await response.json();
       setWhiskyItems(data);
       setTimeout(() => {
-        WhiskySectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        whiskySectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching whiskys:", error);
     } finally {
-      setLoading(false);
+      setLoadingWhiskys(false);
     }
   };
-  const Cognacs = "https://new-haven-backend.vercel.app/cognacs";
-  const [cognacs, setCognacsItems] = useState([]);
-
-  const CognacSectionRef = useRef(null);
 
   const fetchCognacs = async () => {
-    setLoading(true);
+    setLoadingCognacs(true);
     try {
-      const response = await fetch(Cognacs);
+      const response = await fetch(cognacsURL);
       const data = await response.json();
-      setCognacsItems(data);
+      setCognacItems(data);
       setTimeout(() => {
-        CognacSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        cognacSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching cognacs:", error);
     } finally {
-      setLoading(false);
+      setLoadingCognacs(false);
     }
   };
-  const Wines = "https://new-haven-backend.vercel.app/wines";
-  const [wines, setWinesItems] = useState([]);
-
-  const WinesSectionRef = useRef(null);
 
   const fetchWines = async () => {
-    setLoading(true);
+    setLoadingWines(true);
     try {
-      const response = await fetch(Wines);
+      const response = await fetch(winesURL);
       const data = await response.json();
-      setWinesItems(data);
+      setWineItems(data);
       setTimeout(() => {
-        WinesSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        wineSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching wines:", error);
     } finally {
-      setLoading(false);
+      setLoadingWines(false);
     }
   };
-  const Gins = "https://new-haven-backend.vercel.app/gins";
-  const [gins, setGinsItems] = useState([]);
-
-  const GinsSectionRef = useRef(null);
 
   const fetchGins = async () => {
-    setLoading(true);
+    setLoadingGins(true);
     try {
-      const response = await fetch(Gins);
+      const response = await fetch(ginsURL);
       const data = await response.json();
-      setGinsItems(data);
+      setGinItems(data);
       setTimeout(() => {
-        GinsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        ginSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching gins:", error);
     } finally {
-      setLoading(false);
+      setLoadingGins(false);
     }
   };
-  const Vodka = "https://new-haven-backend.vercel.app/vodka";
-  const [vodka, setVodkaItems] = useState([]);
-
-  const VodkaSectionRef = useRef(null);
 
   const fetchVodka = async () => {
-    setLoading(true);
+    setLoadingVodka(true);
     try {
-      const response = await fetch(Vodka);
+      const response = await fetch(vodkaURL);
       const data = await response.json();
       setVodkaItems(data);
       setTimeout(() => {
-        VodkaSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        vodkaSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching vodka:", error);
     } finally {
-      setLoading(false);
+      setLoadingVodka(false);
     }
   };
-  const Tequila = "https://new-haven-backend.vercel.app/tequila";
-  const [tequila, setTequilaItems] = useState([]);
-
-  const TequilaSectionRef = useRef(null);
 
   const fetchTequila = async () => {
-    setLoading(true);
+    setLoadingTequila(true);
     try {
-      const response = await fetch(Tequila);
+      const response = await fetch(tequilaURL);
       const data = await response.json();
       setTequilaItems(data);
       setTimeout(() => {
-        TequilaSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        tequilaSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching tequila:", error);
     } finally {
-      setLoading(false);
+      setLoadingTequila(false);
     }
   };
-  const Rum = "https://new-haven-backend.vercel.app/rum";
-  const [rum, setRumItems] = useState([]);
-
-  const RumSectionRef = useRef(null);
 
   const fetchRum = async () => {
-    setLoading(true);
+    setLoadingRum(true);
     try {
-      const response = await fetch(Rum);
+      const response = await fetch(rumURL);
       const data = await response.json();
       setRumItems(data);
       setTimeout(() => {
-        RumSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        rumSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching rum:", error);
     } finally {
-      setLoading(false);
+      setLoadingRum(false);
     }
   };
-  const Liqueur = "https://new-haven-backend.vercel.app/liqueur";
-  const [liqueur, setliqueurItems] = useState([]);
-
-  const liqueurSectionRef = useRef(null);
 
   const fetchLiqueur = async () => {
-    setLoading(true);
+    setLoadingLiqueur(true);
     try {
-      const response = await fetch(Liqueur);
+      const response = await fetch(liqueurURL);
       const data = await response.json();
-      setliqueurItems(data);
+      setLiqueurItems(data);
       setTimeout(() => {
         liqueurSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching liqueur:", error);
     } finally {
-      setLoading(false);
+      setLoadingLiqueur(false);
     }
   };
-  const SoftDrinks = "https://new-haven-backend.vercel.app/soft_Drinks";
-  const [soft, setSoftItems] = useState([]);
 
-  const softDrinksSectionRef = useRef(null);
-
-  const fetchSoft = async () => {
-    setLoading(true);
+  const fetchSoftDrinks = async () => {
+    setLoadingSoftDrinks(true);
     try {
-      const response = await fetch(SoftDrinks);
+      const response = await fetch(softDrinksURL);
       const data = await response.json();
-      setSoftItems(data);
+      setSoftDrinkItems(data);
       setTimeout(() => {
         softDrinksSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching soft drinks:", error);
     } finally {
-      setLoading(false);
+      setLoadingSoftDrinks(false);
     }
   };
-  const Mocktails = "https://new-haven-backend.vercel.app/mocktails";
-  const [mocktails, setMocktailItems] = useState([]);
 
-  const MocktailSectionRef = useRef(null);
-
-  const fetchMocktail = async () => {
-    setLoading(true);
+  const fetchMocktails = async () => {
+    setLoadingMocktails(true);
     try {
-      const response = await fetch(Mocktails);
+      const response = await fetch(mocktailsURL);
       const data = await response.json();
       setMocktailItems(data);
       setTimeout(() => {
-        MocktailSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        mocktailSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching mocktails:", error);
     } finally {
-      setLoading(false);
+      setLoadingMocktails(false);
     }
   };
-  const Cocktails = "https://new-haven-backend.vercel.app/cocktails";
-  const [cocktails, setCocktailItems] = useState([]);
-
-  const CocktailSectionRef = useRef(null);
 
   const fetchCocktails = async () => {
-    setLoading(true);
+    setLoadingCocktails(true);
     try {
-      const response = await fetch(Cocktails);
+      const response = await fetch(cocktailsURL);
       const data = await response.json();
       setCocktailItems(data);
       setTimeout(() => {
-        CocktailSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+        cocktailSectionRef.current?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } catch (error) {
-      console.error("Error fetching cigarettes:", error);
+      console.error("Error fetching cocktails:", error);
     } finally {
-      setLoading(false);
+      setLoadingCocktails(false);
     }
   };
+
+  // ---------------- Menu Items ----------------
   const menuItems = [
-    {
-      name: "Beers",
-      image:
-        "https://images.unsplash.com/photo-1689888393526-35563a50550e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJlZXJzfGVufDB8fDB8fHww",
-      onClick: fetchBeers,
-    },
-    {
-      name: "Cigarettes",
-      image:
-        "https://images.unsplash.com/photo-1627449543657-ab677b2105cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2lnYXJldHRlJTIwcGFja3xlbnwwfHwwfHx8MA%3D%3D",
-      onClick: fetchCigars,
-    },
-    {
-      name: "Whiskeys",
-      image:
-        "https://images.unsplash.com/photo-1598934475091-f1c4467c4a53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoaXNrZXlzfGVufDB8fDB8fHww",
-      onClick: fetchWhisky,
-    },
-    {
-      name: "Cognac",
-      image:
-        "https://bodegaslacatedral.com/cdn/shop/files/DescripcionCognacHennessyVerySpecial_bodegaslacatedral.jpg?v=1708361988&width=1600",
-      onClick: fetchCognacs,
-    },
-    {
-      name: "Wines",
-      image:
-        "https://www.baccoestate.co.za/wp-content/uploads/2023/06/bacco-family-of-wines-1024x683.jpg",
-      onClick: fetchWines,
-    },
-    {
-      name: "Gins",
-      image:
-        "https://www.oaks.delivery/wp-content/uploads/gordons-lemon-gallery.jpg",
-      onClick: fetchGins,
-    },
-    {
-      name: "Vodka",
-      image:
-        "https://images.unsplash.com/photo-1618412046321-f8127c4589ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dm9ka2F8ZW58MHx8MHx8fDA%3D",
-      onClick: fetchVodka,
-    },
-    {
-      name: "Tequila",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOG8Cya2t-fLW4Re5X4oZhqauiGppjjOOfeQ&s",
-      onClick: fetchTequila,
-    },
-    {
-      name: "Rum",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQajetfiQ-vVrPOkbD3bvOLr81YKGOdBwBkfw&s",
-      onClick: fetchRum,
-    },
-    {
-      name: "Liqueur",
-      image: "https://drinksworld.com/wp-content/uploads/liqueur-02.jpg",
-      onClick: fetchLiqueur,
-    },
-    {
-      name: "Soft Drinks",
-      image:
-        "https://images.unsplash.com/photo-1627243939602-6456a5ab231c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29jYWNvbGF8ZW58MHx8MHx8fDA%3D",
-      onClick: fetchSoft,
-    },
-    {
-      name: "Mocktails",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_uJ8hiQYklrdRwyO_gJMK537-UVVK8zhGXg&s",
-      onClick: fetchMocktail,
-    },
-    {
-      name: "Cocktails",
-      image:
-        "https://images.unsplash.com/photo-1601925088924-aad72e86b894?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29ja3RhaWxzfGVufDB8fDB8fHww",
-      onClick: fetchCocktails,
-    },
+    { name: "Beers", image: "https://images.unsplash.com/photo-1689888393526-35563a50550e?w=500&auto=format&fit=crop&q=60", onClick: fetchBeers },
+    { name: "Cigarettes", image: "https://images.unsplash.com/photo-1627449543657-ab677b2105cf?w=500&auto=format&fit=crop&q=60", onClick: fetchCigarettes },
+    { name: "Whiskeys", image: "https://images.unsplash.com/photo-1598934475091-f1c4467c4a53?w=500&auto=format&fit=crop&q=60", onClick: fetchWhiskys },
+    { name: "Cognac", image: "https://bodegaslacatedral.com/cdn/shop/files/DescripcionCognacHennessyVerySpecial_bodegaslacatedral.jpg?v=1708361988&width=1600", onClick: fetchCognacs },
+    { name: "Wines", image: "https://www.baccoestate.co.za/wp-content/uploads/2023/06/bacco-family-of-wines-1024x683.jpg", onClick: fetchWines },
+    { name: "Gins", image: "https://www.oaks.delivery/wp-content/uploads/gordons-lemon-gallery.jpg", onClick: fetchGins },
+    { name: "Vodka", image: "https://images.unsplash.com/photo-1618412046321-f8127c4589ca?w=500&auto=format&fit=crop&q=60", onClick: fetchVodka },
+    { name: "Tequila", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOG8Cya2t-fLW4Re5X4oZhqauiGppjjOOfeQ&s", onClick: fetchTequila },
+    { name: "Rum", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQajetfiQ-vVrPOkbD3bvOLr81YKGOdBwBkfw&s", onClick: fetchRum },
+    { name: "Liqueur", image: "https://drinksworld.com/wp-content/uploads/liqueur-02.jpg", onClick: fetchLiqueur },
+    { name: "Soft Drinks", image: "https://images.unsplash.com/photo-1627243939602-6456a5ab231c?w=500&auto=format&fit=crop&q=60", onClick: fetchSoftDrinks },
+    { name: "Mocktails", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_uJ8hiQYklrdRwyO_gJMK537-UVVK8zhGXg&s", onClick: fetchMocktails },
   ];
 
   const redirectToHome = () => {
@@ -382,9 +369,7 @@ function Drinks({ addToCart }) {
                   onClick={item.onClick}
                 >
                   <div className="bg-black bg-opacity-50 p-4 rounded">
-                    <h4 className="text-xl font-bold text-white">
-                      {item.name}
-                    </h4>
+                    <h4 className="text-xl font-bold text-white">{item.name}</h4>
                   </div>
                 </div>
               ))}
@@ -392,28 +377,60 @@ function Drinks({ addToCart }) {
           </div>
         </section>
 
+        {/* Example: Beers Section */}
         {beerItems.length > 0 && (
           <section ref={beerSectionRef} id="beers" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Beers</h3>
-              {loading ? (
+              {loadingBeers ? (
                 <p className="text-center">Loading beers...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                   {beerItems.map((beer) => (
-                    <div
-                      key={beer.id}
-                      className="bg-gray-800 p-4 rounded-lg text-center"
-                    >
+                    <div key={beer.id} className="bg-gray-800 p-4 rounded-lg text-center">
                       <h4 className="text-xl font-bold">{beer.name}</h4>
                       <img
                         src={beer.imageUrl}
                         alt={beer.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p> Ksh {beer.price}</p>
+                      <p>Ksh {beer.price}</p>
                       <button
-                        onClick={() => addToCart(beer)}
+                        onClick={() => handleAddToCart(beer)}
+                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+                {/* Cigarettes Section */}
+                {cigaretteItems.length > 0 && (
+          <section ref={cigaretteSectionRef} id="cigarettes" className="py-16">
+            <div className="container mx-auto px-4">
+              <h3 className="text-3xl font-bold mb-8 text-center">Cigarettes</h3>
+              {loadingCigarettes ? (
+                <p className="text-center">Loading Cigarettes...</p>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  {cigaretteItems.map((cigarette) => (
+                    <div
+                      key={cigarette.id}
+                      className="bg-gray-800 p-4 rounded-lg text-center"
+                    >
+                      <h4 className="text-xl font-bold">{cigarette.name}</h4>
+                      <img
+                        src={cigarette.imageUrl}
+                        alt={cigarette.name}
+                        className="w-full h-40 object-cover rounded-md mb-2"
+                      />
+                      <p>Ksh {cigarette.price}</p>
+                      <button
+                        onClick={() => addToCart(cigarette)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
                       >
                         Add to Cart
@@ -426,30 +443,29 @@ function Drinks({ addToCart }) {
           </section>
         )}
 
-        {cigarItems.length > 0 && (
-          <section ref={CigarSectionRef} id="cigarattes" className="py-16">
+        {/* Whiskys Section */}
+        {whiskyItems.length > 0 && (
+          <section ref={whiskySectionRef} id="whiskys" className="py-16">
             <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold mb-8 text-center">
-                Cigarettes
-              </h3>
-              {loading ? (
-                <p className="text-center">Loading Cigarettes...</p>
+              <h3 className="text-3xl font-bold mb-8 text-center">Whiskys</h3>
+              {loadingWhiskys ? (
+                <p className="text-center">Loading Whiskys...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {cigarItems.map((Ciggarates) => (
+                  {whiskyItems.map((whisky) => (
                     <div
-                      key={Ciggarates.id}
+                      key={whisky.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
                     >
-                      <h4 className="text-xl font-bold">{Ciggarates.name}</h4>
+                      <h4 className="text-xl font-bold">{whisky.name}</h4>
                       <img
-                        src={Ciggarates.imageUrl}
-                        alt={Ciggarates.name}
+                        src={whisky.imageUrl}
+                        alt={whisky.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>Ksh {Ciggarates.price}</p>
+                      <p>1 Liter Ksh {whisky.price}</p>
                       <button
-                        onClick={() => addToCart(Ciggarates)}
+                        onClick={() => addToCart(whisky)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
                       >
                         Add to Cart
@@ -461,51 +477,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {Whisky.length > 0 && (
-          <section ref={WhiskySectionRef} id="Whisky" className="py-16">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold mb-8 text-center">whiskys</h3>
-              {loading ? (
-                <p className="text-center">Loading Whyiskys...</p>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {Whisky.map((Whisky) => (
-                    <div
-                      key={Whisky.id}
-                      className="bg-gray-800 p-4 rounded-lg text-center"
-                    >
-                      <h4 className="text-xl font-bold">{Whisky.name}</h4>
-                      <img
-                        src={Whisky.imageUrl}
-                        alt={Whisky.name}
-                        className="w-full h-40 object-cover rounded-md mb-2"
-                      />
-                      <p>Shot Ksh {Whisky.shot_price}</p>
-                      <p>350ml Ksh {Whisky.threeFifty_price}</p>
-                      <p>750ml Ksh {Whisky.sevenfifty_price}</p>
-                      <p>1 Liter Ksh {Whisky.oneLiter_price}</p>
-                      <button
-                        onClick={() => addToCart(Whisky)}
-                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        )}
-        {cognacs.length > 0 && (
-          <section ref={CognacSectionRef} id="cognacs" className="py-16">
+
+        {/* Cognacs Section */}
+        {cognacItems.length > 0 && (
+          <section ref={cognacSectionRef} id="cognacs" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Cognacs</h3>
-              {loading ? (
+              {loadingCognacs ? (
                 <p className="text-center">Loading Cognacs...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {cognacs.map((cognac) => (
+                  {cognacItems.map((cognac) => (
                     <div
                       key={cognac.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -516,8 +498,7 @@ function Drinks({ addToCart }) {
                         alt={cognac.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>Shot Ksh {cognac.shot_price}</p>
-                      <p>750ml Ksh {cognac.sevenfifty_price}</p>
+                      <p>750ml Ksh {cognac.price}</p>
                       <button
                         onClick={() => addToCart(cognac)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
@@ -531,29 +512,30 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {wines.length > 0 && (
-          <section ref={WinesSectionRef} id="wines" className="py-16">
+
+        {/* Wines Section */}
+        {wineItems.length > 0 && (
+          <section ref={wineSectionRef} id="wines" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Wines</h3>
-              {loading ? (
+              {loadingWines ? (
                 <p className="text-center">Loading Wines...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {wines.map((Wines) => (
+                  {wineItems.map((wine) => (
                     <div
-                      key={Wines.id}
+                      key={wine.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
                     >
-                      <h4 className="text-xl font-bold">{Wines.name}</h4>
+                      <h4 className="text-xl font-bold">{wine.name}</h4>
                       <img
-                        src={Wines.imageUrl}
-                        alt={Wines.name}
+                        src={wine.imageUrl}
+                        alt={wine.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>Shot glass Price Ksh {Wines.glass_price}</p>
-                      <p>Bottle Price Ksh {Wines.bottle_price}</p>
+                      <p>Bottle Price Ksh {wine.price}</p>
                       <button
-                        onClick={() => addToCart(Wines)}
+                        onClick={() => addToCart(wine)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
                       >
                         Add to Cart
@@ -565,30 +547,30 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {gins.length > 0 && (
-          <section ref={GinsSectionRef} id="gins" className="py-16">
+
+        {/* Gins Section */}
+        {ginItems.length > 0 && (
+          <section ref={ginSectionRef} id="gins" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Gins</h3>
-              {loading ? (
+              {loadingGins ? (
                 <p className="text-center">Loading Gins...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {gins.map((Gins) => (
+                  {ginItems.map((gin) => (
                     <div
-                      key={Gins.id}
+                      key={gin.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
                     >
-                      <h4 className="text-xl font-bold">{Gins.name}</h4>
+                      <h4 className="text-xl font-bold">{gin.name}</h4>
                       <img
-                        src={Gins.imageUrl}
-                        alt={Gins.name}
+                        src={gin.imageUrl}
+                        alt={gin.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>shot ksh {Gins.shot_price}</p>
-                      <p>350ml ksh {Gins.threeFifty_price}</p>
-                      <p>750ml ksh {Gins.sevenfifty_price}</p>
+                      <p>750ml Ksh {gin.price}</p>
                       <button
-                        onClick={() => addToCart(Gins)}
+                        onClick={() => addToCart(gin)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
                       >
                         Add to Cart
@@ -600,15 +582,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {vodka.length > 0 && (
-          <section ref={VodkaSectionRef} id="vodka" className="py-16">
+
+        {/* Vodka Section */}
+        {vodkaItems.length > 0 && (
+          <section ref={vodkaSectionRef} id="vodka" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Vodka</h3>
-              {loading ? (
+              {loadingVodka ? (
                 <p className="text-center">Loading Vodka...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {vodka.map((vodka) => (
+                  {vodkaItems.map((vodka) => (
                     <div
                       key={vodka.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -619,9 +603,7 @@ function Drinks({ addToCart }) {
                         alt={vodka.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>Shot Price Ksh {vodka.shot_price}</p>
-                      <p>350ml Price Ksh {vodka.threeFifty_price}</p>
-                      <p>750ml Price Ksh {vodka.sevenfifty_price}</p>
+                      <p>750ml Price Ksh {vodka.price}</p>
                       <button
                         onClick={() => addToCart(vodka)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
@@ -635,15 +617,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {tequila.length > 0 && (
-          <section ref={tequila} id="tequila" className="py-16">
+
+        {/* Tequila Section */}
+        {tequilaItems.length > 0 && (
+          <section ref={tequilaSectionRef} id="tequila" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Tequila</h3>
-              {loading ? (
+              {loadingTequila ? (
                 <p className="text-center">Loading Tequila...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {tequila.map((tequila) => (
+                  {tequilaItems.map((tequila) => (
                     <div
                       key={tequila.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -652,11 +636,9 @@ function Drinks({ addToCart }) {
                       <img
                         src={tequila.imageUrl}
                         alt={tequila.name}
-                        className="w-full h-40 object-cover rounded-md mb-2"
+                        className="w-full h-60 object-cover rounded-md mb-2"
                       />
-                      <p>Shot Price Ksh {tequila.shot_price}</p>
-                      <p>750ml bottle Ksh {tequila.sevenfifty_price}</p>
-
+                      <p>Ksh {tequila.price}</p>
                       <button
                         onClick={() => addToCart(tequila)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
@@ -670,15 +652,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {rum.length > 0 && (
-          <section ref={RumSectionRef} id="rum" className="py-16">
+
+        {/* Rum Section */}
+        {rumItems.length > 0 && (
+          <section ref={rumSectionRef} id="rum" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Rum</h3>
-              {loading ? (
+              {loadingRum ? (
                 <p className="text-center">Loading Rum...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {rum.map((rum) => (
+                  {rumItems.map((rum) => (
                     <div
                       key={rum.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -689,8 +673,7 @@ function Drinks({ addToCart }) {
                         alt={rum.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>Ksh {rum.shot_price}</p>
-                      <p>750ml bottle Ksh {rum.sevenfifty_price}</p>
+                      <p>Ksh {rum.price}</p>
                       <button
                         onClick={() => addToCart(rum)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
@@ -704,15 +687,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {liqueur.length > 0 && (
+
+        {/* Liqueur Section */}
+        {liqueurItems.length > 0 && (
           <section ref={liqueurSectionRef} id="liqueur" className="py-16">
             <div className="container mx-auto px-4">
               <h3 className="text-3xl font-bold mb-8 text-center">Liqueur</h3>
-              {loading ? (
+              {loadingLiqueur ? (
                 <p className="text-center">Loading Liqueur...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {liqueur.map((liqueur) => (
+                  {liqueurItems.map((liqueur) => (
                     <div
                       key={liqueur.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -723,7 +708,7 @@ function Drinks({ addToCart }) {
                         alt={liqueur.name}
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
-                      <p>750ml bottle Ksh {liqueur.sevenfifty_price}</p>
+                      <p>ksh {liqueur.price}</p>
                       <button
                         onClick={() => addToCart(liqueur)}
                         className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
@@ -737,15 +722,17 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {soft.length > 0 && (
+
+        {/* Soft Drinks Section */}
+        {softDrinkItems.length > 0 && (
           <section ref={softDrinksSectionRef} id="soft" className="py-16">
             <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold mb-8 text-center">Soft</h3>
-              {loading ? (
-                <p className="text-center">Loading Soft...</p>
+              <h3 className="text-3xl font-bold mb-8 text-center">Soft Drinks</h3>
+              {loadingSoftDrinks ? (
+                <p className="text-center">Loading Soft Drinks...</p>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {soft.map((soft) => (
+                  {softDrinkItems.map((soft) => (
                     <div
                       key={soft.id}
                       className="bg-gray-800 p-4 rounded-lg text-center"
@@ -753,7 +740,7 @@ function Drinks({ addToCart }) {
                       <h4 className="text-xl font-bold">{soft.name}</h4>
                       <img
                         src={soft.imageUrl}
-                        alt={"Img To Be Added Soon"}
+                        alt="Image To Be Added Soon"
                         className="w-full h-40 object-cover rounded-md mb-2"
                       />
                       <p>Ksh {soft.price}</p>
@@ -770,72 +757,63 @@ function Drinks({ addToCart }) {
             </div>
           </section>
         )}
-        {mocktails.length > 0 && (
-          <section ref={MocktailSectionRef} id="Mocktail" className="py-16">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold mb-8 text-center">Mocktails</h3>
-              {loading ? (
-                <p className="text-center">Loading Mocktails...</p>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {mocktails.map((mocktail) => (
-                    <div
-                      key={mocktail.id}
-                      className="bg-gray-800 p-4 rounded-lg text-center"
-                    >
-                      <h4 className="text-xl font-bold">{mocktail.name}</h4>
-                      <img
-                        src={mocktail.imageUrl}
-                        alt={"img to be added soon"}
-                        className="w-full h-40 object-cover rounded-md mb-2"
-                      />
-                      <p>Ksh {mocktail.price}</p>
-                      <button
-                        onClick={() => addToCart(mocktail)}
-                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        )}
 
-        {cocktails.length > 0 && (
-          <section ref={CocktailSectionRef} id="cocktails" className="py-16">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold mb-8 text-center">Cocktails</h3>
-              {loading ? (
-                <p className="text-center">Loading Cocktails...</p>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  {cocktails.map((cocktails) => (
-                    <div
-                      key={cocktails.id}
-                      className="bg-gray-800 p-4 rounded-lg text-center"
-                    >
-                      <h4 className="text-xl font-bold">{cocktails.name}</h4>
-                      <img
-                        src={cocktails.imageUrl}
-                        alt={cocktails.name}
-                        className="w-full h-40 object-cover rounded-md mb-2"
-                      />
-                      <p>Ksh {cocktails.price}</p>
-                      <button
-                        onClick={() => addToCart(cocktails)}
-                        className="mt-2 bg-orange-500 text-white px-4 py-2 rounded shadow-md hover:bg-yellow-300"
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
+
+        {/* Price Selection Modal */}
+        {showPriceSelectionModal && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+              <h2 className="text-2xl font-bold mb-4">Select Price Option</h2>
+              <p className="mb-4">
+                Please select a price option for {selectedProduct?.name}:
+              </p>
+              <div className="flex flex-col space-y-2">
+                {priceOptions.map((option, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedPriceOption(option)}
+                    className={`px-4 py-2 border rounded text-left ${
+                      selectedPriceOption?.type === option.type
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-200 text-black"
+                    }`}
+                  >
+                    {option.type}: Ksh {option.price}
+                  </button>
+                ))}
+              </div>
+              <div className="flex justify-end mt-4 space-x-2">
+                <button
+                  onClick={() => {
+                    setShowPriceSelectionModal(false);
+                    setSelectedProduct(null);
+                    setPriceOptions([]);
+                    setSelectedPriceOption(null);
+                  }}
+                  className="px-4 py-2 bg-gray-400 text-white rounded"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => {
+                    if (selectedPriceOption) {
+                      selectedProduct.price = selectedPriceOption.price;
+                      selectedProduct.selectedPriceType = selectedPriceOption.type;
+                      addToCart(selectedProduct);
+                      setShowPriceSelectionModal(false);
+                      setSelectedProduct(null);
+                      setPriceOptions([]);
+                      setSelectedPriceOption(null);
+                    }
+                  }}
+                  disabled={!selectedPriceOption}
+                  className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
+                >
+                  Confirm
+                </button>
+              </div>
             </div>
-          </section>
+          </div>
         )}
       </div>
     </div>

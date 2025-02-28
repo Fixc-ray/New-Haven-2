@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 
 function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [paymentInitiationStatus, setPaymentInitiationStatus] = useState("");
   const [userData, setUserData] = useState({
     name: "",
     address: "",
@@ -20,13 +21,29 @@ function Cart({ cartItems = [], removeFromCart, updateCartQuantity }) {
     setUserData({ ...userData, [id]: value });
   };
 
-  const checkout = (e) => {
+  const pollPaymentStatus = async (checkoutRequestID) => {
+    for (let i = 0; i < 10; i++) { // Poll for about 50 seconds
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      const statusResponse = await fetch(`http://127.0.0.1:5000/api/payments/status?checkoutRequestID=${checkoutRequestID}`);
+      const statusData = await statusResponse.json();
+      if (statusData.status === "Completed") {
+        return true;
+      }
+      if (statusData.status === "Failed") {
+        return false;
+      }
+    }
+    return false;
+  };
+
+  const checkout = async (e) => {
     e.preventDefault();
 
     const cartDetails = cartItems
       .map((item) => `${item.name} (x${item.quantity}): KSH ${item.price * item.quantity}`)
       .join("\n");
 
+    // Build the order message for WhatsApp
     const message = `New Order Details:
     
 Name: ${userData.name}
@@ -34,17 +51,50 @@ Delivery Address: ${userData.address}
 Email: ${userData.email}
 Phone: ${userData.phoneNumber}
 
-Hello I Would Like To Place An Order For The Following:
+Hello, I would like to place an order for the following:
 ${cartDetails}
 
 Total: KSH ${totalPrice}`;
 
-    // Replace with your business WhatsApp number (in international format without the '+' sign)
-    const businessWhatsAppNumber = "254722880230"; 
+    try {
+      // Initiate the Mpesa payment
+      const paymentResponse = await fetch("http://127.0.0.1:5000/api/payments/mpesa/myphone", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: totalPrice,
+          order_id: "MYORDER",  // Replace with a dynamic order ID if available
+          phone_number: userData.phoneNumber
+        }),
+      });
 
-    const whatsappUrl = `https://wa.me/${businessWhatsAppNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-    setIsModalOpen(false);
+      const paymentData = await paymentResponse.json();
+      if (paymentResponse.status !== 200 || paymentData.ResponseCode !== "0") {
+        setPaymentInitiationStatus("Initiated");
+        return;
+      }
+
+      setPaymentInitiationStatus("Not Initiated");
+
+      const checkoutRequestID = paymentData.CheckoutRequestID;
+      // Poll the backend for payment status
+      const paymentSuccessful = await pollPaymentStatus(checkoutRequestID);
+
+      if (paymentSuccessful) {
+        // Replace with your business WhatsApp number (in international format without the '+' sign)
+        const businessWhatsAppNumber = "254110391729"; 
+        const whatsappUrl = `https://wa.me/${businessWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank");
+      } else {
+        setPaymentInitiationStatus("Not Initiated");
+      }
+      setIsModalOpen(false);
+    } catch (error) {
+      console.error("Error processing payment", error);
+      setPaymentInitiationStatus("Not Initiated");
+    }
   };
 
   return (
@@ -64,7 +114,6 @@ Total: KSH ${totalPrice}`;
                 />
                 <h3 className="text-xl mb-3 font-semibold">{food.name}</h3>
                 <p>Price: KSH {food.price}</p>
-
                 <div className="flex items-center ml-28 pl-8 space-x-4">
                   <button
                     onClick={() => updateCartQuantity(food.id, food.quantity - 1)}
@@ -81,9 +130,7 @@ Total: KSH ${totalPrice}`;
                     +
                   </button>
                 </div>
-
                 <p>Total for this item: KSH {food.price * food.quantity}</p>
-
                 <button
                   onClick={() => removeFromCart(food)}
                   className="bg-red-500 text-white px-4 py-2 rounded shadow-md hover:bg-red-700 mt-4"
@@ -93,7 +140,6 @@ Total: KSH ${totalPrice}`;
               </div>
             ))}
           </div>
-
           <div className="bg-white shadow-md p-4 text-right mt-10">
             <h2 className="text-2xl font-semibold">Total: KSH {totalPrice}</h2>
             <button
@@ -105,7 +151,14 @@ Total: KSH ${totalPrice}`;
           </div>
         </div>
       )}
-
+      {/* Display the payment initiation status if available */}
+      {paymentInitiationStatus && (
+        <div className="text-center mt-4">
+          <p className="text-lg font-medium">
+            Payment {paymentInitiationStatus}
+          </p>
+        </div>
+      )}
       {/* Modal for User and Payment Details */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -153,7 +206,7 @@ Total: KSH ${totalPrice}`;
               </div>
               <div className="mb-4">
                 <label htmlFor="phoneNumber" className="block text-gray-700 font-semibold mb-2">
-                  Phone Number
+                  Phone Number (Format: 254XXXXXXXXX)
                 </label>
                 <input
                   type="tel"

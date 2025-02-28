@@ -42,7 +42,8 @@ function Home({ addToCart }) {
           </h2>
 
           {/* Buttons */}
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4">
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <button
               onClick={Order}
               className="bg-orange-500 text-black font-bold py-2 px-6 sm:px-8 rounded hover:bg-yellow-500 transition text-sm sm:text-base"
